@@ -36,7 +36,7 @@
  * CONSTANT and MACRO definition
 \****************************************************************************/
 
-#define DEMO_SETTING_ENTITY                          MASTER
+//#define DEMO_SETTING_ENTITY                           SLAVE
 
 #define PROXBUFFERSIZE                                   20
 
@@ -52,13 +52,31 @@
 /***************************************************************************\
  * Ranging Demo Main function
 \***************************************************************************/
+uint8_t ranging_role = MASTER;
 
 int main_ranging(void)
 {
 	uint16_t FwVersion=0;
-	
+    uint8_t  keyVal = 0;
+
+    //读取PA7和PA15的值
+    keyVal = 0;
+    keyVal |= HAL_GPIO_ReadPin(KEY_SX1280_PORT, KEY_SX1280_PIN);
+    keyVal <<= 1;
+    keyVal |= HAL_GPIO_ReadPin(KEY_460800_PORT, KEY_460800_PIN);
+
+    if (keyVal == 0x00) {
+        ranging_role = MASTER;
+        HAL_GPIO_WritePin(LED_G_PORT, LED_G_PIN, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(LED_R_PORT, LED_R_PIN, GPIO_PIN_SET  );
+    } else {
+        ranging_role = SLAVE;
+        HAL_GPIO_WritePin(LED_R_PORT, LED_R_PIN, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(LED_G_PORT, LED_G_PIN, GPIO_PIN_SET  );
+    }
+
     /* 1- Initialize the Ranging Application */
-    RangingDemoInitApplication( DEMO_SETTING_ENTITY );
+    RangingDemoInitApplication(ranging_role /* DEMO_SETTING_ENTITY */);
 
     RangingDemoSetRangingParameters( 40u, DEMO_RNG_ADDR_1, DEMO_RNG_ANT_1, DEMO_RNG_UNIT_SEL_M );
     RangingDemoSetRadioParameters( LORA_SF6, LORA_BW_1600, LORA_CR_4_5, DEMO_CENTRAL_FREQ_PRESET2, DEMO_POWER_TX_MAX );
@@ -66,16 +84,16 @@ int main_ranging(void)
 	Radio.Reset();
 	FwVersion = Radio.GetFirmwareVersion();
 		
-	if(DEMO_SETTING_ENTITY == MASTER)
+	if(ranging_role /* DEMO_SETTING_ENTITY */ == MASTER)
 	{
-		printf("Ranging Demo as Master , firmware %d \n\r",FwVersion);
+		printf("Ranging Demo as Master\n");
 	}
 	else
 	{
-		printf("Ranging Demo as Slave , firmware %d  \n\r",FwVersion);
+		printf("Ranging Demo as Slave\n");
 	}
 
-    printf("Init finish!\n");
+    printf("Init finish, firmware 0x%x!\n", FwVersion);
     
     /* Infinite loop */
     while(1){
@@ -87,7 +105,7 @@ int main_ranging(void)
         }while( demoStatus == DEMO_RANGING_RUNNING );
 
         // If master, display the ranging result.
-        if( DEMO_SETTING_ENTITY == MASTER ){
+        if( ranging_role /* DEMO_SETTING_ENTITY */ == MASTER ){
             RangingDisplayUartOutputData( );
             RangingDisplayUartOutputDistance( );
 			HAL_Delay(1000);

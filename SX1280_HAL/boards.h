@@ -40,9 +40,16 @@ extern void Error_Handler(void);
 #define USART_RX_PORT       GPIOB
 #define ANT_SW_PIN          GPIO_PIN_14
 #define ANT_SW_PORT         GPIOC
-#define LED_RX_PIN          GPIO_PIN_14
-#define LED_RX_PORT         GPIOC
-#define LED_TX_PIN          GPIO_PIN_15
-#define LED_TX_PORT         GPIOC
+
+#define LED_R_PIN           GPIO_PIN_9
+#define LED_R_PORT          GPIOB
+#define LED_G_PIN           GPIO_PIN_8
+#define LED_G_PORT          GPIOB
+
+#define KEY_SX1280_PIN      GPIO_PIN_15
+#define KEY_SX1280_PORT     GPIOA
+
+#define KEY_460800_PIN      GPIO_PIN_0
+#define KEY_460800_PORT     GPIOB
 
 #endif

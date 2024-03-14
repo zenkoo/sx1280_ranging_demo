@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "boards.h"
 #include "SEGGER_RTT.h"
 
 /* ------------------通过重定向将printf函数映射到串口1上-------------------*/
@@ -30,10 +31,13 @@ FILE __stdout;
 #else
 #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
 #endif 
+extern UART_HandleTypeDef huart3;
 PUTCHAR_PROTOTYPE
 {
   /* 实现串口发送一个字节数据的函数 */
   //serial_write(&serial1, (uint8_t)ch); //发送一个自己的数据到串口
+  //通过串口3发送数据
+  //HAL_UART_Transmit(&huart3, (uint8_t *)&ch, 1, 0xFFFF);
   SEGGER_RTT_Write(0, &ch, 1);
   return ch;
 }
