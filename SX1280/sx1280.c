@@ -1229,10 +1229,12 @@ void SX1280ProcessIrqs( void )
                 case MODE_RX:
                     if( ( irqRegs & IRQ_RX_DONE ) == IRQ_RX_DONE )
                     {
+                        //printf("MODE_RX RX done irq!\n");
                         if( ( irqRegs & IRQ_CRC_ERROR ) == IRQ_CRC_ERROR )
                         {
                             if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxError != NULL ) )
                             {
+                                //printf("MODE_RX CRC error callback!\n");
                                 RadioCallbacks->rxError( IRQ_CRC_ERROR_CODE );
                             }
                         }
@@ -1240,6 +1242,7 @@ void SX1280ProcessIrqs( void )
                         {
                             if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxError != NULL ) )
                             {
+                                //printf("MODE_RX Syncword error callback!\n");
                                 RadioCallbacks->rxError( IRQ_SYNCWORD_ERROR_CODE );
                             }
                         }
@@ -1247,35 +1250,44 @@ void SX1280ProcessIrqs( void )
                         {
                             if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxDone != NULL ) )
                             {
+                                //printf("MODE_RX RX done callback!\n");
                                 RadioCallbacks->rxDone( );
                             }
                         }
                     }
                     if( ( irqRegs & IRQ_SYNCWORD_VALID ) == IRQ_SYNCWORD_VALID )
                     {
+                        //printf("MODE_RX Syncword valid irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxSyncWordDone != NULL ) )
                         {
+                            //printf("MODE_RX Syncword valid callback!\n");
                             RadioCallbacks->rxSyncWordDone( );
                         }
                     }
                     if( ( irqRegs & IRQ_SYNCWORD_ERROR ) == IRQ_SYNCWORD_ERROR )
                     {
+                        //printf("MODE_RX Syncword error irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxError != NULL ) )
                         {
+                            //printf("MODE_RX Syncword error callback!\n");
                             RadioCallbacks->rxError( IRQ_SYNCWORD_ERROR_CODE );
                         }
                     }
                     if( ( irqRegs & IRQ_RX_TX_TIMEOUT ) == IRQ_RX_TX_TIMEOUT )
                     {
+                        //printf("MODE_RX RX timeout irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxTimeout != NULL ) )
                         {
+                            //printf("MODE_RX RX timeout callback!\n");
                             RadioCallbacks->rxTimeout( );
                         }
                     }
                     if( ( irqRegs & IRQ_TX_DONE ) == IRQ_TX_DONE )
                     {
+                        //printf("MODE_RX TX done irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->txDone != NULL ) )
                         {
+                            //printf("MODE_RX TX done callback!\n");
                             RadioCallbacks->txDone( );
                         }
                     }
@@ -1283,15 +1295,19 @@ void SX1280ProcessIrqs( void )
                 case MODE_TX:
                     if( ( irqRegs & IRQ_TX_DONE ) == IRQ_TX_DONE )
                     {
+                        //printf("MODE_TX TX done irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->txDone != NULL ) )
                         {
+                            //printf("MODE_TX TX done callback!\n");
                             RadioCallbacks->txDone( );
                         }
                     }
                     if( ( irqRegs & IRQ_RX_TX_TIMEOUT ) == IRQ_RX_TX_TIMEOUT )
                     {
+                        //printf("MODE_TX TX timeout irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->txTimeout != NULL ) )
                         {
+                            //printf("MODE_TX TX timeout callback!\n");
                             RadioCallbacks->txTimeout( );
                         }
                     }
@@ -1307,10 +1323,12 @@ void SX1280ProcessIrqs( void )
                 case MODE_RX:
                     if( ( irqRegs & IRQ_RX_DONE ) == IRQ_RX_DONE )
                     {
+                        //printf("LORA MODE_RX RX done irq!\n");
                         if( ( irqRegs & IRQ_CRC_ERROR ) == IRQ_CRC_ERROR )
                         {
                             if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxError != NULL ) )
                             {
+                                //printf("LORA MODE_RX CRC error callback!\n");
                                 RadioCallbacks->rxError( IRQ_CRC_ERROR_CODE );
                             }
                         }
@@ -1318,42 +1336,53 @@ void SX1280ProcessIrqs( void )
                         {
                             if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxDone != NULL ) )
                             {
+                                //printf("LORA MODE_RX RX done callback!\n");
                                 RadioCallbacks->rxDone( );
                             }
                         }
                     }
                     if( ( irqRegs & IRQ_HEADER_VALID ) == IRQ_HEADER_VALID )
                     {
+                        //printf("LORA MODE_RX Header valid irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxHeaderDone != NULL ) )
                         {
+                            //printf("LORA MODE_RX Header valid callback!\n");
                             RadioCallbacks->rxHeaderDone( );
                         }
                     }
                     if( ( irqRegs & IRQ_HEADER_ERROR ) == IRQ_HEADER_ERROR )
                     {
+                        //printf("LORA MODE_RX Header error irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxError != NULL ) )
                         {
+                            //printf("LORA MODE_RX Header error callback!\n");
                             RadioCallbacks->rxError( IRQ_HEADER_ERROR_CODE );
                         }
                     }
                     if( ( irqRegs & IRQ_RX_TX_TIMEOUT ) == IRQ_RX_TX_TIMEOUT )
                     {
+                        //printf("LORA MODE_RX RX timeout irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxTimeout != NULL ) )
                         {
+                            //printf("LORA MODE_RX RX timeout callback!\n");
                             RadioCallbacks->rxTimeout( );
                         }
                     }
                     if( ( irqRegs & IRQ_RANGING_SLAVE_REQUEST_DISCARDED ) == IRQ_RANGING_SLAVE_REQUEST_DISCARDED )
                     {
+                        //printf("LORA MODE_RX Ranging slave request discarded irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxError != NULL ) )
                         {
+                            //printf("LORA MODE_RX Ranging slave request discarded callback!\n");
                             RadioCallbacks->rxError( IRQ_RANGING_ON_LORA_ERROR_CODE );
                         }
                     }
                     if( ( irqRegs & IRQ_TX_DONE ) == IRQ_TX_DONE )
                     {
+                        //printf("LORA MODE_RX TX done irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->txDone != NULL ) )
                         {
+                            //printf("LORA MODE_RX TX done callback!\n");
                             RadioCallbacks->txDone( );
                         }
                     }
@@ -1361,15 +1390,19 @@ void SX1280ProcessIrqs( void )
                 case MODE_TX:
                     if( ( irqRegs & IRQ_TX_DONE ) == IRQ_TX_DONE )
                     {
+                        //printf("LORA MODE_TX TX done irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->txDone != NULL ) )
                         {
+                            //printf("LORA MODE_TX TX done callback!\n");
                             RadioCallbacks->txDone( );
                         }
                     }
                     if( ( irqRegs & IRQ_RX_TX_TIMEOUT ) == IRQ_RX_TX_TIMEOUT )
                     {
+                        //printf("LORA MODE_TX TX timeout irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->txTimeout != NULL ) )
                         {
+                            //printf("LORA MODE_TX TX timeout callback!\n");
                             RadioCallbacks->txTimeout( );
                         }
                     }
@@ -1377,10 +1410,12 @@ void SX1280ProcessIrqs( void )
                 case MODE_CAD:
                     if( ( irqRegs & IRQ_CAD_DONE ) == IRQ_CAD_DONE )
                     {
+                        //printf("LORA MODE_CAD CAD done irq!\n");
                         if( ( irqRegs & IRQ_CAD_ACTIVITY_DETECTED ) == IRQ_CAD_ACTIVITY_DETECTED )
                         {
                             if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->cadDone != NULL ) )
                             {
+                                //printf("LORA MODE_CAD CAD done callback!\n");
                                 RadioCallbacks->cadDone( true );
                             }
                         }
@@ -1388,14 +1423,17 @@ void SX1280ProcessIrqs( void )
                         {
                             if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->cadDone != NULL ) )
                             {
+                                //printf("LORA MODE_CAD CAD done callback!\n");
                                 RadioCallbacks->cadDone( false );
                             }
                         }
                     }
                     else if( ( irqRegs & IRQ_RX_TX_TIMEOUT ) == IRQ_RX_TX_TIMEOUT )
                     {
+                        //printf("LORA MODE_CAD RX timeout irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxTimeout != NULL ) )
                         {
+                            //printf("LORA MODE_CAD RX timeout callback!\n");
                             RadioCallbacks->rxTimeout( );
                         }
                     }
@@ -1412,43 +1450,55 @@ void SX1280ProcessIrqs( void )
                 case MODE_RX:
                     if( ( irqRegs & IRQ_RANGING_SLAVE_REQUEST_DISCARDED ) == IRQ_RANGING_SLAVE_REQUEST_DISCARDED )
                     {
+                        //printf("RANGING MODE_RX Ranging slave request discarded irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rangingDone != NULL ) )
                         {
+                            //printf("RANGING MODE_RX Ranging slave request discarded callback!\n");
                             RadioCallbacks->rangingDone( IRQ_RANGING_SLAVE_ERROR_CODE );
                         }
                     }
                     if( ( irqRegs & IRQ_RANGING_SLAVE_REQUEST_VALID ) == IRQ_RANGING_SLAVE_REQUEST_VALID )
                     {
+                        //printf("RANGING MODE_RX Ranging slave request valid irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rangingDone != NULL ) )
                         {
+                            //printf("RANGING MODE_RX Ranging slave request valid callback!\n");
                             RadioCallbacks->rangingDone( IRQ_RANGING_SLAVE_VALID_CODE );
                         }
                     }
                     if( ( irqRegs & IRQ_RANGING_SLAVE_RESPONSE_DONE ) == IRQ_RANGING_SLAVE_RESPONSE_DONE )
                     {
+                        //printf("RANGING MODE_RX Ranging slave response done irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rangingDone != NULL ) )
                         {
+                            //printf("RANGING MODE_RX Ranging slave response done callback!\n");
                             RadioCallbacks->rangingDone( IRQ_RANGING_SLAVE_VALID_CODE );
                         }
                     }
                     if( ( irqRegs & IRQ_RX_TX_TIMEOUT ) == IRQ_RX_TX_TIMEOUT )
                     {
+                        //printf("RANGING MODE_RX RX timeout irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rangingDone != NULL ) )
                         {
+                            //printf("RANGING MODE_RX RX timeout callback!\n");
                             RadioCallbacks->rangingDone( IRQ_RANGING_SLAVE_ERROR_CODE );
                         }
                     }
                     if( ( irqRegs & IRQ_HEADER_VALID ) == IRQ_HEADER_VALID )
                     {
+                        //printf("RANGING MODE_RX Header valid irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxHeaderDone != NULL ) )
                         {
+                            //printf("RANGING MODE_RX Header valid callback!\n");
                             RadioCallbacks->rxHeaderDone( );
                         }
                     }
                     if( ( irqRegs & IRQ_HEADER_ERROR ) == IRQ_HEADER_ERROR )
                     {
+                        //printf("RANGING MODE_RX Header error irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rxError != NULL ) )
                         {
+                            //printf("RANGING MODE_RX Header error callback!\n");
                             RadioCallbacks->rxError( IRQ_HEADER_ERROR_CODE );
                         }
                     }
@@ -1457,15 +1507,19 @@ void SX1280ProcessIrqs( void )
                 case MODE_TX:
                     if( ( irqRegs & IRQ_RANGING_MASTER_RESULT_TIMEOUT ) == IRQ_RANGING_MASTER_RESULT_TIMEOUT )
                     {
+                        //printf("RANGING MODE_TX Ranging master result timeout irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rangingDone != NULL ) )
                         {
+                            //printf("RANGING MODE_TX Ranging master result timeout callback!\n");
                             RadioCallbacks->rangingDone( IRQ_RANGING_MASTER_ERROR_CODE );
                         }
                     }
                     if( ( irqRegs & IRQ_RANGING_MASTER_RESULT_VALID ) == IRQ_RANGING_MASTER_RESULT_VALID )
                     {
+                        //printf("RANGING MODE_TX Ranging master result valid irq!\n");
                         if( ( RadioCallbacks != NULL ) && ( RadioCallbacks->rangingDone != NULL ) )
                         {
+                            //printf("RANGING MODE_TX Ranging master result valid callback!\n");
                             RadioCallbacks->rangingDone( IRQ_RANGING_MASTER_VALID_CODE );
                         }
                     }

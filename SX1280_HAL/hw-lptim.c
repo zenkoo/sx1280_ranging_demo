@@ -56,7 +56,7 @@ void TimerCreateTimer(void *func, void *param, uint32_t millisec){
     timerSetFlag = true;
     timerStart = HAL_GetTick();
     timerWait  = millisec;
-
+    printf("TimerCreateTimer: %d\n", millisec);
     timerFunction = (TimerFunc)func;
     timerParam    = param;
 }
@@ -69,12 +69,18 @@ void TimerCancelTimer(void){
     timerSetFlag = false;
     timerStart = 0;
     timerWait  = 0;
+    printf("TimerCancelTimer\n");
+    timerFunction = NULL;
+    timerParam    = NULL;
 }
 
 void TimerSysTick_IRQHandler(void){
     if (timerSetFlag == true){
         if (HAL_GetTick() - timerStart >= timerWait){
-            timerFunction(timerParam);
+            if (timerFunction) {
+                printf("TimerSysTick_IRQHandler: %d\n", timerWait);
+                timerFunction(timerParam);
+            }
             timerSetFlag = false;
             timerStart = 0;
             timerWait  = 0;

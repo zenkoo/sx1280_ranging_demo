@@ -387,8 +387,9 @@ RangingDemoStatus_t RangingDemoRun( void )
 
         if( DemoSettings.Entity == MASTER )
         {
-            Radio.SetDioIrqParams( IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE,
-                                   IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE,
+            Radio.SetDioIrqParams( /* IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE, ggg */
+                                   /* IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE, ggg */
+                                   IRQ_RADIO_ALL, IRQ_RADIO_ALL,
                                    IRQ_RADIO_NONE, IRQ_RADIO_NONE);
             DemoResults.RngDistance = 0.0;
             demoInternalState = APP_RANGING_CONFIG;
@@ -435,7 +436,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                     Radio.SendPayload( demoBuffer, packetParams.Params.LoRa.PayloadLength, ( TickTime_t ){ RX_TIMEOUT_TICK_SIZE, RNG_COM_TIMEOUT });
                     demoInternalState = APP_IDLE;
                     #if (PROC_LOG_SW == 1)
-                    printf("Ranging config finish, change to APP_IDLE.\n");
+                    //printf("Ranging config finish, change to APP_IDLE.\n");
                     #endif
                 }
                 break;
@@ -449,8 +450,11 @@ RangingDemoStatus_t RangingDemoRun( void )
                     {
                         Radio.SetRfFrequency( rangingChannels[currentChannel] );
                         #if (PROC_LOG_SW == 1)
-					    printf("Set frequency to %d.\n", rangingChannels[currentChannel]);
+					    printf("Set frequency to %d, channel %d, request count %d.\n", 
+                            rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
                         #endif
+                        
+                        #if 0
 						switch( DemoSettings.RngAntenna )
                         {
                             case DEMO_RNG_ANT_1:
@@ -488,10 +492,11 @@ RangingDemoStatus_t RangingDemoRun( void )
 							break;
                         }
                         SetAntennaSwitch( );
+                        #endif
                         demoInternalState = APP_IDLE;
-                        Radio.SetTx( ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, 0xFFFF });
+                        Radio.SetTx( ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, 50 });
                         #if (PROC_LOG_SW == 1)
-                        printf("Set Tx, change to APP_IDLE.\n");
+                        //printf("Set Tx, change to APP_IDLE.\n");
                         #endif
                     }
                     else
@@ -523,9 +528,9 @@ RangingDemoStatus_t RangingDemoRun( void )
                 DemoResults.CntPacketRxOK++;
                 demoInternalState = APP_RNG;
                 #if (PROC_LOG_SW == 1)
-                printf("Ranging done, change to APP_RNG.\n");
+                //printf("Ranging done, change to APP_RNG.\n");
                 #endif
-                demoStatus = DEMO_RANGING_TERMINATED;
+                TimerCreateTimer( &SendNextPacketEvent,0, DemoSettings.RngReqDelay ); //ggg
             }
             break;
 
@@ -568,14 +573,14 @@ RangingDemoStatus_t RangingDemoRun( void )
                         DemoResults.RngResultIndex   = 0;
                         demoInternalState = APP_RNG;
                         #if (PROC_LOG_SW == 1)
-                        printf("Ranging Rx done, change to APP_RNG.\n");
+                        //printf("Ranging Rx done, change to APP_RNG.\n");
                         #endif
                         TimerCreateTimer( &SendNextPacketEvent,0, DemoSettings.RngReqDelay );
                     }
                     else
                     {
                         #if (PROC_LOG_SW == 1)
-                        printf("Ranging Rx done 1, change to APP_RANGING_CONFIG.\n");
+                        //printf("Ranging Rx done 1, change to APP_RANGING_CONFIG.\n");
                         #endif
                         demoInternalState = APP_RANGING_CONFIG;
                     }
@@ -583,7 +588,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                 else
                 {
                     #if (PROC_LOG_SW == 1)
-                    printf("Ranging Rx done 2, change to APP_RANGING_CONFIG.\n");
+                    //printf("Ranging Rx done 2, change to APP_RANGING_CONFIG.\n");
                     #endif
                     demoInternalState = APP_RANGING_CONFIG;
                 }
@@ -593,7 +598,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                 if( DemoSettings.RngStatus == RNG_INIT )
                 {
                     #if (PROC_LOG_SW == 1)
-                    printf("Ranging Tx done, change to APP_RX.\n");
+                    //printf("Ranging Tx done, change to APP_RX.\n");
                     #endif
                     Radio.SetRx( ( TickTime_t ) { RX_TIMEOUT_TICK_SIZE, RNG_COM_TIMEOUT });
                     demoInternalState = APP_IDLE;
@@ -601,7 +606,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                 else
                 {
                     #if (PROC_LOG_SW == 1)
-                    printf("Ranging Tx done, change to APP_RANGING_CONFIG.\n");
+                    //printf("Ranging Tx done, change to APP_RANGING_CONFIG.\n");
                     #endif
                     demoInternalState = APP_RANGING_CONFIG;
                 }
@@ -617,7 +622,7 @@ RangingDemoStatus_t RangingDemoRun( void )
 
             case APP_RX_ERROR:
                 #if (PROC_LOG_SW == 1)
-                printf("Ranging Rx error, change to APP_RANGING_CONFIG.\n");
+                //printf("Ranging Rx error, change to APP_RANGING_CONFIG.\n");
                 #endif
                 demoInternalState = APP_RANGING_CONFIG;
                 break;
@@ -633,7 +638,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                 if( (DemoSettings.RngStatus == RNG_PROCESS) && (SendNext == true) )
                 {
                     #if (PROC_LOG_SW == 1)
-                    printf("Ranging idle, change to APP_RNG.\n");
+                    //printf("Ranging idle, change to APP_RNG.\n");
                     #endif
                     DemoResults.CntPacketRxKOSlave++;
                     demoInternalState = APP_RNG;
@@ -663,7 +668,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                 Radio.SetRx( ( TickTime_t ) { RADIO_TICK_SIZE_1000_US, 0x1000} ); //0xFFFF
                 demoInternalState = APP_IDLE;
                 #if (PROC_LOG_SW == 1)
-                //ggg printf("Ranging config finish, change to APP_IDLE.\n");
+                printf("Ranging config finish, change to APP_IDLE.\n");
                 #endif
                 break;
 
@@ -675,6 +680,8 @@ RangingDemoStatus_t RangingDemoRun( void )
                     if( measuredChannels <= DemoSettings.RngRequestCount )
                     {
 						Radio.SetRfFrequency( rangingChannels[currentChannel] );
+                        printf("Set frequency to %d, channel %d, request count %d.\n", 
+                            rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
 						switch( DemoSettings.RngAntenna )
                         {
                             case DEMO_RNG_ANT_1:
@@ -713,9 +720,9 @@ RangingDemoStatus_t RangingDemoRun( void )
                         }
                         SetAntennaSwitch( );
                         demoInternalState = APP_IDLE;
-                        Radio.SetRx( ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, DemoSettings.RngReqDelay } );
+                        Radio.SetRx( ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, /* DemoSettings.RngReqDelay ggg */ 0xffff } );
                         #if (PROC_LOG_SW == 1)
-                        //ggg printf("Set Rx, change to APP_IDLE.\n");
+                        //printf("Set Rx, change to APP_IDLE.\n");
                         #endif
                     }
                     else
@@ -727,7 +734,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                         DemoSettings.RngStatus = RNG_VALID;
                         demoInternalState = APP_RANGING_CONFIG;
                         #if (PROC_LOG_SW == 1)
-                        //ggg printf("Ranging terminated, change to APP_RANGING_CONFIG.\n");
+                        //printf("Ranging terminated, change to APP_RANGING_CONFIG.\n");
                         #endif
                     }
                 }
@@ -737,14 +744,15 @@ RangingDemoStatus_t RangingDemoRun( void )
                 DemoResults.CntPacketRxOK++;
                 demoInternalState = APP_RNG;
                 #if (PROC_LOG_SW == 1)
-                //ggg printf("Ranging done, change to APP_RNG.\n");
+                printf("Ranging done, change to APP_RNG, cntPacketRxOK %d.\n", DemoResults.CntPacketRxOK);
                 #endif
+                TimerCreateTimer(&SendNextPacketEvent, 0, /* DemoSettings.RngReqDelay */ 2 ); //ggg
                 break;
 
             case APP_RANGING_TIMEOUT:
                 demoInternalState = APP_RNG;
                 #if (PROC_LOG_SW == 1)
-                //ggg printf("Ranging timeout, change to APP_RNG.\n");
+                //printf("Ranging timeout, change to APP_RNG.\n");
                 #endif
                 break;
 
@@ -764,9 +772,13 @@ RangingDemoStatus_t RangingDemoRun( void )
                         DemoResults.RngFei    = Radio.GetFrequencyError( );
                         DemoResults.RssiValue = PacketStatus.Params.LoRa.RssiPkt;
                         DemoResults.CntPacketTx++;
-                        currentChannel                                 = demoBuffer[4];
+                        currentChannel               = demoBuffer[4];
                         DemoSettings.RngAntenna      = demoBuffer[5];
                         DemoSettings.RngRequestCount = demoBuffer[6];
+
+                        printf("Received ranging request packet, ranging address 0x%x, chl %d, antenna %d, req_count %d.\n",
+                                *(uint32_t *)&demoBuffer[0], currentChannel, DemoSettings.RngAntenna, DemoSettings.RngRequestCount);
+
                         demoBuffer[4] = ( ( ( int32_t )DemoResults.RngFei ) >> 24 ) & 0xFF ;
                         demoBuffer[5] = ( ( ( int32_t )DemoResults.RngFei ) >> 16 ) & 0xFF ;
                         demoBuffer[6] = ( ( ( int32_t )DemoResults.RngFei ) >>  8 ) & 0xFF ;
@@ -774,15 +786,13 @@ RangingDemoStatus_t RangingDemoRun( void )
                         demoBuffer[8] = DemoResults.RssiValue;
                         Radio.SendPayload( demoBuffer, 9, ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, RNG_COM_TIMEOUT } );
                         demoInternalState = APP_IDLE;
-                        #if (PROC_LOG_SW == 1)
                         printf("Ranging Rx done, change to APP_IDLE.\n");
-                        #endif
                     }
                     else
                     {
                         demoInternalState = APP_RANGING_CONFIG;
                         #if (PROC_LOG_SW == 1)
-                        //ggg printf("Ranging Rx done 1, change to APP_RANGING_CONFIG.\n");
+                        printf("Ranging Rx done 1, change to APP_RANGING_CONFIG.\n");
                         #endif
                     }
                 }
@@ -790,7 +800,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                 {
                     demoInternalState = APP_RANGING_CONFIG;
                     #if (PROC_LOG_SW == 1)
-                    //ggg printf("Ranging Rx done 2, change to APP_RANGING_CONFIG.\n");
+                    //printf("Ranging Rx done 2, change to APP_RANGING_CONFIG.\n");
                     #endif
                 }
                 break;
@@ -818,35 +828,35 @@ RangingDemoStatus_t RangingDemoRun( void )
                     TimerCreateTimer( &SendNextPacketEvent, 0, DemoSettings.RngReqDelay );
                     demoInternalState = APP_RNG;
                     #if (PROC_LOG_SW == 1)
-                    //ggg printf("Ranging Tx done, change to APP_RNG.\n");
+                    //printf("Ranging Tx done, change to APP_RNG.\n");
                     #endif
                 }
                 else
                 {
                     demoInternalState = APP_RANGING_CONFIG;
                     #if (PROC_LOG_SW == 1)
-                    //ggg printf("Ranging Tx done, change to APP_RANGING_CONFIG.\n");
+                    //printf("Ranging Tx done, change to APP_RANGING_CONFIG.\n");
                     #endif
                 }
                 break;
 
             case APP_RX_TIMEOUT:
                 #if (PROC_LOG_SW == 1)
-                //ggg printf("Ranging Rx timeout, change to APP_RANGING_CONFIG.\n");
+                //printf("Ranging Rx timeout, change to APP_RANGING_CONFIG.\n");
                 #endif
                 demoInternalState = APP_RANGING_CONFIG;
                 break;
 
             case APP_RX_ERROR:
                 #if (PROC_LOG_SW == 1)
-                //ggg printf("Ranging Rx error, change to APP_RANGING_CONFIG.\n");
+                ///printf("Ranging Rx error, change to APP_RANGING_CONFIG.\n");
                 #endif
                 demoInternalState = APP_RANGING_CONFIG;
                 break;
 
             case APP_TX_TIMEOUT:
                 #if (PROC_LOG_SW == 1)
-                //ggg printf("Ranging Tx timeout, change to APP_RANGING_CONFIG.\n");
+                //printf("Ranging Tx timeout, change to APP_RANGING_CONFIG.\n");
                 #endif
                 demoInternalState = APP_RANGING_CONFIG;
                 break;
@@ -857,7 +867,7 @@ RangingDemoStatus_t RangingDemoRun( void )
                     DemoResults.CntPacketRxKOSlave = 0;
                     demoInternalState = APP_RANGING_CONFIG;
                     #if (PROC_LOG_SW == 1)
-                    //ggg printf("Ranging idle, change to APP_RANGING_CONFIG.\n");
+                    //printf("Ranging idle, change to APP_RANGING_CONFIG.\n");
                     #endif
                     TimerCancelTimer( );
                 }

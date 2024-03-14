@@ -83,7 +83,8 @@ int main_ranging(void)
 	
 	Radio.Reset();
 	FwVersion = Radio.GetFirmwareVersion();
-		
+
+	printf("\n");
 	if(ranging_role /* DEMO_SETTING_ENTITY */ == MASTER)
 	{
 		printf("Ranging Demo as Master\n");
@@ -102,17 +103,16 @@ int main_ranging(void)
         // Run the ranging demo.
         do{
             demoStatus = RangingDemoRun( );
-        }while( demoStatus == DEMO_RANGING_RUNNING );
+        }while( demoStatus == DEMO_RANGING_RUNNING);
 
         // If master, display the ranging result.
-        if( ranging_role /* DEMO_SETTING_ENTITY */ == MASTER ){
+        if( ranging_role /* DEMO_SETTING_ENTITY */ == MASTER){
             RangingDisplayUartOutputData( );
             RangingDisplayUartOutputDistance( );
-			HAL_Delay(1000);
         }
 
         if( demoStatus != DEMO_RANGING_TERMINATED ){
-            RangingDemoReset( );
+            RangingDemoReset();
         }
     }
 }
