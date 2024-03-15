@@ -359,6 +359,18 @@ void RangingDemoSetRadioParameters( RadioLoRaSpreadingFactors_t spreadingFactor,
     DemoSettings.TxPower                         = txPower;
 }
 
+//重发当前ranging消息函数
+void ResendRangingMessage(void)
+{
+    Radio.SetRfFrequency(rangingChannels[currentChannel]);
+
+    printf("Resend frequency to %d, channel %d, request count %d.\n", 
+        rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
+
+    demoInternalState = APP_IDLE;
+    Radio.SetTx((TickTime_t ){ RADIO_TICK_SIZE_1000_US, 50});
+}
+
 /*!
  * \brief Run the ranging demo.
  *
@@ -453,7 +465,7 @@ RangingDemoStatus_t RangingDemoRun( void )
 					    printf("Set frequency to %d, channel %d, request count %d.\n", 
                             rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
                         #endif
-                        
+
                         #if 0
 						switch( DemoSettings.RngAntenna )
                         {
@@ -536,9 +548,7 @@ RangingDemoStatus_t RangingDemoRun( void )
 
             case APP_RANGING_TIMEOUT:
                 demoInternalState = APP_RNG;
-                #if (PROC_LOG_SW == 1)
-                printf("Ranging timeout, change to APP_RNG.\n");
-                #endif
+                ResendRangingMessage();
                 break;
 
             case APP_RX:
@@ -682,6 +692,7 @@ RangingDemoStatus_t RangingDemoRun( void )
 						Radio.SetRfFrequency( rangingChannels[currentChannel] );
                         printf("Set frequency to %d, channel %d, request count %d.\n", 
                             rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
+                        #if 0
 						switch( DemoSettings.RngAntenna )
                         {
                             case DEMO_RNG_ANT_1:
@@ -719,8 +730,9 @@ RangingDemoStatus_t RangingDemoRun( void )
 							break;
                         }
                         SetAntennaSwitch( );
+                        #endif
                         demoInternalState = APP_IDLE;
-                        Radio.SetRx( ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, /* DemoSettings.RngReqDelay ggg */ 0xffff } );
+                        Radio.SetRx((TickTime_t ){ RADIO_TICK_SIZE_1000_US, DemoSettings.RngReqDelay});
                         #if (PROC_LOG_SW == 1)
                         //printf("Set Rx, change to APP_IDLE.\n");
                         #endif
@@ -751,6 +763,13 @@ RangingDemoStatus_t RangingDemoRun( void )
 
             case APP_RANGING_TIMEOUT:
                 demoInternalState = APP_RNG;
+                //ggg add
+                Radio.SetRfFrequency( rangingChannels[currentChannel] );
+                printf("Set frequency to %d, channel %d, request count %d.\n", 
+                rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
+                Radio.SetRx((TickTime_t ){ RADIO_TICK_SIZE_1000_US, DemoSettings.RngReqDelay});
+                demoInternalState = APP_IDLE;
+                //ggg add end
                 #if (PROC_LOG_SW == 1)
                 //printf("Ranging timeout, change to APP_RNG.\n");
                 #endif
