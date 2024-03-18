@@ -54,4 +54,5 @@ sx1280_demoapp/sx1280.o: ..\SX1280\sx1280.c \
   ..\SX1280\rangingCorrection\rangingCorrectionSF7BW1600.h \
   ..\SX1280\rangingCorrection\rangingCorrectionSF8BW1600.h \
   ..\SX1280\rangingCorrection\rangingCorrectionSF9BW1600.h \
-  ..\SX1280\rangingCorrection\rangingCorrectionSF10BW1600.h
+  ..\SX1280\rangingCorrection\rangingCorrectionSF10BW1600.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h

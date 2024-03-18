@@ -97,7 +97,6 @@ void RangingDisplayUartOutputData( void )
 
         RangingDisplayUartOutputContinue();
     }
-
 }
 
 /*!
@@ -107,8 +106,9 @@ void RangingDisplayUartOutputDistance( void )
 {
     demoResult = RangingDemoGetResult();
     if( demoResult->RngResultIndex != 0u ){
-		printf("Distance Ranging = %f, RSSI = %d \r\n", demoResult->RngDistance,demoResult->RssiValue );
+		//ggg printf("Distance Ranging = %f, RSSI = %d \r\n", demoResult->RngDistance,demoResult->RssiValue );
         //printf("Distance Ranging = %d, RSSI = %d \r\n", RangingDisplayGetRangingResult(demoResult->RngDistance),demoResult->RssiValue );
+        printf("%f,", demoResult->RngDistance);
     }
 }
 

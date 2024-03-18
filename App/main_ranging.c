@@ -102,12 +102,12 @@ int main_ranging(void)
         RangingDemoStatus_t demoStatus;
         // Run the ranging demo.
         do{
-            demoStatus = RangingDemoRun( );
+            demoStatus = RangingDemoRun();
         }while( demoStatus == DEMO_RANGING_RUNNING);
 
         // If master, display the ranging result.
         if( ranging_role /* DEMO_SETTING_ENTITY */ == MASTER){
-            RangingDisplayUartOutputData( );
+            //ggg RangingDisplayUartOutputData( );
             RangingDisplayUartOutputDistance( );
         }
 

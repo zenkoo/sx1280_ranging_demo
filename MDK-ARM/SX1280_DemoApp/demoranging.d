@@ -36,4 +36,5 @@ sx1280_demoapp/demoranging.o: ..\App\demoRanging.c ..\SX1280_HAL\boards.h \
   ..\SX1280_HAL\hw-lptim.h ..\SX1280\sx1280.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h ..\SX1280\sx1280-hal.h \
   ..\SX1280\sx1280.h ..\SX1280\radio.h ..\SX1280\radio.h \
-  ..\SX1280_HAL\utilities.h ..\App\FreqLUT.h ..\App\demoRanging.h
+  ..\SX1280_HAL\utilities.h ..\App\FreqLUT.h ..\App\demoRanging.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h
