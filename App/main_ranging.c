@@ -69,10 +69,14 @@ int main_ranging(void)
         ranging_role = MASTER;
         HAL_GPIO_WritePin(LED_G_PORT, LED_G_PIN, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(LED_R_PORT, LED_R_PIN, GPIO_PIN_SET  );
-    } else {
+    } else if (keyVal == 0x03) {
         ranging_role = SLAVE;
         HAL_GPIO_WritePin(LED_R_PORT, LED_R_PIN, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(LED_G_PORT, LED_G_PIN, GPIO_PIN_SET  );
+    } else {
+        ranging_role = SNIFFER;
+        HAL_GPIO_WritePin(LED_G_PORT, LED_G_PIN, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(LED_R_PORT, LED_R_PIN, GPIO_PIN_SET);
     }
 
     /* 1- Initialize the Ranging Application */
@@ -89,10 +93,12 @@ int main_ranging(void)
 	{
 		printf("Ranging Demo as Master\n");
 	}
-	else
+	else if (ranging_role /* DEMO_SETTING_ENTITY */ == SLAVE)
 	{
 		printf("Ranging Demo as Slave\n");
-	}
+	} else {
+        printf("Ranging Demo as Sniffer\n");
+    }
 
     printf("Init finish, firmware 0x%x!\n", FwVersion);
     

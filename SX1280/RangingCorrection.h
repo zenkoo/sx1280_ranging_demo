@@ -35,7 +35,7 @@ Maintainer: Miguel Luis, Matthieu Verdy and Benjamin Boulet
 #include "rangingCorrection/rangingCorrectionSF9BW1600.h"
 #include "rangingCorrection/rangingCorrectionSF10BW1600.h"
 
-
+// 对收到的测距结果基于RSSI进行修正
 const double* RangingCorrectionPerSfBwGain[6][3] = {
     { &RangingCorrectionSF5BW0400[0],  &RangingCorrectionSF5BW0800[0],  &RangingCorrectionSF5BW1600[0] },
     { &RangingCorrectionSF6BW0400[0],  &RangingCorrectionSF6BW0800[0],  &RangingCorrectionSF6BW1600[0] },
@@ -45,6 +45,7 @@ const double* RangingCorrectionPerSfBwGain[6][3] = {
     { &RangingCorrectionSF10BW0400[0], &RangingCorrectionSF10BW0800[0], &RangingCorrectionSF10BW1600[0] },
 };
 
+// 对小于100米的测距结果进行多项式修正
 const RangingCorrectionPolynomes_t* RangingCorrectionPolynomesPerSfBw[6][3] = {
     { &correctionRangingPolynomeSF5BW0400,  &correctionRangingPolynomeSF5BW0800,  &correctionRangingPolynomeSF5BW1600 },
     { &correctionRangingPolynomeSF6BW0400,  &correctionRangingPolynomeSF6BW0800,  &correctionRangingPolynomeSF6BW1600 },

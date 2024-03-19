@@ -33,7 +33,7 @@
  * \brief Defines the type of the demo.
  *  0 : single channel ranging demo, 1 : frequency hopped ranging demo.
  */
-#define DEMO_FREQ_HOPPED_RANGING            1 //0
+#define DEMO_FREQ_HOPPED_RANGING            1 // 0
 
 
 /*!
@@ -84,7 +84,7 @@
  * \brief Define min and max Tx power [dBm]
  */
 #define DEMO_POWER_TX_MIN           -18
-#define DEMO_POWER_TX_MAX           13
+#define DEMO_POWER_TX_MAX            13
 
 typedef enum
 {
@@ -101,7 +101,8 @@ typedef enum
 enum DemoMode
 {
     MASTER = 0,
-    SLAVE
+    SLAVE,
+    SNIFFER    // Add new role
 };
 
 /*!
@@ -124,8 +125,8 @@ enum DemoInternalStates
     APP_IDLE = 0,               // nothing to do (or wait a radio interrupt)
     APP_RANGING_DONE,
     APP_RANGING_TIMEOUT,
-    APP_RANGING_CONFIG,
-    APP_RNG,
+    APP_RANGING_CONFIG,         // Configure the ranging demo
+    APP_RNG,                    // Range request
     APP_RX,                     // Rx done
     APP_RX_TIMEOUT,             // Rx timeout
     APP_RX_ERROR,               // Rx error

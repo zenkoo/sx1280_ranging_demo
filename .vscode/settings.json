@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "stdarg.h": "c"
+        "stdarg.h": "c",
+        "rangingcorrectionsf10bw1600.h": "c"
     }
 }

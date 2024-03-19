@@ -1163,7 +1163,7 @@ double SX1280ComputeRangingCorrectionPolynome(const RadioLoRaSpreadingFactors_t 
     const RangingCorrectionPolynomes_t *polynome = RangingCorrectionPolynomesPerSfBw[sf_index][bw_index];
     double correctedValue = 0.0;
     double correctionCoeff = 0;
-    for(uint8_t order = 0; order < polynome->order; order++){
+    for (uint8_t order = 0; order < polynome->order; order++){
         correctionCoeff = polynome->coefficients[order] * pow(median, polynome->order - order - 1);
         correctedValue += correctionCoeff;
     }

@@ -29,23 +29,59 @@ Section Cross References
     demoranging.o(.ARM.exidx.text.RangingDemoSetRangingParameters) refers to demoranging.o(.text.RangingDemoSetRangingParameters) for [Anonymous Symbol]
     demoranging.o(.text.RangingDemoSetRadioParameters) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
     demoranging.o(.ARM.exidx.text.RangingDemoSetRadioParameters) refers to demoranging.o(.text.RangingDemoSetRadioParameters) for [Anonymous Symbol]
+    demoranging.o(.text.RangingMasterHandler) refers to sx1280.o(.text.SX1280GetRangingCorrectionPerSfBwGain) for SX1280GetRangingCorrectionPerSfBwGain
+    demoranging.o(.text.RangingMasterHandler) refers to dadd.o(.text) for __aeabi_dadd
+    demoranging.o(.text.RangingMasterHandler) refers to hw-lptim.o(.text.TimerCancelTimer) for TimerCancelTimer
+    demoranging.o(.text.RangingMasterHandler) refers to dflti.o(.text) for __aeabi_i2d
+    demoranging.o(.text.RangingMasterHandler) refers to hw-lptim.o(.text.TimerCreateTimer) for TimerCreateTimer
+    demoranging.o(.text.RangingMasterHandler) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
+    demoranging.o(.text.RangingMasterHandler) refers to demoranging.o(.bss.DemoResults) for DemoResults
+    demoranging.o(.text.RangingMasterHandler) refers to sx1280-hal.o(.rodata.Radio) for Radio
+    demoranging.o(.text.RangingMasterHandler) refers to demoranging.o(.bss.demoBuffer) for [Anonymous Symbol]
+    demoranging.o(.text.RangingMasterHandler) refers to demoranging.o(.data..L_MergedGlobals) for [Anonymous Symbol]
+    demoranging.o(.text.RangingMasterHandler) refers to demoranging.o(.text.SendNextPacketEvent) for SendNextPacketEvent
+    demoranging.o(.text.RangingMasterHandler) refers to demoranging.o(.rodata.rangingChannels) for rangingChannels
+    demoranging.o(.text.RangingMasterHandler) refers to demoranging.o(.text.WaitRxTimeout) for WaitRxTimeout
+    demoranging.o(.ARM.exidx.text.RangingMasterHandler) refers to demoranging.o(.text.RangingMasterHandler) for [Anonymous Symbol]
+    demoranging.o(.text.SendNextPacketEvent) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
+    demoranging.o(.text.SendNextPacketEvent) refers to demoranging.o(.bss.DemoResults) for DemoResults
+    demoranging.o(.ARM.exidx.text.SendNextPacketEvent) refers to demoranging.o(.text.SendNextPacketEvent) for [Anonymous Symbol]
+    demoranging.o(.text.RangingSlaveHandler) refers to hw-lptim.o(.text.TimerCancelTimer) for TimerCancelTimer
+    demoranging.o(.text.RangingSlaveHandler) refers to dfixi.o(.text) for __aeabi_d2iz
+    demoranging.o(.text.RangingSlaveHandler) refers to hw-lptim.o(.text.TimerCreateTimer) for TimerCreateTimer
+    demoranging.o(.text.RangingSlaveHandler) refers to printfa.o(i.__0printf) for __2printf
+    demoranging.o(.text.RangingSlaveHandler) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
+    demoranging.o(.text.RangingSlaveHandler) refers to demoranging.o(.bss.DemoResults) for DemoResults
+    demoranging.o(.text.RangingSlaveHandler) refers to sx1280-hal.o(.rodata.Radio) for Radio
+    demoranging.o(.text.RangingSlaveHandler) refers to demoranging.o(.text.SendNextPacketEvent) for SendNextPacketEvent
+    demoranging.o(.text.RangingSlaveHandler) refers to demoranging.o(.bss.demoBuffer) for [Anonymous Symbol]
+    demoranging.o(.text.RangingSlaveHandler) refers to demoranging.o(.data..L_MergedGlobals) for [Anonymous Symbol]
+    demoranging.o(.text.RangingSlaveHandler) refers to demoranging.o(.rodata.rangingChannels) for rangingChannels
+    demoranging.o(.text.RangingSlaveHandler) refers to demoranging.o(.rodata.str1.1) for .L.str.17
+    demoranging.o(.text.RangingSlaveHandler) refers to demoranging.o(.text.WaitRxTimeout) for WaitRxTimeout
+    demoranging.o(.ARM.exidx.text.RangingSlaveHandler) refers to demoranging.o(.text.RangingSlaveHandler) for [Anonymous Symbol]
+    demoranging.o(.text.RangingSnifferHandler) refers to hw-lptim.o(.text.TimerCancelTimer) for TimerCancelTimer
+    demoranging.o(.text.RangingSnifferHandler) refers to dfixi.o(.text) for __aeabi_d2iz
+    demoranging.o(.text.RangingSnifferHandler) refers to hw-lptim.o(.text.TimerCreateTimer) for TimerCreateTimer
+    demoranging.o(.text.RangingSnifferHandler) refers to printfa.o(i.__0printf) for __2printf
+    demoranging.o(.text.RangingSnifferHandler) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
+    demoranging.o(.text.RangingSnifferHandler) refers to demoranging.o(.bss.DemoResults) for DemoResults
+    demoranging.o(.text.RangingSnifferHandler) refers to sx1280-hal.o(.rodata.Radio) for Radio
+    demoranging.o(.text.RangingSnifferHandler) refers to demoranging.o(.text.SendNextPacketEvent) for SendNextPacketEvent
+    demoranging.o(.text.RangingSnifferHandler) refers to demoranging.o(.bss.demoBuffer) for [Anonymous Symbol]
+    demoranging.o(.text.RangingSnifferHandler) refers to demoranging.o(.data..L_MergedGlobals) for [Anonymous Symbol]
+    demoranging.o(.text.RangingSnifferHandler) refers to demoranging.o(.rodata.rangingChannels) for rangingChannels
+    demoranging.o(.text.RangingSnifferHandler) refers to demoranging.o(.rodata.str1.1) for .L.str.17
+    demoranging.o(.text.RangingSnifferHandler) refers to demoranging.o(.text.WaitRxTimeout) for WaitRxTimeout
+    demoranging.o(.ARM.exidx.text.RangingSnifferHandler) refers to demoranging.o(.text.RangingSnifferHandler) for [Anonymous Symbol]
     demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.text.RangingDemoInitializeParameters) for RangingDemoInitializeParameters
     demoranging.o(.text.RangingDemoRun) refers to sx1280.o(.text.SX1280ProcessIrqs) for SX1280ProcessIrqs
-    demoranging.o(.text.RangingDemoRun) refers to printfa.o(i.__0printf) for __2printf
-    demoranging.o(.text.RangingDemoRun) refers to hw-lptim.o(.text.TimerCancelTimer) for TimerCancelTimer
-    demoranging.o(.text.RangingDemoRun) refers to dfixi.o(.text) for __aeabi_d2iz
-    demoranging.o(.text.RangingDemoRun) refers to hw-lptim.o(.text.TimerCreateTimer) for TimerCreateTimer
-    demoranging.o(.text.RangingDemoRun) refers to sx1280.o(.text.SX1280GetRangingCorrectionPerSfBwGain) for SX1280GetRangingCorrectionPerSfBwGain
-    demoranging.o(.text.RangingDemoRun) refers to dadd.o(.text) for __aeabi_dadd
-    demoranging.o(.text.RangingDemoRun) refers to dflti.o(.text) for __aeabi_i2d
+    demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.text.RangingMasterHandler) for RangingMasterHandler
+    demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.text.RangingSlaveHandler) for RangingSlaveHandler
+    demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.text.RangingSnifferHandler) for RangingSnifferHandler
     demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
     demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.bss.DemoResults) for DemoResults
     demoranging.o(.text.RangingDemoRun) refers to sx1280-hal.o(.rodata.Radio) for Radio
-    demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.text.SendNextPacketEvent) for SendNextPacketEvent
-    demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.bss.demoBuffer) for [Anonymous Symbol]
-    demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.data..L_MergedGlobals) for [Anonymous Symbol]
-    demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.rodata.rangingChannels) for rangingChannels
-    demoranging.o(.text.RangingDemoRun) refers to demoranging.o(.text.WaitRxTimeout) for WaitRxTimeout
     demoranging.o(.ARM.exidx.text.RangingDemoRun) refers to demoranging.o(.text.RangingDemoRun) for [Anonymous Symbol]
     demoranging.o(.text.RangingDemoInitializeParameters) refers to sx1280-hal.o(.text.SX1280HalReadRegister) for SX1280HalReadRegister
     demoranging.o(.text.RangingDemoInitializeParameters) refers to sx1280-hal.o(.rodata.Radio) for Radio
@@ -57,9 +93,6 @@ Section Cross References
     demoranging.o(.text.RangingDemoInitializeParameters) refers to demoranging.o(.rodata.RNG_FGRAD_0400) for RNG_FGRAD_0400
     demoranging.o(.text.RangingDemoInitializeParameters) refers to demoranging.o(.rodata.RNG_CALIB_0400) for RNG_CALIB_0400
     demoranging.o(.ARM.exidx.text.RangingDemoInitializeParameters) refers to demoranging.o(.text.RangingDemoInitializeParameters) for [Anonymous Symbol]
-    demoranging.o(.text.SendNextPacketEvent) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
-    demoranging.o(.text.SendNextPacketEvent) refers to demoranging.o(.bss.DemoResults) for DemoResults
-    demoranging.o(.ARM.exidx.text.SendNextPacketEvent) refers to demoranging.o(.text.SendNextPacketEvent) for [Anonymous Symbol]
     demoranging.o(.text.RangingDemoReset) refers to memseta.o(.text) for __aeabi_memclr8
     demoranging.o(.text.RangingDemoReset) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
     demoranging.o(.text.RangingDemoReset) refers to demoranging.o(.bss.DemoResults) for DemoResults
@@ -80,7 +113,6 @@ Section Cross References
     demoranging.o(.text.RangingDemoCheckDistance) refers to demoranging.o(.bss.DemoResults) for DemoResults
     demoranging.o(.text.RangingDemoCheckDistance) refers to demoranging.o(.bss..L_MergedGlobals.22) for [Anonymous Symbol]
     demoranging.o(.ARM.exidx.text.RangingDemoCheckDistance) refers to demoranging.o(.text.RangingDemoCheckDistance) for [Anonymous Symbol]
-    demoranging.o(.ARM.exidx.text.SetAntennaSwitch) refers to demoranging.o(.text.SetAntennaSwitch) for [Anonymous Symbol]
     demoranging.o(.ARM.exidx.text.OnCadDone) refers to demoranging.o(.text.OnCadDone) for [Anonymous Symbol]
     demoranging.o(.data..L_MergedGlobals) refers to demoranging.o(.text.OnTxDone) for OnTxDone
     demoranging.o(.data..L_MergedGlobals) refers to demoranging.o(.text.OnRxDone) for OnRxDone
@@ -2006,16 +2038,17 @@ Removing Unused input sections from the image.
     Removing demoranging.o(.ARM.exidx.text.RangingDemoInitApplication), (8 bytes).
     Removing demoranging.o(.ARM.exidx.text.RangingDemoSetRangingParameters), (8 bytes).
     Removing demoranging.o(.ARM.exidx.text.RangingDemoSetRadioParameters), (8 bytes).
+    Removing demoranging.o(.ARM.exidx.text.RangingMasterHandler), (8 bytes).
+    Removing demoranging.o(.ARM.exidx.text.SendNextPacketEvent), (8 bytes).
+    Removing demoranging.o(.ARM.exidx.text.RangingSlaveHandler), (8 bytes).
+    Removing demoranging.o(.ARM.exidx.text.RangingSnifferHandler), (8 bytes).
     Removing demoranging.o(.ARM.exidx.text.RangingDemoRun), (8 bytes).
     Removing demoranging.o(.ARM.exidx.text.RangingDemoInitializeParameters), (8 bytes).
-    Removing demoranging.o(.ARM.exidx.text.SendNextPacketEvent), (8 bytes).
     Removing demoranging.o(.ARM.exidx.text.RangingDemoReset), (8 bytes).
     Removing demoranging.o(.text.RangingDemoGetConfiguration), (12 bytes).
     Removing demoranging.o(.ARM.exidx.text.RangingDemoGetConfiguration), (8 bytes).
     Removing demoranging.o(.ARM.exidx.text.RangingDemoGetResult), (8 bytes).
     Removing demoranging.o(.ARM.exidx.text.RangingDemoCheckDistance), (8 bytes).
-    Removing demoranging.o(.text.SetAntennaSwitch), (2 bytes).
-    Removing demoranging.o(.ARM.exidx.text.SetAntennaSwitch), (8 bytes).
     Removing demoranging.o(.text.OnCadDone), (2 bytes).
     Removing demoranging.o(.ARM.exidx.text.OnCadDone), (8 bytes).
     Removing demoranging.o(.rodata.Channels), (160 bytes).
@@ -2885,7 +2918,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f1xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
     Removing cdcmple.o(.text), (48 bytes).
 
-889 unused section(s) (total 37583 bytes) removed from the image.
+890 unused section(s) (total 37597 bytes) removed from the image.
 
 ==============================================================================
 
@@ -3154,13 +3187,13 @@ Image Symbol Table
     [Anonymous Symbol]                       0x08001eac   Section        0  demoranging.o(.text.OnTxTimeout)
     [Anonymous Symbol]                       0x08001eb4   Section        0  stm32f1xx_it.o(.text.PendSV_Handler)
     [Anonymous Symbol]                       0x08001eb8   Section        0  demoranging.o(.text.RangingDemoCheckDistance)
-    __arm_cp.16_2                            0x08002004   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
-    __arm_cp.16_3                            0x08002008   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
-    __arm_cp.16_4                            0x0800200c   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
-    __arm_cp.16_5                            0x08002010   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
-    __arm_cp.16_6                            0x08002014   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
-    __arm_cp.16_7                            0x08002018   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
-    __arm_cp.16_8                            0x0800201c   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
+    __arm_cp.19_2                            0x08002004   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
+    __arm_cp.19_3                            0x08002008   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
+    __arm_cp.19_4                            0x0800200c   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
+    __arm_cp.19_5                            0x08002010   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
+    __arm_cp.19_6                            0x08002014   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
+    __arm_cp.19_7                            0x08002018   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
+    __arm_cp.19_8                            0x0800201c   Number         4  demoranging.o(.text.RangingDemoCheckDistance)
     [Anonymous Symbol]                       0x08002020   Section        0  demoranging.o(.text.RangingDemoGetResult)
     [Anonymous Symbol]                       0x08002030   Section        0  demoranging.o(.text.RangingDemoInitApplication)
     __arm_cp.7_0                             0x0800209c   Number         4  demoranging.o(.text.RangingDemoInitApplication)
@@ -3168,245 +3201,268 @@ Image Symbol Table
     __arm_cp.7_4                             0x080020a4   Number         4  demoranging.o(.text.RangingDemoInitApplication)
     __arm_cp.7_5                             0x080020a8   Number         4  demoranging.o(.text.RangingDemoInitApplication)
     [Anonymous Symbol]                       0x080020ac   Section        0  demoranging.o(.text.RangingDemoInitializeParameters)
-    __arm_cp.11_0                            0x080021ac   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
-    __arm_cp.11_2                            0x080021b0   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
-    __arm_cp.11_3                            0x080021b4   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
-    __arm_cp.11_4                            0x080021b8   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
-    __arm_cp.11_5                            0x080021bc   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
-    __arm_cp.11_6                            0x080021c0   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
-    __arm_cp.11_7                            0x080021c4   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
-    [Anonymous Symbol]                       0x080021c8   Section        0  demoranging.o(.text.RangingDemoReset)
-    __arm_cp.13_0                            0x080021f0   Number         4  demoranging.o(.text.RangingDemoReset)
-    __arm_cp.13_1                            0x080021f4   Number         4  demoranging.o(.text.RangingDemoReset)
-    [Anonymous Symbol]                       0x080021f8   Section        0  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_14                           0x08002750   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_0                            0x080027e8   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_1                            0x080027ec   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_2                            0x080027f0   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_3                            0x080027f4   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_4                            0x080027f8   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_5                            0x080027fc   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_6                            0x08002800   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_7                            0x08002804   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_9                            0x08002848   Number         4  demoranging.o(.text.RangingDemoRun)
-    __arm_cp.10_11                           0x0800284c   Number         4  demoranging.o(.text.RangingDemoRun)
-    [Anonymous Symbol]                       0x08002850   Section        0  demoranging.o(.text.RangingDemoSetRadioParameters)
-    [Anonymous Symbol]                       0x0800286c   Section        0  demoranging.o(.text.RangingDemoSetRangingParameters)
-    __arm_cp.8_0                             0x08002880   Number         4  demoranging.o(.text.RangingDemoSetRangingParameters)
-    [Anonymous Symbol]                       0x08002884   Section        0  rangingdisplay.o(.text.RangingDisplayUartOutputDistance)
-    __arm_cp.1_0                             0x080028a4   Number         4  rangingdisplay.o(.text.RangingDisplayUartOutputDistance)
-    [Anonymous Symbol]                       0x080028ac   Section        0  segger_rtt.o(.text.SEGGER_RTT_Init)
-    SPI_EndRxTxTransaction                   0x080028b1   Thumb Code    34  stm32f1xx_hal_spi.o(.text.SPI_EndRxTxTransaction)
-    [Anonymous Symbol]                       0x080028b0   Section        0  stm32f1xx_hal_spi.o(.text.SPI_EndRxTxTransaction)
-    SPI_WaitFlagStateUntilTimeout            0x080028d5   Thumb Code   180  stm32f1xx_hal_spi.o(.text.SPI_WaitFlagStateUntilTimeout)
-    [Anonymous Symbol]                       0x080028d4   Section        0  stm32f1xx_hal_spi.o(.text.SPI_WaitFlagStateUntilTimeout)
-    __arm_cp.54_0                            0x08002984   Number         4  stm32f1xx_hal_spi.o(.text.SPI_WaitFlagStateUntilTimeout)
-    [Anonymous Symbol]                       0x08002988   Section        0  stm32f1xx_it.o(.text.SVC_Handler)
-    [Anonymous Symbol]                       0x0800298a   Section        0  sx1280.o(.text.SX1280Calibrate)
-    [Anonymous Symbol]                       0x080029a2   Section        0  sx1280.o(.text.SX1280ClearIrqStatus)
-    [Anonymous Symbol]                       0x080029b8   Section        0  sx1280.o(.text.SX1280ComputeRangingCorrectionPolynome)
-    __arm_cp.65_0                            0x08002a50   Number         4  sx1280.o(.text.SX1280ComputeRangingCorrectionPolynome)
-    [Anonymous Symbol]                       0x08002a54   Section        0  sx1280.o(.text.SX1280DisableManualGain)
-    [Anonymous Symbol]                       0x08002a82   Section        0  sx1280.o(.text.SX1280EnableManualGain)
-    [Anonymous Symbol]                       0x08002ab0   Section        0  sx1280.o(.text.SX1280GetFirmwareVersion)
-    [Anonymous Symbol]                       0x08002acc   Section        0  sx1280.o(.text.SX1280GetFrequencyError)
-    __arm_cp.62_2                            0x08002b40   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
-    __arm_cp.62_3                            0x08002b44   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
-    __arm_cp.62_4                            0x08002b48   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
-    __arm_cp.62_5                            0x08002b4c   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
-    __arm_cp.62_6                            0x08002b50   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
-    [Anonymous Symbol]                       0x08002b54   Section        0  sx1280.o(.text.SX1280GetIrqStatus)
-    [Anonymous Symbol]                       0x08002b6c   Section        0  sx1280.o(.text.SX1280GetLoRaBandwidth)
-    __arm_cp.55_1                            0x08002b94   Number         4  sx1280.o(.text.SX1280GetLoRaBandwidth)
-    __arm_cp.55_2                            0x08002b98   Number         4  sx1280.o(.text.SX1280GetLoRaBandwidth)
-    __arm_cp.55_3                            0x08002b9c   Number         4  sx1280.o(.text.SX1280GetLoRaBandwidth)
-    __arm_cp.55_4                            0x08002ba0   Number         4  sx1280.o(.text.SX1280GetLoRaBandwidth)
-    [Anonymous Symbol]                       0x08002ba4   Section        0  sx1280.o(.text.SX1280GetOpMode)
-    [Anonymous Symbol]                       0x08002bac   Section        0  sx1280.o(.text.SX1280GetPacketStatus)
-    [Anonymous Symbol]                       0x08002d9c   Section        0  sx1280.o(.text.SX1280GetPacketType)
-    __arm_cp.11_0                            0x08002da4   Number         4  sx1280.o(.text.SX1280GetPacketType)
-    [Anonymous Symbol]                       0x08002da8   Section        0  sx1280.o(.text.SX1280GetPayload)
-    [Anonymous Symbol]                       0x08002dd4   Section        0  sx1280.o(.text.SX1280GetRangingCorrectionPerSfBwGain)
-    __arm_cp.64_0                            0x08002e18   Number         4  sx1280.o(.text.SX1280GetRangingCorrectionPerSfBwGain)
-    [Anonymous Symbol]                       0x08002e1c   Section        0  sx1280.o(.text.SX1280GetRangingPowerDeltaThresholdIndicator)
-    __arm_cp.56_0                            0x08002e58   Number         4  sx1280.o(.text.SX1280GetRangingPowerDeltaThresholdIndicator)
-    [Anonymous Symbol]                       0x08002e5c   Section        0  sx1280.o(.text.SX1280GetRangingResult)
-    __arm_cp.54_0                            0x08002f24   Number         4  sx1280.o(.text.SX1280GetRangingResult)
-    __arm_cp.54_1                            0x08002f28   Number         4  sx1280.o(.text.SX1280GetRangingResult)
-    __arm_cp.54_2                            0x08002f2c   Number         4  sx1280.o(.text.SX1280GetRangingResult)
-    __arm_cp.54_3                            0x08002f30   Number         4  sx1280.o(.text.SX1280GetRangingResult)
-    __arm_cp.54_4                            0x08002f34   Number         4  sx1280.o(.text.SX1280GetRangingResult)
-    [Anonymous Symbol]                       0x08002f38   Section        0  sx1280.o(.text.SX1280GetRssiInst)
-    [Anonymous Symbol]                       0x08002f5c   Section        0  sx1280.o(.text.SX1280GetRxBufferStatus)
-    __arm_cp.25_0                            0x08002fa8   Number         4  sx1280.o(.text.SX1280GetRxBufferStatus)
-    [Anonymous Symbol]                       0x08002fac   Section        0  sx1280.o(.text.SX1280GetStatus)
-    [Anonymous Symbol]                       0x08002fc8   Section        0  sx1280-hal.o(.text.SX1280HalGetDioStatus)
-    [Anonymous Symbol]                       0x08002fec   Section        0  sx1280-hal.o(.text.SX1280HalInit)
-    [Anonymous Symbol]                       0x08003000   Section        0  sx1280-hal.o(.text.SX1280HalIoIrqInit)
-    [Anonymous Symbol]                       0x08003010   Section        0  sx1280-hal.o(.text.SX1280HalReadBuffer)
-    [Anonymous Symbol]                       0x08003070   Section        0  sx1280-hal.o(.text.SX1280HalReadCommand)
-    [Anonymous Symbol]                       0x080030cc   Section        0  sx1280-hal.o(.text.SX1280HalReadRegister)
-    [Anonymous Symbol]                       0x080030e0   Section        0  sx1280-hal.o(.text.SX1280HalReadRegisters)
-    __arm_cp.5_2                             0x08003144   Number         4  sx1280-hal.o(.text.SX1280HalReadRegisters)
-    [Anonymous Symbol]                       0x08003148   Section        0  sx1280-hal.o(.text.SX1280HalReset)
-    __arm_cp.0_0                             0x08003174   Number         4  sx1280-hal.o(.text.SX1280HalReset)
-    __arm_cp.0_1                             0x08003178   Number         4  sx1280-hal.o(.text.SX1280HalReset)
-    [Anonymous Symbol]                       0x0800317c   Section        0  sx1280-hal.o(.text.SX1280HalWaitOnBusy)
-    [Anonymous Symbol]                       0x08003190   Section        0  sx1280-hal.o(.text.SX1280HalWriteBuffer)
-    [Anonymous Symbol]                       0x080031d0   Section        0  sx1280-hal.o(.text.SX1280HalWriteCommand)
-    [Anonymous Symbol]                       0x08003224   Section        0  sx1280-hal.o(.text.SX1280HalWriteRegister)
-    [Anonymous Symbol]                       0x08003238   Section        0  sx1280-hal.o(.text.SX1280HalWriteRegisters)
-    __arm_cp.3_0                             0x08003280   Number         4  sx1280-hal.o(.text.SX1280HalWriteRegisters)
-    __arm_cp.3_1                             0x08003284   Number         4  sx1280-hal.o(.text.SX1280HalWriteRegisters)
-    [Anonymous Symbol]                       0x08003288   Section        0  sx1280.o(.text.SX1280Init)
-    __arm_cp.1_1                             0x08003294   Number         4  sx1280.o(.text.SX1280Init)
-    [Anonymous Symbol]                       0x08003298   Section        0  sx1280.o(.text.SX1280OnDioIrq)
-    __arm_cp.0_0                             0x080032ac   Number         4  sx1280.o(.text.SX1280OnDioIrq)
-    [Anonymous Symbol]                       0x080032b0   Section        0  sx1280.o(.text.SX1280ProcessIrqs)
-    [Anonymous Symbol]                       0x080034e8   Section        0  sx1280.o(.text.SX1280RangingClearFilterResult)
-    [Anonymous Symbol]                       0x08003510   Section        0  sx1280.o(.text.SX1280RangingSetFilterNumSamples)
-    [Anonymous Symbol]                       0x08003522   Section        0  sx1280.o(.text.SX1280SendPayload)
-    [Anonymous Symbol]                       0x08003534   Section        0  sx1280.o(.text.SX1280SetAutoFS)
-    [Anonymous Symbol]                       0x08003548   Section        0  sx1280.o(.text.SX1280SetAutoTx)
-    [Anonymous Symbol]                       0x08003564   Section        0  sx1280.o(.text.SX1280SetBleAccessAddress)
-    __arm_cp.43_0                            0x08003594   Number         4  sx1280.o(.text.SX1280SetBleAccessAddress)
-    [Anonymous Symbol]                       0x08003598   Section        0  sx1280.o(.text.SX1280SetBleAdvertizerAccessAddress)
-    __arm_cp.44_0                            0x080035a0   Number         4  sx1280.o(.text.SX1280SetBleAdvertizerAccessAddress)
-    [Anonymous Symbol]                       0x080035a4   Section        0  sx1280.o(.text.SX1280SetBufferBaseAddresses)
-    [Anonymous Symbol]                       0x080035bc   Section        0  sx1280.o(.text.SX1280SetCad)
-    [Anonymous Symbol]                       0x080035d0   Section        0  sx1280.o(.text.SX1280SetCadParams)
-    [Anonymous Symbol]                       0x080035ec   Section        0  sx1280.o(.text.SX1280SetCrcPolynomial)
-    [Anonymous Symbol]                       0x08003610   Section        0  sx1280.o(.text.SX1280SetCrcSeed)
-    [Anonymous Symbol]                       0x08003634   Section        0  sx1280.o(.text.SX1280SetDeviceRangingAddress)
-    __arm_cp.52_0                            0x08003650   Number         4  sx1280.o(.text.SX1280SetDeviceRangingAddress)
-    [Anonymous Symbol]                       0x08003654   Section        0  sx1280.o(.text.SX1280SetDioIrqParams)
-    [Anonymous Symbol]                       0x0800368c   Section        0  sx1280.o(.text.SX1280SetFs)
-    [Anonymous Symbol]                       0x080036a0   Section        0  sx1280.o(.text.SX1280SetInterruptMode)
-    [Anonymous Symbol]                       0x080036a8   Section        0  sx1280.o(.text.SX1280SetLNAGainSetting)
-    [Anonymous Symbol]                       0x080036da   Section        0  sx1280.o(.text.SX1280SetLongPreamble)
-    [Anonymous Symbol]                       0x080036ee   Section        0  sx1280.o(.text.SX1280SetManualGainValue)
-    [Anonymous Symbol]                       0x08003710   Section        0  sx1280.o(.text.SX1280SetModulationParams)
-    [Anonymous Symbol]                       0x08003788   Section        0  sx1280.o(.text.SX1280SetPacketParams)
-    [Anonymous Symbol]                       0x0800380c   Section        0  sx1280.o(.text.SX1280SetPacketType)
-    [Anonymous Symbol]                       0x08003824   Section        0  sx1280.o(.text.SX1280SetPayload)
-    [Anonymous Symbol]                       0x08003830   Section        0  sx1280.o(.text.SX1280SetPollingMode)
-    [Anonymous Symbol]                       0x08003838   Section        0  sx1280.o(.text.SX1280SetRangingCalibration)
-    [Anonymous Symbol]                       0x08003860   Section        0  sx1280.o(.text.SX1280SetRangingIdLength)
-    [Anonymous Symbol]                       0x0800388c   Section        0  sx1280.o(.text.SX1280SetRangingRequestAddress)
-    [Anonymous Symbol]                       0x080038a8   Section        0  sx1280.o(.text.SX1280SetRangingRole)
-    [Anonymous Symbol]                       0x080038bc   Section        0  sx1280.o(.text.SX1280SetRegistersDefault)
-    [Anonymous Symbol]                       0x080038c4   Section        0  sx1280.o(.text.SX1280SetRegulatorMode)
-    [Anonymous Symbol]                       0x080038d8   Section        0  sx1280.o(.text.SX1280SetRfFrequency)
-    __arm_cp.19_0                            0x08003908   Number         4  sx1280.o(.text.SX1280SetRfFrequency)
-    [Anonymous Symbol]                       0x0800390c   Section        0  sx1280.o(.text.SX1280SetRx)
-    [Anonymous Symbol]                       0x08003948   Section        0  sx1280.o(.text.SX1280SetRxDutyCycle)
-    __arm_cp.14_0                            0x08003978   Number         4  sx1280.o(.text.SX1280SetRxDutyCycle)
-    [Anonymous Symbol]                       0x0800397c   Section        0  sx1280.o(.text.SX1280SetSaveContext)
-    [Anonymous Symbol]                       0x08003988   Section        0  sx1280.o(.text.SX1280SetSleep)
-    __arm_cp.6_0                             0x080039bc   Number         4  sx1280.o(.text.SX1280SetSleep)
-    [Anonymous Symbol]                       0x080039c0   Section        0  sx1280.o(.text.SX1280SetStandby)
-    __arm_cp.7_0                             0x080039e4   Number         4  sx1280.o(.text.SX1280SetStandby)
-    [Anonymous Symbol]                       0x080039e8   Section        0  sx1280.o(.text.SX1280SetSyncWord)
-    __arm_cp.40_0                            0x08003a50   Number         4  sx1280.o(.text.SX1280SetSyncWord)
-    [Anonymous Symbol]                       0x08003a54   Section        0  sx1280.o(.text.SX1280SetSyncWordErrorTolerance)
-    [Anonymous Symbol]                       0x08003a78   Section        0  sx1280.o(.text.SX1280SetTx)
-    __arm_cp.9_0                             0x08003ab4   Number         4  sx1280.o(.text.SX1280SetTx)
-    [Anonymous Symbol]                       0x08003ab8   Section        0  sx1280.o(.text.SX1280SetTxContinuousPreamble)
-    [Anonymous Symbol]                       0x08003ac2   Section        0  sx1280.o(.text.SX1280SetTxContinuousWave)
-    [Anonymous Symbol]                       0x08003acc   Section        0  sx1280.o(.text.SX1280SetTxParams)
-    [Anonymous Symbol]                       0x08003ae8   Section        0  sx1280.o(.text.SX1280SetWhiteningSeed)
-    __arm_cp.46_0                            0x08003b08   Number         4  sx1280.o(.text.SX1280SetWhiteningSeed)
-    [Anonymous Symbol]                       0x08003b0c   Section        0  sx1280.o(.text.SX1280StopAutoTx)
-    [Anonymous Symbol]                       0x08003b24   Section        0  demoranging.o(.text.SendNextPacketEvent)
-    __arm_cp.12_1                            0x08003b3c   Number         4  demoranging.o(.text.SendNextPacketEvent)
-    [Anonymous Symbol]                       0x08003b40   Section        0  hw-spi.o(.text.SpiIn)
-    [Anonymous Symbol]                       0x08003b50   Section        0  hw-spi.o(.text.SpiInOut)
-    [Anonymous Symbol]                       0x08003b68   Section        0  hw-spi.o(.text.SpiInit)
-    __arm_cp.0_0                             0x08003ba4   Number         4  hw-spi.o(.text.SpiInit)
-    __arm_cp.0_1                             0x08003ba8   Number         4  hw-spi.o(.text.SpiInit)
-    [Anonymous Symbol]                       0x08003bac   Section        0  stm32f1xx_it.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x08003bba   Section        0  main.o(.text.SystemClock_Config)
-    [Anonymous Symbol]                       0x08003c20   Section        0  system_stm32f1xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08003c24   Section        0  hw-lptim.o(.text.TimerCancelTimer)
-    [Anonymous Symbol]                       0x08003c34   Section        0  hw-lptim.o(.text.TimerCreateTimer)
-    [Anonymous Symbol]                       0x08003c50   Section        0  hw-lptim.o(.text.TimerSysTick_IRQHandler)
-    __arm_cp.2_0                             0x08003c7c   Number         4  hw-lptim.o(.text.TimerSysTick_IRQHandler)
-    UART_DMAAbortOnError                     0x08003c81   Thumb Code    12  stm32f1xx_hal_uart.o(.text.UART_DMAAbortOnError)
-    [Anonymous Symbol]                       0x08003c80   Section        0  stm32f1xx_hal_uart.o(.text.UART_DMAAbortOnError)
-    UART_EndRxTransfer                       0x08003c8d   Thumb Code    78  stm32f1xx_hal_uart.o(.text.UART_EndRxTransfer)
-    [Anonymous Symbol]                       0x08003c8c   Section        0  stm32f1xx_hal_uart.o(.text.UART_EndRxTransfer)
-    UART_Receive_IT                          0x08003cdb   Thumb Code   196  stm32f1xx_hal_uart.o(.text.UART_Receive_IT)
-    [Anonymous Symbol]                       0x08003cda   Section        0  stm32f1xx_hal_uart.o(.text.UART_Receive_IT)
-    UART_SetConfig                           0x08003da1   Thumb Code   128  stm32f1xx_hal_uart.o(.text.UART_SetConfig)
-    [Anonymous Symbol]                       0x08003da0   Section        0  stm32f1xx_hal_uart.o(.text.UART_SetConfig)
-    __arm_cp.2_0                             0x08003e1c   Number         4  stm32f1xx_hal_uart.o(.text.UART_SetConfig)
-    UART_WaitOnFlagUntilTimeout              0x08003e21   Thumb Code   110  stm32f1xx_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout)
-    [Anonymous Symbol]                       0x08003e20   Section        0  stm32f1xx_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout)
-    [Anonymous Symbol]                       0x08003e90   Section        0  stm32f1xx_it.o(.text.USART3_IRQHandler)
-    [Anonymous Symbol]                       0x08003e98   Section        0  stm32f1xx_it.o(.text.UsageFault_Handler)
-    [Anonymous Symbol]                       0x08003e9c   Section        0  demoranging.o(.text.WaitRxTimeout)
-    __arm_cp.6_0                             0x08003ea4   Number         4  demoranging.o(.text.WaitRxTimeout)
-    _DoInit                                  0x08003ea9   Thumb Code    96  segger_rtt.o(.text._DoInit)
-    [Anonymous Symbol]                       0x08003ea8   Section        0  segger_rtt.o(.text._DoInit)
-    __arm_cp.1_0                             0x08003eec   Number         4  segger_rtt.o(.text._DoInit)
-    __arm_cp.1_1                             0x08003ef0   Number         4  segger_rtt.o(.text._DoInit)
-    __arm_cp.1_2                             0x08003ef4   Number         4  segger_rtt.o(.text._DoInit)
-    __arm_cp.1_3                             0x08003ef8   Number         4  segger_rtt.o(.text._DoInit)
-    __arm_cp.1_4                             0x08003efc   Number         4  segger_rtt.o(.text._DoInit)
-    __arm_cp.1_5                             0x08003f00   Number         4  segger_rtt.o(.text._DoInit)
-    __arm_cp.1_6                             0x08003f04   Number         4  segger_rtt.o(.text._DoInit)
-    __NVIC_SetPriority                       0x08003f09   Thumb Code    36  stm32f1xx_hal_cortex.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08003f08   Section        0  stm32f1xx_hal_cortex.o(.text.__NVIC_SetPriority)
-    __arm_cp.2_0                             0x08003f24   Number         4  stm32f1xx_hal_cortex.o(.text.__NVIC_SetPriority)
-    __arm_cp.2_1                             0x08003f28   Number         4  stm32f1xx_hal_cortex.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08003f2c   Section        0  syscalls.o(.text.fputc)
-    [Anonymous Symbol]                       0x08003f44   Section        0  main.o(.text.main)
-    __arm_cp.0_0                             0x08004100   Number         4  main.o(.text.main)
-    __arm_cp.0_1                             0x08004104   Number         4  main.o(.text.main)
-    __arm_cp.0_2                             0x08004108   Number         4  main.o(.text.main)
-    __arm_cp.0_3                             0x0800410c   Number         4  main.o(.text.main)
-    __arm_cp.0_4                             0x08004110   Number         4  main.o(.text.main)
-    __arm_cp.0_5                             0x08004114   Number         4  main.o(.text.main)
-    __arm_cp.0_6                             0x08004118   Number         4  main.o(.text.main)
-    __arm_cp.0_7                             0x0800411c   Number         4  main.o(.text.main)
-    [Anonymous Symbol]                       0x08004120   Section        0  main_ranging.o(.text.main_ranging)
-    __arm_cp.0_0                             0x080041e0   Number         4  main_ranging.o(.text.main_ranging)
-    __arm_cp.0_1                             0x080041e4   Number         4  main_ranging.o(.text.main_ranging)
-    __arm_cp.0_2                             0x080041e8   Number         4  main_ranging.o(.text.main_ranging)
-    __arm_cp.0_3                             0x080041ec   Number         4  main_ranging.o(.text.main_ranging)
-    i.__0printf                              0x08004240   Section        0  printfa.o(i.__0printf)
-    i.__ARM_fpclassify                       0x08004260   Section        0  fpclassify.o(i.__ARM_fpclassify)
-    i.__kernel_poly                          0x08004288   Section        0  poly.o(i.__kernel_poly)
-    i.__mathlib_dbl_divzero                  0x08004334   Section        0  dunder.o(i.__mathlib_dbl_divzero)
-    i.__mathlib_dbl_infnan2                  0x08004344   Section        0  dunder.o(i.__mathlib_dbl_infnan2)
-    i.__mathlib_dbl_invalid                  0x08004348   Section        0  dunder.o(i.__mathlib_dbl_invalid)
-    i.__mathlib_dbl_overflow                 0x08004354   Section        0  dunder.o(i.__mathlib_dbl_overflow)
-    i.__mathlib_dbl_underflow                0x08004364   Section        0  dunder.o(i.__mathlib_dbl_underflow)
-    i.__scatterload_copy                     0x08004374   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08004382   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08004384   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.__set_errno                            0x08004394   Section        0  errno.o(i.__set_errno)
-    _fp_digits                               0x080043a1   Thumb Code   366  printfa.o(i._fp_digits)
-    i._fp_digits                             0x080043a0   Section        0  printfa.o(i._fp_digits)
-    _printf_core                             0x08004525   Thumb Code  1744  printfa.o(i._printf_core)
-    i._printf_core                           0x08004524   Section        0  printfa.o(i._printf_core)
-    _printf_post_padding                     0x08004c01   Thumb Code    36  printfa.o(i._printf_post_padding)
-    i._printf_post_padding                   0x08004c00   Section        0  printfa.o(i._printf_post_padding)
-    _printf_pre_padding                      0x08004c25   Thumb Code    46  printfa.o(i._printf_pre_padding)
-    i._printf_pre_padding                    0x08004c24   Section        0  printfa.o(i._printf_pre_padding)
-    i.pow                                    0x08004c54   Section        0  pow.o(i.pow)
-    i.putchar                                0x0800562c   Section        0  putchar.o(i.putchar)
-    i.puts                                   0x08005638   Section        0  puts.o(i.puts)
-    i.sqrt                                   0x0800565c   Section        0  sqrt.o(i.sqrt)
-    bp                                       0x080056a8   Data          16  pow.o(.constdata)
-    .constdata                               0x080056a8   Section      136  pow.o(.constdata)
-    dp_h                                     0x080056b8   Data          16  pow.o(.constdata)
-    dp_l                                     0x080056c8   Data          16  pow.o(.constdata)
-    L                                        0x080056d8   Data          48  pow.o(.constdata)
-    P                                        0x08005708   Data          40  pow.o(.constdata)
-    .constdata                               0x08005730   Section        8  qnan.o(.constdata)
-    .L.str                                   0x0800b9f8   Data           9  segger_rtt.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0800b9f8   Section        0  segger_rtt.o(.rodata.str1.1)
+    __arm_cp.15_2                            0x080021ac   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
+    __arm_cp.15_3                            0x080021b0   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
+    __arm_cp.15_4                            0x080021b4   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
+    __arm_cp.15_5                            0x080021b8   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
+    __arm_cp.15_6                            0x080021bc   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
+    __arm_cp.15_7                            0x080021c0   Number         4  demoranging.o(.text.RangingDemoInitializeParameters)
+    [Anonymous Symbol]                       0x080021c4   Section        0  demoranging.o(.text.RangingDemoReset)
+    __arm_cp.16_0                            0x080021e8   Number         4  demoranging.o(.text.RangingDemoReset)
+    [Anonymous Symbol]                       0x080021ec   Section        0  demoranging.o(.text.RangingDemoRun)
+    __arm_cp.14_0                            0x08002268   Number         4  demoranging.o(.text.RangingDemoRun)
+    __arm_cp.14_1                            0x0800226c   Number         4  demoranging.o(.text.RangingDemoRun)
+    __arm_cp.14_2                            0x08002270   Number         4  demoranging.o(.text.RangingDemoRun)
+    [Anonymous Symbol]                       0x08002274   Section        0  demoranging.o(.text.RangingDemoSetRadioParameters)
+    __arm_cp.9_0                             0x08002290   Number         4  demoranging.o(.text.RangingDemoSetRadioParameters)
+    [Anonymous Symbol]                       0x08002294   Section        0  demoranging.o(.text.RangingDemoSetRangingParameters)
+    __arm_cp.8_0                             0x080022a8   Number         4  demoranging.o(.text.RangingDemoSetRangingParameters)
+    [Anonymous Symbol]                       0x080022ac   Section        0  rangingdisplay.o(.text.RangingDisplayUartOutputDistance)
+    __arm_cp.1_0                             0x080022cc   Number         4  rangingdisplay.o(.text.RangingDisplayUartOutputDistance)
+    [Anonymous Symbol]                       0x080022d4   Section        0  demoranging.o(.text.RangingMasterHandler)
+    __arm_cp.10_0                            0x08002594   Number         4  demoranging.o(.text.RangingMasterHandler)
+    __arm_cp.10_1                            0x08002598   Number         4  demoranging.o(.text.RangingMasterHandler)
+    __arm_cp.10_2                            0x0800259c   Number         4  demoranging.o(.text.RangingMasterHandler)
+    __arm_cp.10_3                            0x080025a0   Number         4  demoranging.o(.text.RangingMasterHandler)
+    __arm_cp.10_4                            0x080025a4   Number         4  demoranging.o(.text.RangingMasterHandler)
+    __arm_cp.10_8                            0x080025a8   Number         4  demoranging.o(.text.RangingMasterHandler)
+    [Anonymous Symbol]                       0x080025ac   Section        0  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_0                            0x0800284c   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_1                            0x08002850   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_2                            0x08002854   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_3                            0x08002858   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_4                            0x0800285c   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_5                            0x08002860   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_6                            0x08002864   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_7                            0x08002868   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_9                            0x0800286c   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    __arm_cp.12_10                           0x08002870   Number         4  demoranging.o(.text.RangingSlaveHandler)
+    [Anonymous Symbol]                       0x08002874   Section        0  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_0                            0x08002b14   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_1                            0x08002b18   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_2                            0x08002b1c   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_3                            0x08002b20   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_4                            0x08002b24   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_5                            0x08002b28   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_6                            0x08002b2c   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_7                            0x08002b30   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_8                            0x08002b34   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_9                            0x08002b38   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    __arm_cp.13_10                           0x08002b3c   Number         4  demoranging.o(.text.RangingSnifferHandler)
+    [Anonymous Symbol]                       0x08002b40   Section        0  segger_rtt.o(.text.SEGGER_RTT_Init)
+    SPI_EndRxTxTransaction                   0x08002b45   Thumb Code    34  stm32f1xx_hal_spi.o(.text.SPI_EndRxTxTransaction)
+    [Anonymous Symbol]                       0x08002b44   Section        0  stm32f1xx_hal_spi.o(.text.SPI_EndRxTxTransaction)
+    SPI_WaitFlagStateUntilTimeout            0x08002b69   Thumb Code   180  stm32f1xx_hal_spi.o(.text.SPI_WaitFlagStateUntilTimeout)
+    [Anonymous Symbol]                       0x08002b68   Section        0  stm32f1xx_hal_spi.o(.text.SPI_WaitFlagStateUntilTimeout)
+    __arm_cp.54_0                            0x08002c18   Number         4  stm32f1xx_hal_spi.o(.text.SPI_WaitFlagStateUntilTimeout)
+    [Anonymous Symbol]                       0x08002c1c   Section        0  stm32f1xx_it.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x08002c1e   Section        0  sx1280.o(.text.SX1280Calibrate)
+    [Anonymous Symbol]                       0x08002c36   Section        0  sx1280.o(.text.SX1280ClearIrqStatus)
+    [Anonymous Symbol]                       0x08002c4c   Section        0  sx1280.o(.text.SX1280ComputeRangingCorrectionPolynome)
+    __arm_cp.65_0                            0x08002ce4   Number         4  sx1280.o(.text.SX1280ComputeRangingCorrectionPolynome)
+    [Anonymous Symbol]                       0x08002ce8   Section        0  sx1280.o(.text.SX1280DisableManualGain)
+    [Anonymous Symbol]                       0x08002d16   Section        0  sx1280.o(.text.SX1280EnableManualGain)
+    [Anonymous Symbol]                       0x08002d44   Section        0  sx1280.o(.text.SX1280GetFirmwareVersion)
+    [Anonymous Symbol]                       0x08002d60   Section        0  sx1280.o(.text.SX1280GetFrequencyError)
+    __arm_cp.62_2                            0x08002dd4   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
+    __arm_cp.62_3                            0x08002dd8   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
+    __arm_cp.62_4                            0x08002ddc   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
+    __arm_cp.62_5                            0x08002de0   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
+    __arm_cp.62_6                            0x08002de4   Number         4  sx1280.o(.text.SX1280GetFrequencyError)
+    [Anonymous Symbol]                       0x08002de8   Section        0  sx1280.o(.text.SX1280GetIrqStatus)
+    [Anonymous Symbol]                       0x08002e00   Section        0  sx1280.o(.text.SX1280GetLoRaBandwidth)
+    __arm_cp.55_1                            0x08002e28   Number         4  sx1280.o(.text.SX1280GetLoRaBandwidth)
+    __arm_cp.55_2                            0x08002e2c   Number         4  sx1280.o(.text.SX1280GetLoRaBandwidth)
+    __arm_cp.55_3                            0x08002e30   Number         4  sx1280.o(.text.SX1280GetLoRaBandwidth)
+    __arm_cp.55_4                            0x08002e34   Number         4  sx1280.o(.text.SX1280GetLoRaBandwidth)
+    [Anonymous Symbol]                       0x08002e38   Section        0  sx1280.o(.text.SX1280GetOpMode)
+    [Anonymous Symbol]                       0x08002e40   Section        0  sx1280.o(.text.SX1280GetPacketStatus)
+    [Anonymous Symbol]                       0x08003030   Section        0  sx1280.o(.text.SX1280GetPacketType)
+    __arm_cp.11_0                            0x08003038   Number         4  sx1280.o(.text.SX1280GetPacketType)
+    [Anonymous Symbol]                       0x0800303c   Section        0  sx1280.o(.text.SX1280GetPayload)
+    [Anonymous Symbol]                       0x08003068   Section        0  sx1280.o(.text.SX1280GetRangingCorrectionPerSfBwGain)
+    __arm_cp.64_0                            0x080030ac   Number         4  sx1280.o(.text.SX1280GetRangingCorrectionPerSfBwGain)
+    [Anonymous Symbol]                       0x080030b0   Section        0  sx1280.o(.text.SX1280GetRangingPowerDeltaThresholdIndicator)
+    __arm_cp.56_0                            0x080030ec   Number         4  sx1280.o(.text.SX1280GetRangingPowerDeltaThresholdIndicator)
+    [Anonymous Symbol]                       0x080030f0   Section        0  sx1280.o(.text.SX1280GetRangingResult)
+    __arm_cp.54_0                            0x080031b8   Number         4  sx1280.o(.text.SX1280GetRangingResult)
+    __arm_cp.54_1                            0x080031bc   Number         4  sx1280.o(.text.SX1280GetRangingResult)
+    __arm_cp.54_2                            0x080031c0   Number         4  sx1280.o(.text.SX1280GetRangingResult)
+    __arm_cp.54_3                            0x080031c4   Number         4  sx1280.o(.text.SX1280GetRangingResult)
+    __arm_cp.54_4                            0x080031c8   Number         4  sx1280.o(.text.SX1280GetRangingResult)
+    [Anonymous Symbol]                       0x080031cc   Section        0  sx1280.o(.text.SX1280GetRssiInst)
+    [Anonymous Symbol]                       0x080031f0   Section        0  sx1280.o(.text.SX1280GetRxBufferStatus)
+    __arm_cp.25_0                            0x0800323c   Number         4  sx1280.o(.text.SX1280GetRxBufferStatus)
+    [Anonymous Symbol]                       0x08003240   Section        0  sx1280.o(.text.SX1280GetStatus)
+    [Anonymous Symbol]                       0x0800325c   Section        0  sx1280-hal.o(.text.SX1280HalGetDioStatus)
+    [Anonymous Symbol]                       0x08003280   Section        0  sx1280-hal.o(.text.SX1280HalInit)
+    [Anonymous Symbol]                       0x08003294   Section        0  sx1280-hal.o(.text.SX1280HalIoIrqInit)
+    [Anonymous Symbol]                       0x080032a4   Section        0  sx1280-hal.o(.text.SX1280HalReadBuffer)
+    [Anonymous Symbol]                       0x08003304   Section        0  sx1280-hal.o(.text.SX1280HalReadCommand)
+    [Anonymous Symbol]                       0x08003360   Section        0  sx1280-hal.o(.text.SX1280HalReadRegister)
+    [Anonymous Symbol]                       0x08003374   Section        0  sx1280-hal.o(.text.SX1280HalReadRegisters)
+    __arm_cp.5_2                             0x080033d8   Number         4  sx1280-hal.o(.text.SX1280HalReadRegisters)
+    [Anonymous Symbol]                       0x080033dc   Section        0  sx1280-hal.o(.text.SX1280HalReset)
+    __arm_cp.0_0                             0x08003408   Number         4  sx1280-hal.o(.text.SX1280HalReset)
+    __arm_cp.0_1                             0x0800340c   Number         4  sx1280-hal.o(.text.SX1280HalReset)
+    [Anonymous Symbol]                       0x08003410   Section        0  sx1280-hal.o(.text.SX1280HalWaitOnBusy)
+    [Anonymous Symbol]                       0x08003424   Section        0  sx1280-hal.o(.text.SX1280HalWriteBuffer)
+    [Anonymous Symbol]                       0x08003464   Section        0  sx1280-hal.o(.text.SX1280HalWriteCommand)
+    [Anonymous Symbol]                       0x080034b8   Section        0  sx1280-hal.o(.text.SX1280HalWriteRegister)
+    [Anonymous Symbol]                       0x080034cc   Section        0  sx1280-hal.o(.text.SX1280HalWriteRegisters)
+    __arm_cp.3_0                             0x08003514   Number         4  sx1280-hal.o(.text.SX1280HalWriteRegisters)
+    __arm_cp.3_1                             0x08003518   Number         4  sx1280-hal.o(.text.SX1280HalWriteRegisters)
+    [Anonymous Symbol]                       0x0800351c   Section        0  sx1280.o(.text.SX1280Init)
+    __arm_cp.1_1                             0x08003528   Number         4  sx1280.o(.text.SX1280Init)
+    [Anonymous Symbol]                       0x0800352c   Section        0  sx1280.o(.text.SX1280OnDioIrq)
+    __arm_cp.0_0                             0x08003540   Number         4  sx1280.o(.text.SX1280OnDioIrq)
+    [Anonymous Symbol]                       0x08003544   Section        0  sx1280.o(.text.SX1280ProcessIrqs)
+    [Anonymous Symbol]                       0x0800377c   Section        0  sx1280.o(.text.SX1280RangingClearFilterResult)
+    [Anonymous Symbol]                       0x080037a4   Section        0  sx1280.o(.text.SX1280RangingSetFilterNumSamples)
+    [Anonymous Symbol]                       0x080037b6   Section        0  sx1280.o(.text.SX1280SendPayload)
+    [Anonymous Symbol]                       0x080037c8   Section        0  sx1280.o(.text.SX1280SetAutoFS)
+    [Anonymous Symbol]                       0x080037dc   Section        0  sx1280.o(.text.SX1280SetAutoTx)
+    [Anonymous Symbol]                       0x080037f8   Section        0  sx1280.o(.text.SX1280SetBleAccessAddress)
+    __arm_cp.43_0                            0x08003828   Number         4  sx1280.o(.text.SX1280SetBleAccessAddress)
+    [Anonymous Symbol]                       0x0800382c   Section        0  sx1280.o(.text.SX1280SetBleAdvertizerAccessAddress)
+    __arm_cp.44_0                            0x08003834   Number         4  sx1280.o(.text.SX1280SetBleAdvertizerAccessAddress)
+    [Anonymous Symbol]                       0x08003838   Section        0  sx1280.o(.text.SX1280SetBufferBaseAddresses)
+    [Anonymous Symbol]                       0x08003850   Section        0  sx1280.o(.text.SX1280SetCad)
+    [Anonymous Symbol]                       0x08003864   Section        0  sx1280.o(.text.SX1280SetCadParams)
+    [Anonymous Symbol]                       0x08003880   Section        0  sx1280.o(.text.SX1280SetCrcPolynomial)
+    [Anonymous Symbol]                       0x080038a4   Section        0  sx1280.o(.text.SX1280SetCrcSeed)
+    [Anonymous Symbol]                       0x080038c8   Section        0  sx1280.o(.text.SX1280SetDeviceRangingAddress)
+    __arm_cp.52_0                            0x080038e4   Number         4  sx1280.o(.text.SX1280SetDeviceRangingAddress)
+    [Anonymous Symbol]                       0x080038e8   Section        0  sx1280.o(.text.SX1280SetDioIrqParams)
+    [Anonymous Symbol]                       0x08003920   Section        0  sx1280.o(.text.SX1280SetFs)
+    [Anonymous Symbol]                       0x08003934   Section        0  sx1280.o(.text.SX1280SetInterruptMode)
+    [Anonymous Symbol]                       0x0800393c   Section        0  sx1280.o(.text.SX1280SetLNAGainSetting)
+    [Anonymous Symbol]                       0x0800396e   Section        0  sx1280.o(.text.SX1280SetLongPreamble)
+    [Anonymous Symbol]                       0x08003982   Section        0  sx1280.o(.text.SX1280SetManualGainValue)
+    [Anonymous Symbol]                       0x080039a4   Section        0  sx1280.o(.text.SX1280SetModulationParams)
+    [Anonymous Symbol]                       0x08003a1c   Section        0  sx1280.o(.text.SX1280SetPacketParams)
+    [Anonymous Symbol]                       0x08003aa0   Section        0  sx1280.o(.text.SX1280SetPacketType)
+    [Anonymous Symbol]                       0x08003ab8   Section        0  sx1280.o(.text.SX1280SetPayload)
+    [Anonymous Symbol]                       0x08003ac4   Section        0  sx1280.o(.text.SX1280SetPollingMode)
+    [Anonymous Symbol]                       0x08003acc   Section        0  sx1280.o(.text.SX1280SetRangingCalibration)
+    [Anonymous Symbol]                       0x08003af4   Section        0  sx1280.o(.text.SX1280SetRangingIdLength)
+    [Anonymous Symbol]                       0x08003b20   Section        0  sx1280.o(.text.SX1280SetRangingRequestAddress)
+    [Anonymous Symbol]                       0x08003b3c   Section        0  sx1280.o(.text.SX1280SetRangingRole)
+    [Anonymous Symbol]                       0x08003b50   Section        0  sx1280.o(.text.SX1280SetRegistersDefault)
+    [Anonymous Symbol]                       0x08003b58   Section        0  sx1280.o(.text.SX1280SetRegulatorMode)
+    [Anonymous Symbol]                       0x08003b6c   Section        0  sx1280.o(.text.SX1280SetRfFrequency)
+    __arm_cp.19_0                            0x08003b9c   Number         4  sx1280.o(.text.SX1280SetRfFrequency)
+    [Anonymous Symbol]                       0x08003ba0   Section        0  sx1280.o(.text.SX1280SetRx)
+    [Anonymous Symbol]                       0x08003bdc   Section        0  sx1280.o(.text.SX1280SetRxDutyCycle)
+    __arm_cp.14_0                            0x08003c0c   Number         4  sx1280.o(.text.SX1280SetRxDutyCycle)
+    [Anonymous Symbol]                       0x08003c10   Section        0  sx1280.o(.text.SX1280SetSaveContext)
+    [Anonymous Symbol]                       0x08003c1c   Section        0  sx1280.o(.text.SX1280SetSleep)
+    __arm_cp.6_0                             0x08003c50   Number         4  sx1280.o(.text.SX1280SetSleep)
+    [Anonymous Symbol]                       0x08003c54   Section        0  sx1280.o(.text.SX1280SetStandby)
+    __arm_cp.7_0                             0x08003c78   Number         4  sx1280.o(.text.SX1280SetStandby)
+    [Anonymous Symbol]                       0x08003c7c   Section        0  sx1280.o(.text.SX1280SetSyncWord)
+    __arm_cp.40_0                            0x08003ce4   Number         4  sx1280.o(.text.SX1280SetSyncWord)
+    [Anonymous Symbol]                       0x08003ce8   Section        0  sx1280.o(.text.SX1280SetSyncWordErrorTolerance)
+    [Anonymous Symbol]                       0x08003d0c   Section        0  sx1280.o(.text.SX1280SetTx)
+    __arm_cp.9_0                             0x08003d48   Number         4  sx1280.o(.text.SX1280SetTx)
+    [Anonymous Symbol]                       0x08003d4c   Section        0  sx1280.o(.text.SX1280SetTxContinuousPreamble)
+    [Anonymous Symbol]                       0x08003d56   Section        0  sx1280.o(.text.SX1280SetTxContinuousWave)
+    [Anonymous Symbol]                       0x08003d60   Section        0  sx1280.o(.text.SX1280SetTxParams)
+    [Anonymous Symbol]                       0x08003d7c   Section        0  sx1280.o(.text.SX1280SetWhiteningSeed)
+    __arm_cp.46_0                            0x08003d9c   Number         4  sx1280.o(.text.SX1280SetWhiteningSeed)
+    [Anonymous Symbol]                       0x08003da0   Section        0  sx1280.o(.text.SX1280StopAutoTx)
+    [Anonymous Symbol]                       0x08003db8   Section        0  demoranging.o(.text.SendNextPacketEvent)
+    __arm_cp.11_1                            0x08003dd0   Number         4  demoranging.o(.text.SendNextPacketEvent)
+    [Anonymous Symbol]                       0x08003dd4   Section        0  hw-spi.o(.text.SpiIn)
+    [Anonymous Symbol]                       0x08003de4   Section        0  hw-spi.o(.text.SpiInOut)
+    [Anonymous Symbol]                       0x08003dfc   Section        0  hw-spi.o(.text.SpiInit)
+    __arm_cp.0_0                             0x08003e38   Number         4  hw-spi.o(.text.SpiInit)
+    __arm_cp.0_1                             0x08003e3c   Number         4  hw-spi.o(.text.SpiInit)
+    [Anonymous Symbol]                       0x08003e40   Section        0  stm32f1xx_it.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x08003e4e   Section        0  main.o(.text.SystemClock_Config)
+    [Anonymous Symbol]                       0x08003eb4   Section        0  system_stm32f1xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08003eb8   Section        0  hw-lptim.o(.text.TimerCancelTimer)
+    [Anonymous Symbol]                       0x08003ec8   Section        0  hw-lptim.o(.text.TimerCreateTimer)
+    [Anonymous Symbol]                       0x08003ee4   Section        0  hw-lptim.o(.text.TimerSysTick_IRQHandler)
+    __arm_cp.2_0                             0x08003f10   Number         4  hw-lptim.o(.text.TimerSysTick_IRQHandler)
+    UART_DMAAbortOnError                     0x08003f15   Thumb Code    12  stm32f1xx_hal_uart.o(.text.UART_DMAAbortOnError)
+    [Anonymous Symbol]                       0x08003f14   Section        0  stm32f1xx_hal_uart.o(.text.UART_DMAAbortOnError)
+    UART_EndRxTransfer                       0x08003f21   Thumb Code    78  stm32f1xx_hal_uart.o(.text.UART_EndRxTransfer)
+    [Anonymous Symbol]                       0x08003f20   Section        0  stm32f1xx_hal_uart.o(.text.UART_EndRxTransfer)
+    UART_Receive_IT                          0x08003f6f   Thumb Code   196  stm32f1xx_hal_uart.o(.text.UART_Receive_IT)
+    [Anonymous Symbol]                       0x08003f6e   Section        0  stm32f1xx_hal_uart.o(.text.UART_Receive_IT)
+    UART_SetConfig                           0x08004035   Thumb Code   128  stm32f1xx_hal_uart.o(.text.UART_SetConfig)
+    [Anonymous Symbol]                       0x08004034   Section        0  stm32f1xx_hal_uart.o(.text.UART_SetConfig)
+    __arm_cp.2_0                             0x080040b0   Number         4  stm32f1xx_hal_uart.o(.text.UART_SetConfig)
+    UART_WaitOnFlagUntilTimeout              0x080040b5   Thumb Code   110  stm32f1xx_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout)
+    [Anonymous Symbol]                       0x080040b4   Section        0  stm32f1xx_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout)
+    [Anonymous Symbol]                       0x08004124   Section        0  stm32f1xx_it.o(.text.USART3_IRQHandler)
+    [Anonymous Symbol]                       0x0800412c   Section        0  stm32f1xx_it.o(.text.UsageFault_Handler)
+    [Anonymous Symbol]                       0x08004130   Section        0  demoranging.o(.text.WaitRxTimeout)
+    __arm_cp.6_0                             0x08004138   Number         4  demoranging.o(.text.WaitRxTimeout)
+    _DoInit                                  0x0800413d   Thumb Code    96  segger_rtt.o(.text._DoInit)
+    [Anonymous Symbol]                       0x0800413c   Section        0  segger_rtt.o(.text._DoInit)
+    __arm_cp.1_0                             0x08004180   Number         4  segger_rtt.o(.text._DoInit)
+    __arm_cp.1_1                             0x08004184   Number         4  segger_rtt.o(.text._DoInit)
+    __arm_cp.1_2                             0x08004188   Number         4  segger_rtt.o(.text._DoInit)
+    __arm_cp.1_3                             0x0800418c   Number         4  segger_rtt.o(.text._DoInit)
+    __arm_cp.1_4                             0x08004190   Number         4  segger_rtt.o(.text._DoInit)
+    __arm_cp.1_5                             0x08004194   Number         4  segger_rtt.o(.text._DoInit)
+    __arm_cp.1_6                             0x08004198   Number         4  segger_rtt.o(.text._DoInit)
+    __NVIC_SetPriority                       0x0800419d   Thumb Code    36  stm32f1xx_hal_cortex.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x0800419c   Section        0  stm32f1xx_hal_cortex.o(.text.__NVIC_SetPriority)
+    __arm_cp.2_0                             0x080041b8   Number         4  stm32f1xx_hal_cortex.o(.text.__NVIC_SetPriority)
+    __arm_cp.2_1                             0x080041bc   Number         4  stm32f1xx_hal_cortex.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x080041c0   Section        0  syscalls.o(.text.fputc)
+    [Anonymous Symbol]                       0x080041d8   Section        0  main.o(.text.main)
+    __arm_cp.0_0                             0x08004394   Number         4  main.o(.text.main)
+    __arm_cp.0_1                             0x08004398   Number         4  main.o(.text.main)
+    __arm_cp.0_2                             0x0800439c   Number         4  main.o(.text.main)
+    __arm_cp.0_3                             0x080043a0   Number         4  main.o(.text.main)
+    __arm_cp.0_4                             0x080043a4   Number         4  main.o(.text.main)
+    __arm_cp.0_5                             0x080043a8   Number         4  main.o(.text.main)
+    __arm_cp.0_6                             0x080043ac   Number         4  main.o(.text.main)
+    __arm_cp.0_7                             0x080043b0   Number         4  main.o(.text.main)
+    [Anonymous Symbol]                       0x080043b4   Section        0  main_ranging.o(.text.main_ranging)
+    __arm_cp.0_0                             0x08004494   Number         4  main_ranging.o(.text.main_ranging)
+    __arm_cp.0_1                             0x08004498   Number         4  main_ranging.o(.text.main_ranging)
+    __arm_cp.0_2                             0x0800449c   Number         4  main_ranging.o(.text.main_ranging)
+    __arm_cp.0_3                             0x080044a0   Number         4  main_ranging.o(.text.main_ranging)
+    i.__0printf                              0x0800450c   Section        0  printfa.o(i.__0printf)
+    i.__ARM_fpclassify                       0x0800452c   Section        0  fpclassify.o(i.__ARM_fpclassify)
+    i.__kernel_poly                          0x08004554   Section        0  poly.o(i.__kernel_poly)
+    i.__mathlib_dbl_divzero                  0x08004600   Section        0  dunder.o(i.__mathlib_dbl_divzero)
+    i.__mathlib_dbl_infnan2                  0x08004610   Section        0  dunder.o(i.__mathlib_dbl_infnan2)
+    i.__mathlib_dbl_invalid                  0x08004614   Section        0  dunder.o(i.__mathlib_dbl_invalid)
+    i.__mathlib_dbl_overflow                 0x08004620   Section        0  dunder.o(i.__mathlib_dbl_overflow)
+    i.__mathlib_dbl_underflow                0x08004630   Section        0  dunder.o(i.__mathlib_dbl_underflow)
+    i.__scatterload_copy                     0x08004640   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800464e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08004650   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x08004660   Section        0  errno.o(i.__set_errno)
+    _fp_digits                               0x0800466d   Thumb Code   366  printfa.o(i._fp_digits)
+    i._fp_digits                             0x0800466c   Section        0  printfa.o(i._fp_digits)
+    _printf_core                             0x080047f1   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_core                           0x080047f0   Section        0  printfa.o(i._printf_core)
+    _printf_post_padding                     0x08004ecd   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_post_padding                   0x08004ecc   Section        0  printfa.o(i._printf_post_padding)
+    _printf_pre_padding                      0x08004ef1   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._printf_pre_padding                    0x08004ef0   Section        0  printfa.o(i._printf_pre_padding)
+    i.pow                                    0x08004f20   Section        0  pow.o(i.pow)
+    i.putchar                                0x080058f8   Section        0  putchar.o(i.putchar)
+    i.puts                                   0x08005904   Section        0  puts.o(i.puts)
+    i.sqrt                                   0x08005928   Section        0  sqrt.o(i.sqrt)
+    bp                                       0x08005978   Data          16  pow.o(.constdata)
+    .constdata                               0x08005978   Section      136  pow.o(.constdata)
+    dp_h                                     0x08005988   Data          16  pow.o(.constdata)
+    dp_l                                     0x08005998   Data          16  pow.o(.constdata)
+    L                                        0x080059a8   Data          48  pow.o(.constdata)
+    P                                        0x080059d8   Data          40  pow.o(.constdata)
+    .constdata                               0x08005a00   Section        8  qnan.o(.constdata)
+    .L.str.17                                0x0800bcc8   Data          62  demoranging.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0800bcc8   Section        0  demoranging.o(.rodata.str1.1)
+    .L.str                                   0x0800bd06   Data           9  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0800bd06   Section        0  segger_rtt.o(.rodata.str1.1)
     .data                                    0x20000000   Section        4  stdout.o(.data)
     _errno                                   0x20000004   Data           4  errno.o(.data)
     .data                                    0x20000004   Section        4  errno.o(.data)
@@ -3434,9 +3490,9 @@ Image Symbol Table
     [Anonymous Symbol]                       0x200000f8   Section        0  demoranging.o(.bss..L_MergedGlobals.22)
     demoReady                                0x200000f9   Data           1  demoranging.o(.bss..L_MergedGlobals.22)
     demoRunning                              0x200000fa   Data           1  demoranging.o(.bss..L_MergedGlobals.22)
-    demoStatus                               0x200000fb   Data           1  demoranging.o(.bss..L_MergedGlobals.22)
-    currentChannel                           0x200000fc   Data           1  demoranging.o(.bss..L_MergedGlobals.22)
-    SendNext                                 0x200000fd   Data           1  demoranging.o(.bss..L_MergedGlobals.22)
+    currentChannel                           0x200000fb   Data           1  demoranging.o(.bss..L_MergedGlobals.22)
+    SendNext                                 0x200000fc   Data           1  demoranging.o(.bss..L_MergedGlobals.22)
+    demoStatus                               0x200000fd   Data           1  demoranging.o(.bss..L_MergedGlobals.22)
     measuredChannels                         0x200000fe   Data           2  demoranging.o(.bss..L_MergedGlobals.22)
     RetryCount                               0x20000100   Data           4  demoranging.o(.bss..L_MergedGlobals.22)
     modulationParams                         0x20000104   Data          13  demoranging.o(.bss..L_MergedGlobals.22)
@@ -3664,178 +3720,181 @@ Image Symbol Table
     RangingDemoCheckDistance                 0x08001eb9   Thumb Code   360  demoranging.o(.text.RangingDemoCheckDistance)
     RangingDemoGetResult                     0x08002021   Thumb Code    16  demoranging.o(.text.RangingDemoGetResult)
     RangingDemoInitApplication               0x08002031   Thumb Code   124  demoranging.o(.text.RangingDemoInitApplication)
-    RangingDemoInitializeParameters          0x080020ad   Thumb Code   284  demoranging.o(.text.RangingDemoInitializeParameters)
-    RangingDemoReset                         0x080021c9   Thumb Code    48  demoranging.o(.text.RangingDemoReset)
-    RangingDemoRun                           0x080021f9   Thumb Code  1624  demoranging.o(.text.RangingDemoRun)
-    RangingDemoSetRadioParameters            0x08002851   Thumb Code    28  demoranging.o(.text.RangingDemoSetRadioParameters)
-    RangingDemoSetRangingParameters          0x0800286d   Thumb Code    24  demoranging.o(.text.RangingDemoSetRangingParameters)
-    RangingDisplayUartOutputDistance         0x08002885   Thumb Code    40  rangingdisplay.o(.text.RangingDisplayUartOutputDistance)
-    SEGGER_RTT_Init                          0x080028ad   Thumb Code     4  segger_rtt.o(.text.SEGGER_RTT_Init)
-    SVC_Handler                              0x08002989   Thumb Code     2  stm32f1xx_it.o(.text.SVC_Handler)
-    SX1280Calibrate                          0x0800298b   Thumb Code    24  sx1280.o(.text.SX1280Calibrate)
-    SX1280ClearIrqStatus                     0x080029a3   Thumb Code    22  sx1280.o(.text.SX1280ClearIrqStatus)
-    SX1280ComputeRangingCorrectionPolynome   0x080029b9   Thumb Code   156  sx1280.o(.text.SX1280ComputeRangingCorrectionPolynome)
-    SX1280DisableManualGain                  0x08002a55   Thumb Code    46  sx1280.o(.text.SX1280DisableManualGain)
-    SX1280EnableManualGain                   0x08002a83   Thumb Code    46  sx1280.o(.text.SX1280EnableManualGain)
-    SX1280GetFirmwareVersion                 0x08002ab1   Thumb Code    26  sx1280.o(.text.SX1280GetFirmwareVersion)
-    SX1280GetFrequencyError                  0x08002acd   Thumb Code   136  sx1280.o(.text.SX1280GetFrequencyError)
-    SX1280GetIrqStatus                       0x08002b55   Thumb Code    24  sx1280.o(.text.SX1280GetIrqStatus)
-    SX1280GetLoRaBandwidth                   0x08002b6d   Thumb Code    56  sx1280.o(.text.SX1280GetLoRaBandwidth)
-    SX1280GetOpMode                          0x08002ba5   Thumb Code     8  sx1280.o(.text.SX1280GetOpMode)
-    SX1280GetPacketStatus                    0x08002bad   Thumb Code   496  sx1280.o(.text.SX1280GetPacketStatus)
-    SX1280GetPacketType                      0x08002d9d   Thumb Code    12  sx1280.o(.text.SX1280GetPacketType)
-    SX1280GetPayload                         0x08002da9   Thumb Code    42  sx1280.o(.text.SX1280GetPayload)
-    SX1280GetRangingCorrectionPerSfBwGain    0x08002dd5   Thumb Code    72  sx1280.o(.text.SX1280GetRangingCorrectionPerSfBwGain)
-    SX1280GetRangingPowerDeltaThresholdIndicator 0x08002e1d   Thumb Code    64  sx1280.o(.text.SX1280GetRangingPowerDeltaThresholdIndicator)
-    SX1280GetRangingResult                   0x08002e5d   Thumb Code   220  sx1280.o(.text.SX1280GetRangingResult)
-    SX1280GetRssiInst                        0x08002f39   Thumb Code    36  sx1280.o(.text.SX1280GetRssiInst)
-    SX1280GetRxBufferStatus                  0x08002f5d   Thumb Code    80  sx1280.o(.text.SX1280GetRxBufferStatus)
-    SX1280GetStatus                          0x08002fad   Thumb Code    26  sx1280.o(.text.SX1280GetStatus)
-    SX1280HalGetDioStatus                    0x08002fc9   Thumb Code    36  sx1280-hal.o(.text.SX1280HalGetDioStatus)
-    SX1280HalInit                            0x08002fed   Thumb Code    18  sx1280-hal.o(.text.SX1280HalInit)
-    SX1280HalIoIrqInit                       0x08003001   Thumb Code    16  sx1280-hal.o(.text.SX1280HalIoIrqInit)
-    SX1280HalReadBuffer                      0x08003011   Thumb Code    96  sx1280-hal.o(.text.SX1280HalReadBuffer)
-    SX1280HalReadCommand                     0x08003071   Thumb Code    92  sx1280-hal.o(.text.SX1280HalReadCommand)
-    SX1280HalReadRegister                    0x080030cd   Thumb Code    18  sx1280-hal.o(.text.SX1280HalReadRegister)
-    SX1280HalReadRegisters                   0x080030e1   Thumb Code   104  sx1280-hal.o(.text.SX1280HalReadRegisters)
-    SX1280HalReset                           0x08003149   Thumb Code    52  sx1280-hal.o(.text.SX1280HalReset)
-    SX1280HalWaitOnBusy                      0x0800317d   Thumb Code    20  sx1280-hal.o(.text.SX1280HalWaitOnBusy)
-    SX1280HalWriteBuffer                     0x08003191   Thumb Code    64  sx1280-hal.o(.text.SX1280HalWriteBuffer)
-    SX1280HalWriteCommand                    0x080031d1   Thumb Code    84  sx1280-hal.o(.text.SX1280HalWriteCommand)
-    SX1280HalWriteRegister                   0x08003225   Thumb Code    18  sx1280-hal.o(.text.SX1280HalWriteRegister)
-    SX1280HalWriteRegisters                  0x08003239   Thumb Code    80  sx1280-hal.o(.text.SX1280HalWriteRegisters)
-    SX1280Init                               0x08003289   Thumb Code    16  sx1280.o(.text.SX1280Init)
-    SX1280OnDioIrq                           0x08003299   Thumb Code    24  sx1280.o(.text.SX1280OnDioIrq)
-    SX1280ProcessIrqs                        0x080032b1   Thumb Code   568  sx1280.o(.text.SX1280ProcessIrqs)
-    SX1280RangingClearFilterResult           0x080034e9   Thumb Code    40  sx1280.o(.text.SX1280RangingClearFilterResult)
-    SX1280RangingSetFilterNumSamples         0x08003511   Thumb Code    18  sx1280.o(.text.SX1280RangingSetFilterNumSamples)
-    SX1280SendPayload                        0x08003523   Thumb Code    18  sx1280.o(.text.SX1280SendPayload)
-    SX1280SetAutoFS                          0x08003535   Thumb Code    20  sx1280.o(.text.SX1280SetAutoFS)
-    SX1280SetAutoTx                          0x08003549   Thumb Code    26  sx1280.o(.text.SX1280SetAutoTx)
-    SX1280SetBleAccessAddress                0x08003565   Thumb Code    52  sx1280.o(.text.SX1280SetBleAccessAddress)
-    SX1280SetBleAdvertizerAccessAddress      0x08003599   Thumb Code    12  sx1280.o(.text.SX1280SetBleAdvertizerAccessAddress)
-    SX1280SetBufferBaseAddresses             0x080035a5   Thumb Code    24  sx1280.o(.text.SX1280SetBufferBaseAddresses)
-    SX1280SetCad                             0x080035bd   Thumb Code    20  sx1280.o(.text.SX1280SetCad)
-    SX1280SetCadParams                       0x080035d1   Thumb Code    28  sx1280.o(.text.SX1280SetCadParams)
-    SX1280SetCrcPolynomial                   0x080035ed   Thumb Code    36  sx1280.o(.text.SX1280SetCrcPolynomial)
-    SX1280SetCrcSeed                         0x08003611   Thumb Code    36  sx1280.o(.text.SX1280SetCrcSeed)
-    SX1280SetDeviceRangingAddress            0x08003635   Thumb Code    32  sx1280.o(.text.SX1280SetDeviceRangingAddress)
-    SX1280SetDioIrqParams                    0x08003655   Thumb Code    54  sx1280.o(.text.SX1280SetDioIrqParams)
-    SX1280SetFs                              0x0800368d   Thumb Code    20  sx1280.o(.text.SX1280SetFs)
-    SX1280SetInterruptMode                   0x080036a1   Thumb Code     8  sx1280.o(.text.SX1280SetInterruptMode)
-    SX1280SetLNAGainSetting                  0x080036a9   Thumb Code    50  sx1280.o(.text.SX1280SetLNAGainSetting)
-    SX1280SetLongPreamble                    0x080036db   Thumb Code    20  sx1280.o(.text.SX1280SetLongPreamble)
-    SX1280SetManualGainValue                 0x080036ef   Thumb Code    32  sx1280.o(.text.SX1280SetManualGainValue)
-    SX1280SetModulationParams                0x08003711   Thumb Code   120  sx1280.o(.text.SX1280SetModulationParams)
-    SX1280SetPacketParams                    0x08003789   Thumb Code   132  sx1280.o(.text.SX1280SetPacketParams)
-    SX1280SetPacketType                      0x0800380d   Thumb Code    24  sx1280.o(.text.SX1280SetPacketType)
-    SX1280SetPayload                         0x08003825   Thumb Code    10  sx1280.o(.text.SX1280SetPayload)
-    SX1280SetPollingMode                     0x08003831   Thumb Code     8  sx1280.o(.text.SX1280SetPollingMode)
-    SX1280SetRangingCalibration              0x08003839   Thumb Code    40  sx1280.o(.text.SX1280SetRangingCalibration)
-    SX1280SetRangingIdLength                 0x08003861   Thumb Code    44  sx1280.o(.text.SX1280SetRangingIdLength)
-    SX1280SetRangingRequestAddress           0x0800388d   Thumb Code    28  sx1280.o(.text.SX1280SetRangingRequestAddress)
-    SX1280SetRangingRole                     0x080038a9   Thumb Code    20  sx1280.o(.text.SX1280SetRangingRole)
-    SX1280SetRegistersDefault                0x080038bd   Thumb Code     8  sx1280.o(.text.SX1280SetRegistersDefault)
-    SX1280SetRegulatorMode                   0x080038c5   Thumb Code    20  sx1280.o(.text.SX1280SetRegulatorMode)
-    SX1280SetRfFrequency                     0x080038d9   Thumb Code    52  sx1280.o(.text.SX1280SetRfFrequency)
-    SX1280SetRx                              0x0800390d   Thumb Code    60  sx1280.o(.text.SX1280SetRx)
-    SX1280SetRxDutyCycle                     0x08003949   Thumb Code    52  sx1280.o(.text.SX1280SetRxDutyCycle)
-    SX1280SetSaveContext                     0x0800397d   Thumb Code    10  sx1280.o(.text.SX1280SetSaveContext)
-    SX1280SetSleep                           0x08003989   Thumb Code    56  sx1280.o(.text.SX1280SetSleep)
-    SX1280SetStandby                         0x080039c1   Thumb Code    40  sx1280.o(.text.SX1280SetStandby)
-    SX1280SetSyncWord                        0x080039e9   Thumb Code   108  sx1280.o(.text.SX1280SetSyncWord)
-    SX1280SetSyncWordErrorTolerance          0x08003a55   Thumb Code    34  sx1280.o(.text.SX1280SetSyncWordErrorTolerance)
-    SX1280SetTx                              0x08003a79   Thumb Code    64  sx1280.o(.text.SX1280SetTx)
-    SX1280SetTxContinuousPreamble            0x08003ab9   Thumb Code    10  sx1280.o(.text.SX1280SetTxContinuousPreamble)
-    SX1280SetTxContinuousWave                0x08003ac3   Thumb Code    10  sx1280.o(.text.SX1280SetTxContinuousWave)
-    SX1280SetTxParams                        0x08003acd   Thumb Code    26  sx1280.o(.text.SX1280SetTxParams)
-    SX1280SetWhiteningSeed                   0x08003ae9   Thumb Code    36  sx1280.o(.text.SX1280SetWhiteningSeed)
-    SX1280StopAutoTx                         0x08003b0d   Thumb Code    22  sx1280.o(.text.SX1280StopAutoTx)
-    SendNextPacketEvent                      0x08003b25   Thumb Code    28  demoranging.o(.text.SendNextPacketEvent)
-    SpiIn                                    0x08003b41   Thumb Code    16  hw-spi.o(.text.SpiIn)
-    SpiInOut                                 0x08003b51   Thumb Code    24  hw-spi.o(.text.SpiInOut)
-    SpiInit                                  0x08003b69   Thumb Code    68  hw-spi.o(.text.SpiInit)
-    SysTick_Handler                          0x08003bad   Thumb Code    14  stm32f1xx_it.o(.text.SysTick_Handler)
-    SystemClock_Config                       0x08003bbb   Thumb Code   102  main.o(.text.SystemClock_Config)
-    SystemInit                               0x08003c21   Thumb Code     2  system_stm32f1xx.o(.text.SystemInit)
-    TimerCancelTimer                         0x08003c25   Thumb Code    16  hw-lptim.o(.text.TimerCancelTimer)
-    TimerCreateTimer                         0x08003c35   Thumb Code    28  hw-lptim.o(.text.TimerCreateTimer)
-    TimerSysTick_IRQHandler                  0x08003c51   Thumb Code    48  hw-lptim.o(.text.TimerSysTick_IRQHandler)
-    USART3_IRQHandler                        0x08003e91   Thumb Code     8  stm32f1xx_it.o(.text.USART3_IRQHandler)
-    UsageFault_Handler                       0x08003e99   Thumb Code     2  stm32f1xx_it.o(.text.UsageFault_Handler)
-    WaitRxTimeout                            0x08003e9d   Thumb Code    12  demoranging.o(.text.WaitRxTimeout)
-    fputc                                    0x08003f2d   Thumb Code    24  syscalls.o(.text.fputc)
-    main                                     0x08003f45   Thumb Code   476  main.o(.text.main)
-    main_ranging                             0x08004121   Thumb Code   288  main_ranging.o(.text.main_ranging)
-    __0printf                                0x08004241   Thumb Code    22  printfa.o(i.__0printf)
-    __1printf                                0x08004241   Thumb Code     0  printfa.o(i.__0printf)
-    __2printf                                0x08004241   Thumb Code     0  printfa.o(i.__0printf)
-    __c89printf                              0x08004241   Thumb Code     0  printfa.o(i.__0printf)
-    printf                                   0x08004241   Thumb Code     0  printfa.o(i.__0printf)
-    __ARM_fpclassify                         0x08004261   Thumb Code    40  fpclassify.o(i.__ARM_fpclassify)
-    __kernel_poly                            0x08004289   Thumb Code   170  poly.o(i.__kernel_poly)
-    __mathlib_dbl_divzero                    0x08004335   Thumb Code    12  dunder.o(i.__mathlib_dbl_divzero)
-    __mathlib_dbl_infnan2                    0x08004345   Thumb Code     4  dunder.o(i.__mathlib_dbl_infnan2)
-    __mathlib_dbl_invalid                    0x08004349   Thumb Code    12  dunder.o(i.__mathlib_dbl_invalid)
-    __mathlib_dbl_overflow                   0x08004355   Thumb Code    14  dunder.o(i.__mathlib_dbl_overflow)
-    __mathlib_dbl_underflow                  0x08004365   Thumb Code    10  dunder.o(i.__mathlib_dbl_underflow)
-    __scatterload_copy                       0x08004375   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08004383   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08004385   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    __set_errno                              0x08004395   Thumb Code     6  errno.o(i.__set_errno)
-    pow                                      0x08004c55   Thumb Code  2512  pow.o(i.pow)
-    putchar                                  0x0800562d   Thumb Code     6  putchar.o(i.putchar)
-    puts                                     0x08005639   Thumb Code    30  puts.o(i.puts)
-    sqrt                                     0x0800565d   Thumb Code    76  sqrt.o(i.sqrt)
-    __mathlib_zero                           0x08005730   Data           8  qnan.o(.constdata)
-    AHBPrescTable                            0x08005738   Data          16  system_stm32f1xx.o(.rodata.AHBPrescTable)
-    APBPrescTable                            0x08005748   Data           8  system_stm32f1xx.o(.rodata.APBPrescTable)
-    RNG_CALIB_0400                           0x08005750   Data          12  demoranging.o(.rodata.RNG_CALIB_0400)
-    RNG_CALIB_0800                           0x0800575c   Data          12  demoranging.o(.rodata.RNG_CALIB_0800)
-    RNG_CALIB_1600                           0x08005768   Data          12  demoranging.o(.rodata.RNG_CALIB_1600)
-    RNG_FGRAD_0400                           0x08005778   Data          48  demoranging.o(.rodata.RNG_FGRAD_0400)
-    RNG_FGRAD_0800                           0x080057a8   Data          48  demoranging.o(.rodata.RNG_FGRAD_0800)
-    RNG_FGRAD_1600                           0x080057d8   Data          48  demoranging.o(.rodata.RNG_FGRAD_1600)
-    Radio                                    0x08005808   Data         284  sx1280-hal.o(.rodata.Radio)
-    RangingCorrectionSF10BW0400              0x08005928   Data        1280  sx1280.o(.rodata.RangingCorrectionSF10BW0400)
-    RangingCorrectionSF10BW0800              0x08005e28   Data        1280  sx1280.o(.rodata.RangingCorrectionSF10BW0800)
-    RangingCorrectionSF10BW1600              0x08006328   Data        1280  sx1280.o(.rodata.RangingCorrectionSF10BW1600)
-    RangingCorrectionSF5BW0400               0x08006828   Data        1280  sx1280.o(.rodata.RangingCorrectionSF5BW0400)
-    RangingCorrectionSF5BW0800               0x08006d28   Data        1280  sx1280.o(.rodata.RangingCorrectionSF5BW0800)
-    RangingCorrectionSF5BW1600               0x08007228   Data        1280  sx1280.o(.rodata.RangingCorrectionSF5BW1600)
-    RangingCorrectionSF6BW0400               0x08007728   Data        1280  sx1280.o(.rodata.RangingCorrectionSF6BW0400)
-    RangingCorrectionSF6BW0800               0x08007c28   Data        1280  sx1280.o(.rodata.RangingCorrectionSF6BW0800)
-    RangingCorrectionSF6BW1600               0x08008128   Data        1280  sx1280.o(.rodata.RangingCorrectionSF6BW1600)
-    RangingCorrectionSF7BW0400               0x08008628   Data        1280  sx1280.o(.rodata.RangingCorrectionSF7BW0400)
-    RangingCorrectionSF7BW0800               0x08008b28   Data        1280  sx1280.o(.rodata.RangingCorrectionSF7BW0800)
-    RangingCorrectionSF7BW1600               0x08009028   Data        1280  sx1280.o(.rodata.RangingCorrectionSF7BW1600)
-    RangingCorrectionSF8BW0400               0x08009528   Data        1280  sx1280.o(.rodata.RangingCorrectionSF8BW0400)
-    RangingCorrectionSF8BW0800               0x08009a28   Data        1280  sx1280.o(.rodata.RangingCorrectionSF8BW0800)
-    RangingCorrectionSF8BW1600               0x08009f28   Data        1280  sx1280.o(.rodata.RangingCorrectionSF8BW1600)
-    RangingCorrectionSF9BW0400               0x0800a428   Data        1280  sx1280.o(.rodata.RangingCorrectionSF9BW0400)
-    RangingCorrectionSF9BW0800               0x0800a928   Data        1280  sx1280.o(.rodata.RangingCorrectionSF9BW0800)
-    RangingCorrectionSF9BW1600               0x0800ae28   Data        1280  sx1280.o(.rodata.RangingCorrectionSF9BW1600)
-    correctionRangingPolynomeSF10BW0400      0x0800b328   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF10BW0400)
-    correctionRangingPolynomeSF10BW0800      0x0800b380   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF10BW0800)
-    correctionRangingPolynomeSF10BW1600      0x0800b3d8   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF10BW1600)
-    correctionRangingPolynomeSF5BW0400       0x0800b430   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF5BW0400)
-    correctionRangingPolynomeSF5BW0800       0x0800b488   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF5BW0800)
-    correctionRangingPolynomeSF5BW1600       0x0800b4e0   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF5BW1600)
-    correctionRangingPolynomeSF6BW0400       0x0800b538   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF6BW0400)
-    correctionRangingPolynomeSF6BW0800       0x0800b590   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF6BW0800)
-    correctionRangingPolynomeSF6BW1600       0x0800b5e8   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF6BW1600)
-    correctionRangingPolynomeSF7BW0400       0x0800b640   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF7BW0400)
-    correctionRangingPolynomeSF7BW0800       0x0800b698   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF7BW0800)
-    correctionRangingPolynomeSF7BW1600       0x0800b6f0   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF7BW1600)
-    correctionRangingPolynomeSF8BW0400       0x0800b748   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF8BW0400)
-    correctionRangingPolynomeSF8BW0800       0x0800b7a0   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF8BW0800)
-    correctionRangingPolynomeSF8BW1600       0x0800b7f8   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF8BW1600)
-    correctionRangingPolynomeSF9BW0400       0x0800b850   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF9BW0400)
-    correctionRangingPolynomeSF9BW0800       0x0800b8a8   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF9BW0800)
-    correctionRangingPolynomeSF9BW1600       0x0800b900   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF9BW1600)
-    rangingChannels                          0x0800b958   Data         160  demoranging.o(.rodata.rangingChannels)
-    Region$$Table$$Base                      0x0800ba04   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800ba24   Number         0  anon$$obj.o(Region$$Table)
+    RangingDemoInitializeParameters          0x080020ad   Thumb Code   280  demoranging.o(.text.RangingDemoInitializeParameters)
+    RangingDemoReset                         0x080021c5   Thumb Code    40  demoranging.o(.text.RangingDemoReset)
+    RangingDemoRun                           0x080021ed   Thumb Code   136  demoranging.o(.text.RangingDemoRun)
+    RangingDemoSetRadioParameters            0x08002275   Thumb Code    32  demoranging.o(.text.RangingDemoSetRadioParameters)
+    RangingDemoSetRangingParameters          0x08002295   Thumb Code    24  demoranging.o(.text.RangingDemoSetRangingParameters)
+    RangingDisplayUartOutputDistance         0x080022ad   Thumb Code    40  rangingdisplay.o(.text.RangingDisplayUartOutputDistance)
+    RangingMasterHandler                     0x080022d5   Thumb Code   728  demoranging.o(.text.RangingMasterHandler)
+    RangingSlaveHandler                      0x080025ad   Thumb Code   712  demoranging.o(.text.RangingSlaveHandler)
+    RangingSnifferHandler                    0x08002875   Thumb Code   716  demoranging.o(.text.RangingSnifferHandler)
+    SEGGER_RTT_Init                          0x08002b41   Thumb Code     4  segger_rtt.o(.text.SEGGER_RTT_Init)
+    SVC_Handler                              0x08002c1d   Thumb Code     2  stm32f1xx_it.o(.text.SVC_Handler)
+    SX1280Calibrate                          0x08002c1f   Thumb Code    24  sx1280.o(.text.SX1280Calibrate)
+    SX1280ClearIrqStatus                     0x08002c37   Thumb Code    22  sx1280.o(.text.SX1280ClearIrqStatus)
+    SX1280ComputeRangingCorrectionPolynome   0x08002c4d   Thumb Code   156  sx1280.o(.text.SX1280ComputeRangingCorrectionPolynome)
+    SX1280DisableManualGain                  0x08002ce9   Thumb Code    46  sx1280.o(.text.SX1280DisableManualGain)
+    SX1280EnableManualGain                   0x08002d17   Thumb Code    46  sx1280.o(.text.SX1280EnableManualGain)
+    SX1280GetFirmwareVersion                 0x08002d45   Thumb Code    26  sx1280.o(.text.SX1280GetFirmwareVersion)
+    SX1280GetFrequencyError                  0x08002d61   Thumb Code   136  sx1280.o(.text.SX1280GetFrequencyError)
+    SX1280GetIrqStatus                       0x08002de9   Thumb Code    24  sx1280.o(.text.SX1280GetIrqStatus)
+    SX1280GetLoRaBandwidth                   0x08002e01   Thumb Code    56  sx1280.o(.text.SX1280GetLoRaBandwidth)
+    SX1280GetOpMode                          0x08002e39   Thumb Code     8  sx1280.o(.text.SX1280GetOpMode)
+    SX1280GetPacketStatus                    0x08002e41   Thumb Code   496  sx1280.o(.text.SX1280GetPacketStatus)
+    SX1280GetPacketType                      0x08003031   Thumb Code    12  sx1280.o(.text.SX1280GetPacketType)
+    SX1280GetPayload                         0x0800303d   Thumb Code    42  sx1280.o(.text.SX1280GetPayload)
+    SX1280GetRangingCorrectionPerSfBwGain    0x08003069   Thumb Code    72  sx1280.o(.text.SX1280GetRangingCorrectionPerSfBwGain)
+    SX1280GetRangingPowerDeltaThresholdIndicator 0x080030b1   Thumb Code    64  sx1280.o(.text.SX1280GetRangingPowerDeltaThresholdIndicator)
+    SX1280GetRangingResult                   0x080030f1   Thumb Code   220  sx1280.o(.text.SX1280GetRangingResult)
+    SX1280GetRssiInst                        0x080031cd   Thumb Code    36  sx1280.o(.text.SX1280GetRssiInst)
+    SX1280GetRxBufferStatus                  0x080031f1   Thumb Code    80  sx1280.o(.text.SX1280GetRxBufferStatus)
+    SX1280GetStatus                          0x08003241   Thumb Code    26  sx1280.o(.text.SX1280GetStatus)
+    SX1280HalGetDioStatus                    0x0800325d   Thumb Code    36  sx1280-hal.o(.text.SX1280HalGetDioStatus)
+    SX1280HalInit                            0x08003281   Thumb Code    18  sx1280-hal.o(.text.SX1280HalInit)
+    SX1280HalIoIrqInit                       0x08003295   Thumb Code    16  sx1280-hal.o(.text.SX1280HalIoIrqInit)
+    SX1280HalReadBuffer                      0x080032a5   Thumb Code    96  sx1280-hal.o(.text.SX1280HalReadBuffer)
+    SX1280HalReadCommand                     0x08003305   Thumb Code    92  sx1280-hal.o(.text.SX1280HalReadCommand)
+    SX1280HalReadRegister                    0x08003361   Thumb Code    18  sx1280-hal.o(.text.SX1280HalReadRegister)
+    SX1280HalReadRegisters                   0x08003375   Thumb Code   104  sx1280-hal.o(.text.SX1280HalReadRegisters)
+    SX1280HalReset                           0x080033dd   Thumb Code    52  sx1280-hal.o(.text.SX1280HalReset)
+    SX1280HalWaitOnBusy                      0x08003411   Thumb Code    20  sx1280-hal.o(.text.SX1280HalWaitOnBusy)
+    SX1280HalWriteBuffer                     0x08003425   Thumb Code    64  sx1280-hal.o(.text.SX1280HalWriteBuffer)
+    SX1280HalWriteCommand                    0x08003465   Thumb Code    84  sx1280-hal.o(.text.SX1280HalWriteCommand)
+    SX1280HalWriteRegister                   0x080034b9   Thumb Code    18  sx1280-hal.o(.text.SX1280HalWriteRegister)
+    SX1280HalWriteRegisters                  0x080034cd   Thumb Code    80  sx1280-hal.o(.text.SX1280HalWriteRegisters)
+    SX1280Init                               0x0800351d   Thumb Code    16  sx1280.o(.text.SX1280Init)
+    SX1280OnDioIrq                           0x0800352d   Thumb Code    24  sx1280.o(.text.SX1280OnDioIrq)
+    SX1280ProcessIrqs                        0x08003545   Thumb Code   568  sx1280.o(.text.SX1280ProcessIrqs)
+    SX1280RangingClearFilterResult           0x0800377d   Thumb Code    40  sx1280.o(.text.SX1280RangingClearFilterResult)
+    SX1280RangingSetFilterNumSamples         0x080037a5   Thumb Code    18  sx1280.o(.text.SX1280RangingSetFilterNumSamples)
+    SX1280SendPayload                        0x080037b7   Thumb Code    18  sx1280.o(.text.SX1280SendPayload)
+    SX1280SetAutoFS                          0x080037c9   Thumb Code    20  sx1280.o(.text.SX1280SetAutoFS)
+    SX1280SetAutoTx                          0x080037dd   Thumb Code    26  sx1280.o(.text.SX1280SetAutoTx)
+    SX1280SetBleAccessAddress                0x080037f9   Thumb Code    52  sx1280.o(.text.SX1280SetBleAccessAddress)
+    SX1280SetBleAdvertizerAccessAddress      0x0800382d   Thumb Code    12  sx1280.o(.text.SX1280SetBleAdvertizerAccessAddress)
+    SX1280SetBufferBaseAddresses             0x08003839   Thumb Code    24  sx1280.o(.text.SX1280SetBufferBaseAddresses)
+    SX1280SetCad                             0x08003851   Thumb Code    20  sx1280.o(.text.SX1280SetCad)
+    SX1280SetCadParams                       0x08003865   Thumb Code    28  sx1280.o(.text.SX1280SetCadParams)
+    SX1280SetCrcPolynomial                   0x08003881   Thumb Code    36  sx1280.o(.text.SX1280SetCrcPolynomial)
+    SX1280SetCrcSeed                         0x080038a5   Thumb Code    36  sx1280.o(.text.SX1280SetCrcSeed)
+    SX1280SetDeviceRangingAddress            0x080038c9   Thumb Code    32  sx1280.o(.text.SX1280SetDeviceRangingAddress)
+    SX1280SetDioIrqParams                    0x080038e9   Thumb Code    54  sx1280.o(.text.SX1280SetDioIrqParams)
+    SX1280SetFs                              0x08003921   Thumb Code    20  sx1280.o(.text.SX1280SetFs)
+    SX1280SetInterruptMode                   0x08003935   Thumb Code     8  sx1280.o(.text.SX1280SetInterruptMode)
+    SX1280SetLNAGainSetting                  0x0800393d   Thumb Code    50  sx1280.o(.text.SX1280SetLNAGainSetting)
+    SX1280SetLongPreamble                    0x0800396f   Thumb Code    20  sx1280.o(.text.SX1280SetLongPreamble)
+    SX1280SetManualGainValue                 0x08003983   Thumb Code    32  sx1280.o(.text.SX1280SetManualGainValue)
+    SX1280SetModulationParams                0x080039a5   Thumb Code   120  sx1280.o(.text.SX1280SetModulationParams)
+    SX1280SetPacketParams                    0x08003a1d   Thumb Code   132  sx1280.o(.text.SX1280SetPacketParams)
+    SX1280SetPacketType                      0x08003aa1   Thumb Code    24  sx1280.o(.text.SX1280SetPacketType)
+    SX1280SetPayload                         0x08003ab9   Thumb Code    10  sx1280.o(.text.SX1280SetPayload)
+    SX1280SetPollingMode                     0x08003ac5   Thumb Code     8  sx1280.o(.text.SX1280SetPollingMode)
+    SX1280SetRangingCalibration              0x08003acd   Thumb Code    40  sx1280.o(.text.SX1280SetRangingCalibration)
+    SX1280SetRangingIdLength                 0x08003af5   Thumb Code    44  sx1280.o(.text.SX1280SetRangingIdLength)
+    SX1280SetRangingRequestAddress           0x08003b21   Thumb Code    28  sx1280.o(.text.SX1280SetRangingRequestAddress)
+    SX1280SetRangingRole                     0x08003b3d   Thumb Code    20  sx1280.o(.text.SX1280SetRangingRole)
+    SX1280SetRegistersDefault                0x08003b51   Thumb Code     8  sx1280.o(.text.SX1280SetRegistersDefault)
+    SX1280SetRegulatorMode                   0x08003b59   Thumb Code    20  sx1280.o(.text.SX1280SetRegulatorMode)
+    SX1280SetRfFrequency                     0x08003b6d   Thumb Code    52  sx1280.o(.text.SX1280SetRfFrequency)
+    SX1280SetRx                              0x08003ba1   Thumb Code    60  sx1280.o(.text.SX1280SetRx)
+    SX1280SetRxDutyCycle                     0x08003bdd   Thumb Code    52  sx1280.o(.text.SX1280SetRxDutyCycle)
+    SX1280SetSaveContext                     0x08003c11   Thumb Code    10  sx1280.o(.text.SX1280SetSaveContext)
+    SX1280SetSleep                           0x08003c1d   Thumb Code    56  sx1280.o(.text.SX1280SetSleep)
+    SX1280SetStandby                         0x08003c55   Thumb Code    40  sx1280.o(.text.SX1280SetStandby)
+    SX1280SetSyncWord                        0x08003c7d   Thumb Code   108  sx1280.o(.text.SX1280SetSyncWord)
+    SX1280SetSyncWordErrorTolerance          0x08003ce9   Thumb Code    34  sx1280.o(.text.SX1280SetSyncWordErrorTolerance)
+    SX1280SetTx                              0x08003d0d   Thumb Code    64  sx1280.o(.text.SX1280SetTx)
+    SX1280SetTxContinuousPreamble            0x08003d4d   Thumb Code    10  sx1280.o(.text.SX1280SetTxContinuousPreamble)
+    SX1280SetTxContinuousWave                0x08003d57   Thumb Code    10  sx1280.o(.text.SX1280SetTxContinuousWave)
+    SX1280SetTxParams                        0x08003d61   Thumb Code    26  sx1280.o(.text.SX1280SetTxParams)
+    SX1280SetWhiteningSeed                   0x08003d7d   Thumb Code    36  sx1280.o(.text.SX1280SetWhiteningSeed)
+    SX1280StopAutoTx                         0x08003da1   Thumb Code    22  sx1280.o(.text.SX1280StopAutoTx)
+    SendNextPacketEvent                      0x08003db9   Thumb Code    28  demoranging.o(.text.SendNextPacketEvent)
+    SpiIn                                    0x08003dd5   Thumb Code    16  hw-spi.o(.text.SpiIn)
+    SpiInOut                                 0x08003de5   Thumb Code    24  hw-spi.o(.text.SpiInOut)
+    SpiInit                                  0x08003dfd   Thumb Code    68  hw-spi.o(.text.SpiInit)
+    SysTick_Handler                          0x08003e41   Thumb Code    14  stm32f1xx_it.o(.text.SysTick_Handler)
+    SystemClock_Config                       0x08003e4f   Thumb Code   102  main.o(.text.SystemClock_Config)
+    SystemInit                               0x08003eb5   Thumb Code     2  system_stm32f1xx.o(.text.SystemInit)
+    TimerCancelTimer                         0x08003eb9   Thumb Code    16  hw-lptim.o(.text.TimerCancelTimer)
+    TimerCreateTimer                         0x08003ec9   Thumb Code    28  hw-lptim.o(.text.TimerCreateTimer)
+    TimerSysTick_IRQHandler                  0x08003ee5   Thumb Code    48  hw-lptim.o(.text.TimerSysTick_IRQHandler)
+    USART3_IRQHandler                        0x08004125   Thumb Code     8  stm32f1xx_it.o(.text.USART3_IRQHandler)
+    UsageFault_Handler                       0x0800412d   Thumb Code     2  stm32f1xx_it.o(.text.UsageFault_Handler)
+    WaitRxTimeout                            0x08004131   Thumb Code    12  demoranging.o(.text.WaitRxTimeout)
+    fputc                                    0x080041c1   Thumb Code    24  syscalls.o(.text.fputc)
+    main                                     0x080041d9   Thumb Code   476  main.o(.text.main)
+    main_ranging                             0x080043b5   Thumb Code   344  main_ranging.o(.text.main_ranging)
+    __0printf                                0x0800450d   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x0800450d   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x0800450d   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x0800450d   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x0800450d   Thumb Code     0  printfa.o(i.__0printf)
+    __ARM_fpclassify                         0x0800452d   Thumb Code    40  fpclassify.o(i.__ARM_fpclassify)
+    __kernel_poly                            0x08004555   Thumb Code   170  poly.o(i.__kernel_poly)
+    __mathlib_dbl_divzero                    0x08004601   Thumb Code    12  dunder.o(i.__mathlib_dbl_divzero)
+    __mathlib_dbl_infnan2                    0x08004611   Thumb Code     4  dunder.o(i.__mathlib_dbl_infnan2)
+    __mathlib_dbl_invalid                    0x08004615   Thumb Code    12  dunder.o(i.__mathlib_dbl_invalid)
+    __mathlib_dbl_overflow                   0x08004621   Thumb Code    14  dunder.o(i.__mathlib_dbl_overflow)
+    __mathlib_dbl_underflow                  0x08004631   Thumb Code    10  dunder.o(i.__mathlib_dbl_underflow)
+    __scatterload_copy                       0x08004641   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800464f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08004651   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x08004661   Thumb Code     6  errno.o(i.__set_errno)
+    pow                                      0x08004f21   Thumb Code  2512  pow.o(i.pow)
+    putchar                                  0x080058f9   Thumb Code     6  putchar.o(i.putchar)
+    puts                                     0x08005905   Thumb Code    30  puts.o(i.puts)
+    sqrt                                     0x08005929   Thumb Code    76  sqrt.o(i.sqrt)
+    __mathlib_zero                           0x08005a00   Data           8  qnan.o(.constdata)
+    AHBPrescTable                            0x08005a08   Data          16  system_stm32f1xx.o(.rodata.AHBPrescTable)
+    APBPrescTable                            0x08005a18   Data           8  system_stm32f1xx.o(.rodata.APBPrescTable)
+    RNG_CALIB_0400                           0x08005a20   Data          12  demoranging.o(.rodata.RNG_CALIB_0400)
+    RNG_CALIB_0800                           0x08005a2c   Data          12  demoranging.o(.rodata.RNG_CALIB_0800)
+    RNG_CALIB_1600                           0x08005a38   Data          12  demoranging.o(.rodata.RNG_CALIB_1600)
+    RNG_FGRAD_0400                           0x08005a48   Data          48  demoranging.o(.rodata.RNG_FGRAD_0400)
+    RNG_FGRAD_0800                           0x08005a78   Data          48  demoranging.o(.rodata.RNG_FGRAD_0800)
+    RNG_FGRAD_1600                           0x08005aa8   Data          48  demoranging.o(.rodata.RNG_FGRAD_1600)
+    Radio                                    0x08005ad8   Data         284  sx1280-hal.o(.rodata.Radio)
+    RangingCorrectionSF10BW0400              0x08005bf8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF10BW0400)
+    RangingCorrectionSF10BW0800              0x080060f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF10BW0800)
+    RangingCorrectionSF10BW1600              0x080065f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF10BW1600)
+    RangingCorrectionSF5BW0400               0x08006af8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF5BW0400)
+    RangingCorrectionSF5BW0800               0x08006ff8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF5BW0800)
+    RangingCorrectionSF5BW1600               0x080074f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF5BW1600)
+    RangingCorrectionSF6BW0400               0x080079f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF6BW0400)
+    RangingCorrectionSF6BW0800               0x08007ef8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF6BW0800)
+    RangingCorrectionSF6BW1600               0x080083f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF6BW1600)
+    RangingCorrectionSF7BW0400               0x080088f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF7BW0400)
+    RangingCorrectionSF7BW0800               0x08008df8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF7BW0800)
+    RangingCorrectionSF7BW1600               0x080092f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF7BW1600)
+    RangingCorrectionSF8BW0400               0x080097f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF8BW0400)
+    RangingCorrectionSF8BW0800               0x08009cf8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF8BW0800)
+    RangingCorrectionSF8BW1600               0x0800a1f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF8BW1600)
+    RangingCorrectionSF9BW0400               0x0800a6f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF9BW0400)
+    RangingCorrectionSF9BW0800               0x0800abf8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF9BW0800)
+    RangingCorrectionSF9BW1600               0x0800b0f8   Data        1280  sx1280.o(.rodata.RangingCorrectionSF9BW1600)
+    correctionRangingPolynomeSF10BW0400      0x0800b5f8   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF10BW0400)
+    correctionRangingPolynomeSF10BW0800      0x0800b650   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF10BW0800)
+    correctionRangingPolynomeSF10BW1600      0x0800b6a8   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF10BW1600)
+    correctionRangingPolynomeSF5BW0400       0x0800b700   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF5BW0400)
+    correctionRangingPolynomeSF5BW0800       0x0800b758   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF5BW0800)
+    correctionRangingPolynomeSF5BW1600       0x0800b7b0   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF5BW1600)
+    correctionRangingPolynomeSF6BW0400       0x0800b808   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF6BW0400)
+    correctionRangingPolynomeSF6BW0800       0x0800b860   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF6BW0800)
+    correctionRangingPolynomeSF6BW1600       0x0800b8b8   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF6BW1600)
+    correctionRangingPolynomeSF7BW0400       0x0800b910   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF7BW0400)
+    correctionRangingPolynomeSF7BW0800       0x0800b968   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF7BW0800)
+    correctionRangingPolynomeSF7BW1600       0x0800b9c0   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF7BW1600)
+    correctionRangingPolynomeSF8BW0400       0x0800ba18   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF8BW0400)
+    correctionRangingPolynomeSF8BW0800       0x0800ba70   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF8BW0800)
+    correctionRangingPolynomeSF8BW1600       0x0800bac8   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF8BW1600)
+    correctionRangingPolynomeSF9BW0400       0x0800bb20   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF9BW0400)
+    correctionRangingPolynomeSF9BW0800       0x0800bb78   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF9BW0800)
+    correctionRangingPolynomeSF9BW1600       0x0800bbd0   Data          88  sx1280.o(.rodata.correctionRangingPolynomeSF9BW1600)
+    rangingChannels                          0x0800bc28   Data         160  demoranging.o(.rodata.rangingChannels)
+    Region$$Table$$Base                      0x0800bd10   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800bd30   Number         0  anon$$obj.o(Region$$Table)
     __stdout                                 0x20000000   Data           4  stdout.o(.data)
     Callbacks                                0x2000000c   Data          36  demoranging.o(.data..L_MergedGlobals)
     uwTickFreq                               0x20000030   Data           1  stm32f1xx_hal.o(.data..L_MergedGlobals)
@@ -3862,356 +3921,361 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000baf8, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000be00, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000ba24, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000bd30, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000000ec   Data   RO         1359    RESET               startup_stm32f103xb.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO         1392  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO         1721    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO         1724    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         1726    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         1728    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO         1729    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         1731    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         1733    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO         1722    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000100   0x08000100   0x00000024   Code   RO         1360    .text               startup_stm32f103xb.o
-    0x08000124   0x08000124   0x00000020   Code   RO         1401    .text               mc_w.l(llushr.o)
-    0x08000144   0x08000144   0x00000024   Code   RO         1403    .text               mc_w.l(memcpya.o)
-    0x08000168   0x08000168   0x00000024   Code   RO         1405    .text               mc_w.l(memseta.o)
-    0x0800018c   0x0800018c   0x0000014c   Code   RO         1674    .text               mc_w.l(_scanf_int.o)
-    0x080002d8   0x080002d8   0x0000014e   Code   RO         1676    .text               mf_w.l(dadd.o)
-    0x08000426   0x08000426   0x000000e4   Code   RO         1678    .text               mf_w.l(dmul.o)
-    0x0800050a   0x0800050a   0x000000de   Code   RO         1680    .text               mf_w.l(ddiv.o)
-    0x080005e8   0x080005e8   0x00000036   Code   RO         1682    .text               mf_w.l(dcmpge.o)
-    0x0800061e   0x0800061e   0x00000036   Code   RO         1684    .text               mf_w.l(dcmpgt.o)
-    0x08000654   0x08000654   0x00000022   Code   RO         1686    .text               mf_w.l(dflti.o)
-    0x08000676   0x08000676   0x0000001a   Code   RO         1688    .text               mf_w.l(dfltui.o)
-    0x08000690   0x08000690   0x0000003e   Code   RO         1690    .text               mf_w.l(dfixi.o)
-    0x080006ce   0x080006ce   0x00000032   Code   RO         1692    .text               mf_w.l(dfixui.o)
-    0x08000700   0x08000700   0x0000002c   Code   RO         1736    .text               mc_w.l(uidiv.o)
-    0x0800072c   0x0800072c   0x00000062   Code   RO         1738    .text               mc_w.l(uldiv.o)
-    0x0800078e   0x0800078e   0x0000001e   Code   RO         1740    .text               mc_w.l(llshl.o)
-    0x080007ac   0x080007ac   0x00000024   Code   RO         1742    .text               mc_w.l(llsshr.o)
-    0x080007d0   0x080007d0   0x0000001c   Code   RO         1751    .text               mc_w.l(_chval.o)
-    0x080007ec   0x080007ec   0x00000000   Code   RO         1757    .text               mc_w.l(iusefp.o)
-    0x080007ec   0x080007ec   0x000000ba   Code   RO         1758    .text               mf_w.l(depilogue.o)
-    0x080008a6   0x080008a6   0x0000002e   Code   RO         1760    .text               mf_w.l(dscalb.o)
-    0x080008d4   0x080008d4   0x00000030   Code   RO         1762    .text               mf_w.l(dfixul.o)
-    0x08000904   0x08000904   0x00000030   Code   RO         1764    .text               mf_w.l(cdrcmple.o)
-    0x08000934   0x08000934   0x00000024   Code   RO         1766    .text               mc_w.l(init.o)
-    0x08000958   0x08000958   0x000000a2   Code   RO         1772    .text               mf_w.l(dsqrt.o)
-    0x080009fa   0x080009fa   0x00000002   Code   RO          552    .text.BusFault_Handler  stm32f1xx_it.o
-    0x080009fc   0x080009fc   0x00000002   Code   RO          558    .text.DebugMon_Handler  stm32f1xx_it.o
-    0x080009fe   0x080009fe   0x00000008   Code   RO          566    .text.EXTI15_10_IRQHandler  stm32f1xx_it.o
-    0x08000a06   0x08000a06   0x00000008   Code   RO          532    .text.Error_Handler  main.o
-    0x08000a0e   0x08000a0e   0x00000032   Code   RO          490    .text.GpioGetBitPos  hw-gpio.o
-    0x08000a40   0x08000a40   0x00000018   Code   RO          494    .text.GpioLaunchIrqHandler  hw-gpio.o
-    0x08000a58   0x08000a58   0x00000008   Code   RO          498    .text.GpioRead      hw-gpio.o
-    0x08000a60   0x08000a60   0x00000038   Code   RO          488    .text.GpioSetIrq    hw-gpio.o
-    0x08000a98   0x08000a98   0x00000006   Code   RO          496    .text.GpioWrite     hw-gpio.o
-    0x08000a9e   0x08000a9e   0x00000040   Code   RO          905    .text.HAL_DMA_Abort  stm32f1xx_hal_dma.o
+    0x08000000   0x08000000   0x000000ec   Data   RO         1364    RESET               startup_stm32f103xb.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO         1397  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO         1726    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO         1729    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO         1731    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO         1733    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO         1734    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO         1736    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO         1738    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO         1727    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000100   0x08000100   0x00000024   Code   RO         1365    .text               startup_stm32f103xb.o
+    0x08000124   0x08000124   0x00000020   Code   RO         1406    .text               mc_w.l(llushr.o)
+    0x08000144   0x08000144   0x00000024   Code   RO         1408    .text               mc_w.l(memcpya.o)
+    0x08000168   0x08000168   0x00000024   Code   RO         1410    .text               mc_w.l(memseta.o)
+    0x0800018c   0x0800018c   0x0000014c   Code   RO         1679    .text               mc_w.l(_scanf_int.o)
+    0x080002d8   0x080002d8   0x0000014e   Code   RO         1681    .text               mf_w.l(dadd.o)
+    0x08000426   0x08000426   0x000000e4   Code   RO         1683    .text               mf_w.l(dmul.o)
+    0x0800050a   0x0800050a   0x000000de   Code   RO         1685    .text               mf_w.l(ddiv.o)
+    0x080005e8   0x080005e8   0x00000036   Code   RO         1687    .text               mf_w.l(dcmpge.o)
+    0x0800061e   0x0800061e   0x00000036   Code   RO         1689    .text               mf_w.l(dcmpgt.o)
+    0x08000654   0x08000654   0x00000022   Code   RO         1691    .text               mf_w.l(dflti.o)
+    0x08000676   0x08000676   0x0000001a   Code   RO         1693    .text               mf_w.l(dfltui.o)
+    0x08000690   0x08000690   0x0000003e   Code   RO         1695    .text               mf_w.l(dfixi.o)
+    0x080006ce   0x080006ce   0x00000032   Code   RO         1697    .text               mf_w.l(dfixui.o)
+    0x08000700   0x08000700   0x0000002c   Code   RO         1741    .text               mc_w.l(uidiv.o)
+    0x0800072c   0x0800072c   0x00000062   Code   RO         1743    .text               mc_w.l(uldiv.o)
+    0x0800078e   0x0800078e   0x0000001e   Code   RO         1745    .text               mc_w.l(llshl.o)
+    0x080007ac   0x080007ac   0x00000024   Code   RO         1747    .text               mc_w.l(llsshr.o)
+    0x080007d0   0x080007d0   0x0000001c   Code   RO         1756    .text               mc_w.l(_chval.o)
+    0x080007ec   0x080007ec   0x00000000   Code   RO         1762    .text               mc_w.l(iusefp.o)
+    0x080007ec   0x080007ec   0x000000ba   Code   RO         1763    .text               mf_w.l(depilogue.o)
+    0x080008a6   0x080008a6   0x0000002e   Code   RO         1765    .text               mf_w.l(dscalb.o)
+    0x080008d4   0x080008d4   0x00000030   Code   RO         1767    .text               mf_w.l(dfixul.o)
+    0x08000904   0x08000904   0x00000030   Code   RO         1769    .text               mf_w.l(cdrcmple.o)
+    0x08000934   0x08000934   0x00000024   Code   RO         1771    .text               mc_w.l(init.o)
+    0x08000958   0x08000958   0x000000a2   Code   RO         1777    .text               mf_w.l(dsqrt.o)
+    0x080009fa   0x080009fa   0x00000002   Code   RO          557    .text.BusFault_Handler  stm32f1xx_it.o
+    0x080009fc   0x080009fc   0x00000002   Code   RO          563    .text.DebugMon_Handler  stm32f1xx_it.o
+    0x080009fe   0x080009fe   0x00000008   Code   RO          571    .text.EXTI15_10_IRQHandler  stm32f1xx_it.o
+    0x08000a06   0x08000a06   0x00000008   Code   RO          537    .text.Error_Handler  main.o
+    0x08000a0e   0x08000a0e   0x00000032   Code   RO          495    .text.GpioGetBitPos  hw-gpio.o
+    0x08000a40   0x08000a40   0x00000018   Code   RO          499    .text.GpioLaunchIrqHandler  hw-gpio.o
+    0x08000a58   0x08000a58   0x00000008   Code   RO          503    .text.GpioRead      hw-gpio.o
+    0x08000a60   0x08000a60   0x00000038   Code   RO          493    .text.GpioSetIrq    hw-gpio.o
+    0x08000a98   0x08000a98   0x00000006   Code   RO          501    .text.GpioWrite     hw-gpio.o
+    0x08000a9e   0x08000a9e   0x00000040   Code   RO          910    .text.HAL_DMA_Abort  stm32f1xx_hal_dma.o
     0x08000ade   0x08000ade   0x00000002   PAD
-    0x08000ae0   0x08000ae0   0x000000a0   Code   RO          907    .text.HAL_DMA_Abort_IT  stm32f1xx_hal_dma.o
-    0x08000b80   0x08000b80   0x00000020   Code   RO          777    .text.HAL_Delay     stm32f1xx_hal.o
-    0x08000ba0   0x08000ba0   0x00000004   Code   RO          500    .text.HAL_GPIO_EXTI_Callback  hw-gpio.o
-    0x08000ba4   0x08000ba4   0x00000014   Code   RO          882    .text.HAL_GPIO_EXTI_IRQHandler  stm32f1xx_hal_gpio.o
-    0x08000bb8   0x08000bb8   0x0000019c   Code   RO          870    .text.HAL_GPIO_Init  stm32f1xx_hal_gpio.o
-    0x08000d54   0x08000d54   0x0000000a   Code   RO          874    .text.HAL_GPIO_ReadPin  stm32f1xx_hal_gpio.o
-    0x08000d5e   0x08000d5e   0x0000000a   Code   RO          876    .text.HAL_GPIO_WritePin  stm32f1xx_hal_gpio.o
-    0x08000d68   0x08000d68   0x00000008   Code   RO          769    .text.HAL_GetTick   stm32f1xx_hal.o
-    0x08000d70   0x08000d70   0x00000178   Code   RO          624    .text.HAL_I2C_Init  stm32f1xx_hal_i2c.o
-    0x08000ee8   0x08000ee8   0x0000005c   Code   RO          578    .text.HAL_I2C_MspInit  stm32f1xx_hal_msp.o
-    0x08000f44   0x08000f44   0x00000018   Code   RO          767    .text.HAL_IncTick   stm32f1xx_hal.o
-    0x08000f5c   0x08000f5c   0x00000020   Code   RO          757    .text.HAL_Init      stm32f1xx_hal.o
-    0x08000f7c   0x08000f7c   0x0000003c   Code   RO          759    .text.HAL_InitTick  stm32f1xx_hal.o
-    0x08000fb8   0x08000fb8   0x00000040   Code   RO          576    .text.HAL_MspInit   stm32f1xx_hal_msp.o
-    0x08000ff8   0x08000ff8   0x0000001c   Code   RO          936    .text.HAL_NVIC_EnableIRQ  stm32f1xx_hal_cortex.o
-    0x08001014   0x08001014   0x00000038   Code   RO          932    .text.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x0800104c   0x0800104c   0x00000020   Code   RO          930    .text.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
-    0x0800106c   0x0800106c   0x0000013c   Code   RO          822    .text.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
-    0x080011a8   0x080011a8   0x00000014   Code   RO          834    .text.HAL_RCC_GetPCLK1Freq  stm32f1xx_hal_rcc.o
-    0x080011bc   0x080011bc   0x0000001c   Code   RO          836    .text.HAL_RCC_GetPCLK2Freq  stm32f1xx_hal_rcc.o
-    0x080011d8   0x080011d8   0x00000060   Code   RO          824    .text.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
-    0x08001238   0x08001238   0x00000330   Code   RO          820    .text.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
-    0x08001568   0x08001568   0x000000b2   Code   RO         1108    .text.HAL_SPI_Init  stm32f1xx_hal_spi.o
+    0x08000ae0   0x08000ae0   0x000000a0   Code   RO          912    .text.HAL_DMA_Abort_IT  stm32f1xx_hal_dma.o
+    0x08000b80   0x08000b80   0x00000020   Code   RO          782    .text.HAL_Delay     stm32f1xx_hal.o
+    0x08000ba0   0x08000ba0   0x00000004   Code   RO          505    .text.HAL_GPIO_EXTI_Callback  hw-gpio.o
+    0x08000ba4   0x08000ba4   0x00000014   Code   RO          887    .text.HAL_GPIO_EXTI_IRQHandler  stm32f1xx_hal_gpio.o
+    0x08000bb8   0x08000bb8   0x0000019c   Code   RO          875    .text.HAL_GPIO_Init  stm32f1xx_hal_gpio.o
+    0x08000d54   0x08000d54   0x0000000a   Code   RO          879    .text.HAL_GPIO_ReadPin  stm32f1xx_hal_gpio.o
+    0x08000d5e   0x08000d5e   0x0000000a   Code   RO          881    .text.HAL_GPIO_WritePin  stm32f1xx_hal_gpio.o
+    0x08000d68   0x08000d68   0x00000008   Code   RO          774    .text.HAL_GetTick   stm32f1xx_hal.o
+    0x08000d70   0x08000d70   0x00000178   Code   RO          629    .text.HAL_I2C_Init  stm32f1xx_hal_i2c.o
+    0x08000ee8   0x08000ee8   0x0000005c   Code   RO          583    .text.HAL_I2C_MspInit  stm32f1xx_hal_msp.o
+    0x08000f44   0x08000f44   0x00000018   Code   RO          772    .text.HAL_IncTick   stm32f1xx_hal.o
+    0x08000f5c   0x08000f5c   0x00000020   Code   RO          762    .text.HAL_Init      stm32f1xx_hal.o
+    0x08000f7c   0x08000f7c   0x0000003c   Code   RO          764    .text.HAL_InitTick  stm32f1xx_hal.o
+    0x08000fb8   0x08000fb8   0x00000040   Code   RO          581    .text.HAL_MspInit   stm32f1xx_hal_msp.o
+    0x08000ff8   0x08000ff8   0x0000001c   Code   RO          941    .text.HAL_NVIC_EnableIRQ  stm32f1xx_hal_cortex.o
+    0x08001014   0x08001014   0x00000038   Code   RO          937    .text.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x0800104c   0x0800104c   0x00000020   Code   RO          935    .text.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
+    0x0800106c   0x0800106c   0x0000013c   Code   RO          827    .text.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
+    0x080011a8   0x080011a8   0x00000014   Code   RO          839    .text.HAL_RCC_GetPCLK1Freq  stm32f1xx_hal_rcc.o
+    0x080011bc   0x080011bc   0x0000001c   Code   RO          841    .text.HAL_RCC_GetPCLK2Freq  stm32f1xx_hal_rcc.o
+    0x080011d8   0x080011d8   0x00000060   Code   RO          829    .text.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
+    0x08001238   0x08001238   0x00000330   Code   RO          825    .text.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
+    0x08001568   0x08001568   0x000000b2   Code   RO         1113    .text.HAL_SPI_Init  stm32f1xx_hal_spi.o
     0x0800161a   0x0800161a   0x00000002   PAD
-    0x0800161c   0x0800161c   0x00000074   Code   RO          582    .text.HAL_SPI_MspInit  stm32f1xx_hal_msp.o
-    0x08001690   0x08001690   0x00000166   Code   RO         1116    .text.HAL_SPI_Transmit  stm32f1xx_hal_spi.o
-    0x080017f6   0x080017f6   0x000001dc   Code   RO         1122    .text.HAL_SPI_TransmitReceive  stm32f1xx_hal_spi.o
+    0x0800161c   0x0800161c   0x00000074   Code   RO          587    .text.HAL_SPI_MspInit  stm32f1xx_hal_msp.o
+    0x08001690   0x08001690   0x00000166   Code   RO         1121    .text.HAL_SPI_Transmit  stm32f1xx_hal_spi.o
+    0x080017f6   0x080017f6   0x000001dc   Code   RO         1127    .text.HAL_SPI_TransmitReceive  stm32f1xx_hal_spi.o
     0x080019d2   0x080019d2   0x00000002   PAD
-    0x080019d4   0x080019d4   0x00000028   Code   RO          944    .text.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
-    0x080019fc   0x080019fc   0x00000002   Code   RO         1321    .text.HAL_UARTEx_RxEventCallback  stm32f1xx_hal_uart.o
-    0x080019fe   0x080019fe   0x00000002   Code   RO         1319    .text.HAL_UART_ErrorCallback  stm32f1xx_hal_uart.o
-    0x08001a00   0x08001a00   0x00000290   Code   RO         1313    .text.HAL_UART_IRQHandler  stm32f1xx_hal_uart.o
-    0x08001c90   0x08001c90   0x0000005e   Code   RO         1229    .text.HAL_UART_Init  stm32f1xx_hal_uart.o
+    0x080019d4   0x080019d4   0x00000028   Code   RO          949    .text.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
+    0x080019fc   0x080019fc   0x00000002   Code   RO         1326    .text.HAL_UARTEx_RxEventCallback  stm32f1xx_hal_uart.o
+    0x080019fe   0x080019fe   0x00000002   Code   RO         1324    .text.HAL_UART_ErrorCallback  stm32f1xx_hal_uart.o
+    0x08001a00   0x08001a00   0x00000290   Code   RO         1318    .text.HAL_UART_IRQHandler  stm32f1xx_hal_uart.o
+    0x08001c90   0x08001c90   0x0000005e   Code   RO         1234    .text.HAL_UART_Init  stm32f1xx_hal_uart.o
     0x08001cee   0x08001cee   0x00000002   PAD
-    0x08001cf0   0x08001cf0   0x00000088   Code   RO          586    .text.HAL_UART_MspInit  stm32f1xx_hal_msp.o
-    0x08001d78   0x08001d78   0x00000002   Code   RO         1327    .text.HAL_UART_RxCpltCallback  stm32f1xx_hal_uart.o
-    0x08001d7a   0x08001d7a   0x000000a6   Code   RO         1245    .text.HAL_UART_Transmit  stm32f1xx_hal_uart.o
-    0x08001e20   0x08001e20   0x00000002   Code   RO         1323    .text.HAL_UART_TxCpltCallback  stm32f1xx_hal_uart.o
-    0x08001e22   0x08001e22   0x00000002   Code   RO          548    .text.HardFault_Handler  stm32f1xx_it.o
-    0x08001e24   0x08001e24   0x00000048   Code   RO          492    .text.MSP_GetIRQn   hw-gpio.o
-    0x08001e6c   0x08001e6c   0x00000002   Code   RO          550    .text.MemManage_Handler  stm32f1xx_it.o
-    0x08001e6e   0x08001e6e   0x00000002   Code   RO          546    .text.NMI_Handler   stm32f1xx_it.o
+    0x08001cf0   0x08001cf0   0x00000088   Code   RO          591    .text.HAL_UART_MspInit  stm32f1xx_hal_msp.o
+    0x08001d78   0x08001d78   0x00000002   Code   RO         1332    .text.HAL_UART_RxCpltCallback  stm32f1xx_hal_uart.o
+    0x08001d7a   0x08001d7a   0x000000a6   Code   RO         1250    .text.HAL_UART_Transmit  stm32f1xx_hal_uart.o
+    0x08001e20   0x08001e20   0x00000002   Code   RO         1328    .text.HAL_UART_TxCpltCallback  stm32f1xx_hal_uart.o
+    0x08001e22   0x08001e22   0x00000002   Code   RO          553    .text.HardFault_Handler  stm32f1xx_it.o
+    0x08001e24   0x08001e24   0x00000048   Code   RO          497    .text.MSP_GetIRQn   hw-gpio.o
+    0x08001e6c   0x08001e6c   0x00000002   Code   RO          555    .text.MemManage_Handler  stm32f1xx_it.o
+    0x08001e6e   0x08001e6e   0x00000002   Code   RO          551    .text.NMI_Handler   stm32f1xx_it.o
     0x08001e70   0x08001e70   0x0000001c   Code   RO           12    .text.OnRangingDone  demoranging.o
     0x08001e8c   0x08001e8c   0x00000008   Code   RO            4    .text.OnRxDone      demoranging.o
     0x08001e94   0x08001e94   0x00000008   Code   RO           10    .text.OnRxError     demoranging.o
     0x08001e9c   0x08001e9c   0x00000008   Code   RO            8    .text.OnRxTimeout   demoranging.o
     0x08001ea4   0x08001ea4   0x00000008   Code   RO            2    .text.OnTxDone      demoranging.o
     0x08001eac   0x08001eac   0x00000008   Code   RO            6    .text.OnTxTimeout   demoranging.o
-    0x08001eb4   0x08001eb4   0x00000002   Code   RO          560    .text.PendSV_Handler  stm32f1xx_it.o
+    0x08001eb4   0x08001eb4   0x00000002   Code   RO          565    .text.PendSV_Handler  stm32f1xx_it.o
     0x08001eb6   0x08001eb6   0x00000002   PAD
-    0x08001eb8   0x08001eb8   0x00000168   Code   RO           34    .text.RangingDemoCheckDistance  demoranging.o
-    0x08002020   0x08002020   0x00000010   Code   RO           32    .text.RangingDemoGetResult  demoranging.o
+    0x08001eb8   0x08001eb8   0x00000168   Code   RO           40    .text.RangingDemoCheckDistance  demoranging.o
+    0x08002020   0x08002020   0x00000010   Code   RO           38    .text.RangingDemoGetResult  demoranging.o
     0x08002030   0x08002030   0x0000007c   Code   RO           16    .text.RangingDemoInitApplication  demoranging.o
-    0x080020ac   0x080020ac   0x0000011c   Code   RO           24    .text.RangingDemoInitializeParameters  demoranging.o
-    0x080021c8   0x080021c8   0x00000030   Code   RO           28    .text.RangingDemoReset  demoranging.o
-    0x080021f8   0x080021f8   0x00000658   Code   RO           22    .text.RangingDemoRun  demoranging.o
-    0x08002850   0x08002850   0x0000001c   Code   RO           20    .text.RangingDemoSetRadioParameters  demoranging.o
-    0x0800286c   0x0800286c   0x00000018   Code   RO           18    .text.RangingDemoSetRangingParameters  demoranging.o
-    0x08002884   0x08002884   0x00000028   Code   RO           74    .text.RangingDisplayUartOutputDistance  rangingdisplay.o
-    0x080028ac   0x080028ac   0x00000004   Code   RO          164    .text.SEGGER_RTT_Init  segger_rtt.o
-    0x080028b0   0x080028b0   0x00000022   Code   RO         1118    .text.SPI_EndRxTxTransaction  stm32f1xx_hal_spi.o
-    0x080028d2   0x080028d2   0x00000002   PAD
-    0x080028d4   0x080028d4   0x000000b4   Code   RO         1216    .text.SPI_WaitFlagStateUntilTimeout  stm32f1xx_hal_spi.o
-    0x08002988   0x08002988   0x00000002   Code   RO          556    .text.SVC_Handler   stm32f1xx_it.o
-    0x0800298a   0x0800298a   0x00000018   Code   RO          268    .text.SX1280Calibrate  sx1280.o
-    0x080029a2   0x080029a2   0x00000016   Code   RO          228    .text.SX1280ClearIrqStatus  sx1280.o
-    0x080029b8   0x080029b8   0x0000009c   Code   RO          338    .text.SX1280ComputeRangingCorrectionPolynome  sx1280.o
-    0x08002a54   0x08002a54   0x0000002e   Code   RO          304    .text.SX1280DisableManualGain  sx1280.o
-    0x08002a82   0x08002a82   0x0000002e   Code   RO          302    .text.SX1280EnableManualGain  sx1280.o
-    0x08002ab0   0x08002ab0   0x0000001a   Code   RO          214    .text.SX1280GetFirmwareVersion  sx1280.o
-    0x08002aca   0x08002aca   0x00000002   PAD
-    0x08002acc   0x08002acc   0x00000088   Code   RO          332    .text.SX1280GetFrequencyError  sx1280.o
-    0x08002b54   0x08002b54   0x00000018   Code   RO          266    .text.SX1280GetIrqStatus  sx1280.o
-    0x08002b6c   0x08002b6c   0x00000038   Code   RO          318    .text.SX1280GetLoRaBandwidth  sx1280.o
-    0x08002ba4   0x08002ba4   0x00000008   Code   RO          218    .text.SX1280GetOpMode  sx1280.o
-    0x08002bac   0x08002bac   0x000001f0   Code   RO          260    .text.SX1280GetPacketStatus  sx1280.o
-    0x08002d9c   0x08002d9c   0x0000000c   Code   RO          230    .text.SX1280GetPacketType  sx1280.o
-    0x08002da8   0x08002da8   0x0000002a   Code   RO          284    .text.SX1280GetPayload  sx1280.o
-    0x08002dd2   0x08002dd2   0x00000002   PAD
-    0x08002dd4   0x08002dd4   0x00000048   Code   RO          336    .text.SX1280GetRangingCorrectionPerSfBwGain  sx1280.o
-    0x08002e1c   0x08002e1c   0x00000040   Code   RO          320    .text.SX1280GetRangingPowerDeltaThresholdIndicator  sx1280.o
-    0x08002e5c   0x08002e5c   0x000000dc   Code   RO          316    .text.SX1280GetRangingResult  sx1280.o
-    0x08002f38   0x08002f38   0x00000024   Code   RO          262    .text.SX1280GetRssiInst  sx1280.o
-    0x08002f5c   0x08002f5c   0x00000050   Code   RO          258    .text.SX1280GetRxBufferStatus  sx1280.o
-    0x08002fac   0x08002fac   0x0000001a   Code   RO          216    .text.SX1280GetStatus  sx1280.o
-    0x08002fc6   0x08002fc6   0x00000002   PAD
-    0x08002fc8   0x08002fc8   0x00000024   Code   RO          413    .text.SX1280HalGetDioStatus  sx1280-hal.o
-    0x08002fec   0x08002fec   0x00000012   Code   RO          417    .text.SX1280HalInit  sx1280-hal.o
-    0x08002ffe   0x08002ffe   0x00000002   PAD
-    0x08003000   0x08003000   0x00000010   Code   RO          419    .text.SX1280HalIoIrqInit  sx1280-hal.o
-    0x08003010   0x08003010   0x00000060   Code   RO          411    .text.SX1280HalReadBuffer  sx1280-hal.o
-    0x08003070   0x08003070   0x0000005c   Code   RO          399    .text.SX1280HalReadCommand  sx1280-hal.o
-    0x080030cc   0x080030cc   0x00000012   Code   RO          407    .text.SX1280HalReadRegister  sx1280-hal.o
-    0x080030de   0x080030de   0x00000002   PAD
-    0x080030e0   0x080030e0   0x00000068   Code   RO          405    .text.SX1280HalReadRegisters  sx1280-hal.o
-    0x08003148   0x08003148   0x00000034   Code   RO          395    .text.SX1280HalReset  sx1280-hal.o
-    0x0800317c   0x0800317c   0x00000014   Code   RO          415    .text.SX1280HalWaitOnBusy  sx1280-hal.o
-    0x08003190   0x08003190   0x00000040   Code   RO          409    .text.SX1280HalWriteBuffer  sx1280-hal.o
-    0x080031d0   0x080031d0   0x00000054   Code   RO          397    .text.SX1280HalWriteCommand  sx1280-hal.o
-    0x08003224   0x08003224   0x00000012   Code   RO          403    .text.SX1280HalWriteRegister  sx1280-hal.o
-    0x08003236   0x08003236   0x00000002   PAD
-    0x08003238   0x08003238   0x00000050   Code   RO          401    .text.SX1280HalWriteRegisters  sx1280-hal.o
-    0x08003288   0x08003288   0x00000010   Code   RO          210    .text.SX1280Init    sx1280.o
-    0x08003298   0x08003298   0x00000018   Code   RO          208    .text.SX1280OnDioIrq  sx1280.o
-    0x080032b0   0x080032b0   0x00000238   Code   RO          342    .text.SX1280ProcessIrqs  sx1280.o
-    0x080034e8   0x080034e8   0x00000028   Code   RO          324    .text.SX1280RangingClearFilterResult  sx1280.o
-    0x08003510   0x08003510   0x00000012   Code   RO          326    .text.SX1280RangingSetFilterNumSamples  sx1280.o
-    0x08003522   0x08003522   0x00000012   Code   RO          286    .text.SX1280SendPayload  sx1280.o
-    0x08003534   0x08003534   0x00000014   Code   RO          278    .text.SX1280SetAutoFS  sx1280.o
-    0x08003548   0x08003548   0x0000001a   Code   RO          274    .text.SX1280SetAutoTx  sx1280.o
-    0x08003562   0x08003562   0x00000002   PAD
-    0x08003564   0x08003564   0x00000034   Code   RO          294    .text.SX1280SetBleAccessAddress  sx1280.o
-    0x08003598   0x08003598   0x0000000c   Code   RO          296    .text.SX1280SetBleAdvertizerAccessAddress  sx1280.o
-    0x080035a4   0x080035a4   0x00000018   Code   RO          252    .text.SX1280SetBufferBaseAddresses  sx1280.o
-    0x080035bc   0x080035bc   0x00000014   Code   RO          238    .text.SX1280SetCad  sx1280.o
-    0x080035d0   0x080035d0   0x0000001c   Code   RO          250    .text.SX1280SetCadParams  sx1280.o
-    0x080035ec   0x080035ec   0x00000024   Code   RO          298    .text.SX1280SetCrcPolynomial  sx1280.o
-    0x08003610   0x08003610   0x00000024   Code   RO          292    .text.SX1280SetCrcSeed  sx1280.o
-    0x08003634   0x08003634   0x00000020   Code   RO          312    .text.SX1280SetDeviceRangingAddress  sx1280.o
-    0x08003654   0x08003654   0x00000036   Code   RO          264    .text.SX1280SetDioIrqParams  sx1280.o
-    0x0800368a   0x0800368a   0x00000002   PAD
-    0x0800368c   0x0800368c   0x00000014   Code   RO          224    .text.SX1280SetFs   sx1280.o
-    0x080036a0   0x080036a0   0x00000008   Code   RO          340    .text.SX1280SetInterruptMode  sx1280.o
-    0x080036a8   0x080036a8   0x00000032   Code   RO          308    .text.SX1280SetLNAGainSetting  sx1280.o
-    0x080036da   0x080036da   0x00000014   Code   RO          280    .text.SX1280SetLongPreamble  sx1280.o
-    0x080036ee   0x080036ee   0x00000020   Code   RO          306    .text.SX1280SetManualGainValue  sx1280.o
-    0x0800370e   0x0800370e   0x00000002   PAD
-    0x08003710   0x08003710   0x00000078   Code   RO          254    .text.SX1280SetModulationParams  sx1280.o
-    0x08003788   0x08003788   0x00000084   Code   RO          256    .text.SX1280SetPacketParams  sx1280.o
-    0x0800380c   0x0800380c   0x00000018   Code   RO          244    .text.SX1280SetPacketType  sx1280.o
-    0x08003824   0x08003824   0x0000000a   Code   RO          282    .text.SX1280SetPayload  sx1280.o
-    0x0800382e   0x0800382e   0x00000002   PAD
-    0x08003830   0x08003830   0x00000008   Code   RO          334    .text.SX1280SetPollingMode  sx1280.o
-    0x08003838   0x08003838   0x00000028   Code   RO          322    .text.SX1280SetRangingCalibration  sx1280.o
-    0x08003860   0x08003860   0x0000002c   Code   RO          310    .text.SX1280SetRangingIdLength  sx1280.o
-    0x0800388c   0x0800388c   0x0000001c   Code   RO          314    .text.SX1280SetRangingRequestAddress  sx1280.o
-    0x080038a8   0x080038a8   0x00000014   Code   RO          232    .text.SX1280SetRangingRole  sx1280.o
-    0x080038bc   0x080038bc   0x00000008   Code   RO          212    .text.SX1280SetRegistersDefault  sx1280.o
-    0x080038c4   0x080038c4   0x00000014   Code   RO          270    .text.SX1280SetRegulatorMode  sx1280.o
-    0x080038d8   0x080038d8   0x00000034   Code   RO          246    .text.SX1280SetRfFrequency  sx1280.o
-    0x0800390c   0x0800390c   0x0000003c   Code   RO          234    .text.SX1280SetRx   sx1280.o
-    0x08003948   0x08003948   0x00000034   Code   RO          236    .text.SX1280SetRxDutyCycle  sx1280.o
-    0x0800397c   0x0800397c   0x0000000a   Code   RO          272    .text.SX1280SetSaveContext  sx1280.o
-    0x08003986   0x08003986   0x00000002   PAD
-    0x08003988   0x08003988   0x00000038   Code   RO          220    .text.SX1280SetSleep  sx1280.o
-    0x080039c0   0x080039c0   0x00000028   Code   RO          222    .text.SX1280SetStandby  sx1280.o
-    0x080039e8   0x080039e8   0x0000006c   Code   RO          288    .text.SX1280SetSyncWord  sx1280.o
-    0x08003a54   0x08003a54   0x00000022   Code   RO          290    .text.SX1280SetSyncWordErrorTolerance  sx1280.o
-    0x08003a76   0x08003a76   0x00000002   PAD
-    0x08003a78   0x08003a78   0x00000040   Code   RO          226    .text.SX1280SetTx   sx1280.o
-    0x08003ab8   0x08003ab8   0x0000000a   Code   RO          242    .text.SX1280SetTxContinuousPreamble  sx1280.o
-    0x08003ac2   0x08003ac2   0x0000000a   Code   RO          240    .text.SX1280SetTxContinuousWave  sx1280.o
-    0x08003acc   0x08003acc   0x0000001a   Code   RO          248    .text.SX1280SetTxParams  sx1280.o
-    0x08003ae6   0x08003ae6   0x00000002   PAD
-    0x08003ae8   0x08003ae8   0x00000024   Code   RO          300    .text.SX1280SetWhiteningSeed  sx1280.o
-    0x08003b0c   0x08003b0c   0x00000016   Code   RO          276    .text.SX1280StopAutoTx  sx1280.o
-    0x08003b22   0x08003b22   0x00000002   PAD
-    0x08003b24   0x08003b24   0x0000001c   Code   RO           26    .text.SendNextPacketEvent  demoranging.o
-    0x08003b40   0x08003b40   0x00000010   Code   RO          443    .text.SpiIn         hw-spi.o
-    0x08003b50   0x08003b50   0x00000018   Code   RO          441    .text.SpiInOut      hw-spi.o
-    0x08003b68   0x08003b68   0x00000044   Code   RO          437    .text.SpiInit       hw-spi.o
-    0x08003bac   0x08003bac   0x0000000e   Code   RO          562    .text.SysTick_Handler  stm32f1xx_it.o
-    0x08003bba   0x08003bba   0x00000066   Code   RO          530    .text.SystemClock_Config  main.o
-    0x08003c20   0x08003c20   0x00000002   Code   RO         1367    .text.SystemInit    system_stm32f1xx.o
-    0x08003c22   0x08003c22   0x00000002   PAD
-    0x08003c24   0x08003c24   0x00000010   Code   RO          514    .text.TimerCancelTimer  hw-lptim.o
-    0x08003c34   0x08003c34   0x0000001c   Code   RO          512    .text.TimerCreateTimer  hw-lptim.o
-    0x08003c50   0x08003c50   0x00000030   Code   RO          516    .text.TimerSysTick_IRQHandler  hw-lptim.o
-    0x08003c80   0x08003c80   0x0000000c   Code   RO         1317    .text.UART_DMAAbortOnError  stm32f1xx_hal_uart.o
-    0x08003c8c   0x08003c8c   0x0000004e   Code   RO         1277    .text.UART_EndRxTransfer  stm32f1xx_hal_uart.o
-    0x08003cda   0x08003cda   0x000000c4   Code   RO         1315    .text.UART_Receive_IT  stm32f1xx_hal_uart.o
-    0x08003d9e   0x08003d9e   0x00000002   PAD
-    0x08003da0   0x08003da0   0x00000080   Code   RO         1233    .text.UART_SetConfig  stm32f1xx_hal_uart.o
-    0x08003e20   0x08003e20   0x0000006e   Code   RO         1247    .text.UART_WaitOnFlagUntilTimeout  stm32f1xx_hal_uart.o
-    0x08003e8e   0x08003e8e   0x00000002   PAD
-    0x08003e90   0x08003e90   0x00000008   Code   RO          564    .text.USART3_IRQHandler  stm32f1xx_it.o
-    0x08003e98   0x08003e98   0x00000002   Code   RO          554    .text.UsageFault_Handler  stm32f1xx_it.o
-    0x08003e9a   0x08003e9a   0x00000002   PAD
-    0x08003e9c   0x08003e9c   0x0000000c   Code   RO           14    .text.WaitRxTimeout  demoranging.o
-    0x08003ea8   0x08003ea8   0x00000060   Code   RO          106    .text._DoInit       segger_rtt.o
-    0x08003f08   0x08003f08   0x00000024   Code   RO          934    .text.__NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x08003f2c   0x08003f2c   0x00000018   Code   RO          599    .text.fputc         syscalls.o
-    0x08003f44   0x08003f44   0x000001dc   Code   RO          528    .text.main          main.o
-    0x08004120   0x08004120   0x00000120   Code   RO           61    .text.main_ranging  main_ranging.o
-    0x08004240   0x08004240   0x00000020   Code   RO         1644    i.__0printf         mc_w.l(printfa.o)
-    0x08004260   0x08004260   0x00000028   Code   RO         1708    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
-    0x08004288   0x08004288   0x000000aa   Code   RO         1710    i.__kernel_poly     m_ws.l(poly.o)
-    0x08004332   0x08004332   0x00000002   PAD
-    0x08004334   0x08004334   0x00000010   Code   RO         1694    i.__mathlib_dbl_divzero  m_ws.l(dunder.o)
-    0x08004344   0x08004344   0x00000004   Code   RO         1696    i.__mathlib_dbl_infnan2  m_ws.l(dunder.o)
-    0x08004348   0x08004348   0x0000000c   Code   RO         1697    i.__mathlib_dbl_invalid  m_ws.l(dunder.o)
-    0x08004354   0x08004354   0x0000000e   Code   RO         1698    i.__mathlib_dbl_overflow  m_ws.l(dunder.o)
-    0x08004362   0x08004362   0x00000002   PAD
-    0x08004364   0x08004364   0x00000010   Code   RO         1700    i.__mathlib_dbl_underflow  m_ws.l(dunder.o)
-    0x08004374   0x08004374   0x0000000e   Code   RO         1781    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08004382   0x08004382   0x00000002   Code   RO         1782    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08004384   0x08004384   0x0000000e   Code   RO         1783    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08004392   0x08004392   0x00000002   PAD
-    0x08004394   0x08004394   0x0000000c   Code   RO         1746    i.__set_errno       mc_w.l(errno.o)
-    0x080043a0   0x080043a0   0x00000184   Code   RO         1651    i._fp_digits        mc_w.l(printfa.o)
-    0x08004524   0x08004524   0x000006dc   Code   RO         1652    i._printf_core      mc_w.l(printfa.o)
-    0x08004c00   0x08004c00   0x00000024   Code   RO         1653    i._printf_post_padding  mc_w.l(printfa.o)
-    0x08004c24   0x08004c24   0x0000002e   Code   RO         1654    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x08004c52   0x08004c52   0x00000002   PAD
-    0x08004c54   0x08004c54   0x000009d8   Code   RO         1383    i.pow               m_ws.l(pow.o)
-    0x0800562c   0x0800562c   0x0000000c   Code   RO         1397    i.putchar           mc_w.l(putchar.o)
-    0x08005638   0x08005638   0x00000024   Code   RO         1395    i.puts              mc_w.l(puts.o)
-    0x0800565c   0x0800565c   0x0000004c   Code   RO         1714    i.sqrt              m_ws.l(sqrt.o)
-    0x080056a8   0x080056a8   0x00000088   Data   RO         1384    .constdata          m_ws.l(pow.o)
-    0x08005730   0x08005730   0x00000008   Data   RO         1712    .constdata          m_ws.l(qnan.o)
-    0x08005738   0x08005738   0x00000010   Data   RO         1372    .rodata.AHBPrescTable  system_stm32f1xx.o
-    0x08005748   0x08005748   0x00000008   Data   RO         1373    .rodata.APBPrescTable  system_stm32f1xx.o
-    0x08005750   0x08005750   0x0000000c   Data   RO           42    .rodata.RNG_CALIB_0400  demoranging.o
-    0x0800575c   0x0800575c   0x0000000c   Data   RO           43    .rodata.RNG_CALIB_0800  demoranging.o
-    0x08005768   0x08005768   0x0000000c   Data   RO           44    .rodata.RNG_CALIB_1600  demoranging.o
-    0x08005774   0x08005774   0x00000004   PAD
-    0x08005778   0x08005778   0x00000030   Data   RO           45    .rodata.RNG_FGRAD_0400  demoranging.o
-    0x080057a8   0x080057a8   0x00000030   Data   RO           46    .rodata.RNG_FGRAD_0800  demoranging.o
-    0x080057d8   0x080057d8   0x00000030   Data   RO           47    .rodata.RNG_FGRAD_1600  demoranging.o
-    0x08005808   0x08005808   0x0000011c   Data   RO          425    .rodata.Radio       sx1280-hal.o
-    0x08005924   0x08005924   0x00000004   PAD
-    0x08005928   0x08005928   0x00000500   Data   RO          354    .rodata.RangingCorrectionSF10BW0400  sx1280.o
-    0x08005e28   0x08005e28   0x00000500   Data   RO          366    .rodata.RangingCorrectionSF10BW0800  sx1280.o
-    0x08006328   0x08006328   0x00000500   Data   RO          378    .rodata.RangingCorrectionSF10BW1600  sx1280.o
-    0x08006828   0x08006828   0x00000500   Data   RO          344    .rodata.RangingCorrectionSF5BW0400  sx1280.o
-    0x08006d28   0x08006d28   0x00000500   Data   RO          356    .rodata.RangingCorrectionSF5BW0800  sx1280.o
-    0x08007228   0x08007228   0x00000500   Data   RO          368    .rodata.RangingCorrectionSF5BW1600  sx1280.o
-    0x08007728   0x08007728   0x00000500   Data   RO          346    .rodata.RangingCorrectionSF6BW0400  sx1280.o
-    0x08007c28   0x08007c28   0x00000500   Data   RO          358    .rodata.RangingCorrectionSF6BW0800  sx1280.o
-    0x08008128   0x08008128   0x00000500   Data   RO          370    .rodata.RangingCorrectionSF6BW1600  sx1280.o
-    0x08008628   0x08008628   0x00000500   Data   RO          348    .rodata.RangingCorrectionSF7BW0400  sx1280.o
-    0x08008b28   0x08008b28   0x00000500   Data   RO          360    .rodata.RangingCorrectionSF7BW0800  sx1280.o
-    0x08009028   0x08009028   0x00000500   Data   RO          372    .rodata.RangingCorrectionSF7BW1600  sx1280.o
-    0x08009528   0x08009528   0x00000500   Data   RO          350    .rodata.RangingCorrectionSF8BW0400  sx1280.o
-    0x08009a28   0x08009a28   0x00000500   Data   RO          362    .rodata.RangingCorrectionSF8BW0800  sx1280.o
-    0x08009f28   0x08009f28   0x00000500   Data   RO          374    .rodata.RangingCorrectionSF8BW1600  sx1280.o
-    0x0800a428   0x0800a428   0x00000500   Data   RO          352    .rodata.RangingCorrectionSF9BW0400  sx1280.o
-    0x0800a928   0x0800a928   0x00000500   Data   RO          364    .rodata.RangingCorrectionSF9BW0800  sx1280.o
-    0x0800ae28   0x0800ae28   0x00000500   Data   RO          376    .rodata.RangingCorrectionSF9BW1600  sx1280.o
-    0x0800b328   0x0800b328   0x00000058   Data   RO          355    .rodata.correctionRangingPolynomeSF10BW0400  sx1280.o
-    0x0800b380   0x0800b380   0x00000058   Data   RO          367    .rodata.correctionRangingPolynomeSF10BW0800  sx1280.o
-    0x0800b3d8   0x0800b3d8   0x00000058   Data   RO          379    .rodata.correctionRangingPolynomeSF10BW1600  sx1280.o
-    0x0800b430   0x0800b430   0x00000058   Data   RO          345    .rodata.correctionRangingPolynomeSF5BW0400  sx1280.o
-    0x0800b488   0x0800b488   0x00000058   Data   RO          357    .rodata.correctionRangingPolynomeSF5BW0800  sx1280.o
-    0x0800b4e0   0x0800b4e0   0x00000058   Data   RO          369    .rodata.correctionRangingPolynomeSF5BW1600  sx1280.o
-    0x0800b538   0x0800b538   0x00000058   Data   RO          347    .rodata.correctionRangingPolynomeSF6BW0400  sx1280.o
-    0x0800b590   0x0800b590   0x00000058   Data   RO          359    .rodata.correctionRangingPolynomeSF6BW0800  sx1280.o
-    0x0800b5e8   0x0800b5e8   0x00000058   Data   RO          371    .rodata.correctionRangingPolynomeSF6BW1600  sx1280.o
-    0x0800b640   0x0800b640   0x00000058   Data   RO          349    .rodata.correctionRangingPolynomeSF7BW0400  sx1280.o
-    0x0800b698   0x0800b698   0x00000058   Data   RO          361    .rodata.correctionRangingPolynomeSF7BW0800  sx1280.o
-    0x0800b6f0   0x0800b6f0   0x00000058   Data   RO          373    .rodata.correctionRangingPolynomeSF7BW1600  sx1280.o
-    0x0800b748   0x0800b748   0x00000058   Data   RO          351    .rodata.correctionRangingPolynomeSF8BW0400  sx1280.o
-    0x0800b7a0   0x0800b7a0   0x00000058   Data   RO          363    .rodata.correctionRangingPolynomeSF8BW0800  sx1280.o
-    0x0800b7f8   0x0800b7f8   0x00000058   Data   RO          375    .rodata.correctionRangingPolynomeSF8BW1600  sx1280.o
-    0x0800b850   0x0800b850   0x00000058   Data   RO          353    .rodata.correctionRangingPolynomeSF9BW0400  sx1280.o
-    0x0800b8a8   0x0800b8a8   0x00000058   Data   RO          365    .rodata.correctionRangingPolynomeSF9BW0800  sx1280.o
-    0x0800b900   0x0800b900   0x00000058   Data   RO          377    .rodata.correctionRangingPolynomeSF9BW1600  sx1280.o
-    0x0800b958   0x0800b958   0x000000a0   Data   RO           41    .rodata.rangingChannels  demoranging.o
-    0x0800b9f8   0x0800b9f8   0x00000009   Data   RO          179    .rodata.str1.1      segger_rtt.o
-    0x0800ba01   0x0800ba01   0x00000003   PAD
-    0x0800ba04   0x0800ba04   0x00000020   Data   RO         1780    Region$$Table       anon$$obj.o
+    0x080020ac   0x080020ac   0x00000118   Code   RO           32    .text.RangingDemoInitializeParameters  demoranging.o
+    0x080021c4   0x080021c4   0x00000028   Code   RO           34    .text.RangingDemoReset  demoranging.o
+    0x080021ec   0x080021ec   0x00000088   Code   RO           30    .text.RangingDemoRun  demoranging.o
+    0x08002274   0x08002274   0x00000020   Code   RO           20    .text.RangingDemoSetRadioParameters  demoranging.o
+    0x08002294   0x08002294   0x00000018   Code   RO           18    .text.RangingDemoSetRangingParameters  demoranging.o
+    0x080022ac   0x080022ac   0x00000028   Code   RO           79    .text.RangingDisplayUartOutputDistance  rangingdisplay.o
+    0x080022d4   0x080022d4   0x000002d8   Code   RO           22    .text.RangingMasterHandler  demoranging.o
+    0x080025ac   0x080025ac   0x000002c8   Code   RO           26    .text.RangingSlaveHandler  demoranging.o
+    0x08002874   0x08002874   0x000002cc   Code   RO           28    .text.RangingSnifferHandler  demoranging.o
+    0x08002b40   0x08002b40   0x00000004   Code   RO          169    .text.SEGGER_RTT_Init  segger_rtt.o
+    0x08002b44   0x08002b44   0x00000022   Code   RO         1123    .text.SPI_EndRxTxTransaction  stm32f1xx_hal_spi.o
+    0x08002b66   0x08002b66   0x00000002   PAD
+    0x08002b68   0x08002b68   0x000000b4   Code   RO         1221    .text.SPI_WaitFlagStateUntilTimeout  stm32f1xx_hal_spi.o
+    0x08002c1c   0x08002c1c   0x00000002   Code   RO          561    .text.SVC_Handler   stm32f1xx_it.o
+    0x08002c1e   0x08002c1e   0x00000018   Code   RO          273    .text.SX1280Calibrate  sx1280.o
+    0x08002c36   0x08002c36   0x00000016   Code   RO          233    .text.SX1280ClearIrqStatus  sx1280.o
+    0x08002c4c   0x08002c4c   0x0000009c   Code   RO          343    .text.SX1280ComputeRangingCorrectionPolynome  sx1280.o
+    0x08002ce8   0x08002ce8   0x0000002e   Code   RO          309    .text.SX1280DisableManualGain  sx1280.o
+    0x08002d16   0x08002d16   0x0000002e   Code   RO          307    .text.SX1280EnableManualGain  sx1280.o
+    0x08002d44   0x08002d44   0x0000001a   Code   RO          219    .text.SX1280GetFirmwareVersion  sx1280.o
+    0x08002d5e   0x08002d5e   0x00000002   PAD
+    0x08002d60   0x08002d60   0x00000088   Code   RO          337    .text.SX1280GetFrequencyError  sx1280.o
+    0x08002de8   0x08002de8   0x00000018   Code   RO          271    .text.SX1280GetIrqStatus  sx1280.o
+    0x08002e00   0x08002e00   0x00000038   Code   RO          323    .text.SX1280GetLoRaBandwidth  sx1280.o
+    0x08002e38   0x08002e38   0x00000008   Code   RO          223    .text.SX1280GetOpMode  sx1280.o
+    0x08002e40   0x08002e40   0x000001f0   Code   RO          265    .text.SX1280GetPacketStatus  sx1280.o
+    0x08003030   0x08003030   0x0000000c   Code   RO          235    .text.SX1280GetPacketType  sx1280.o
+    0x0800303c   0x0800303c   0x0000002a   Code   RO          289    .text.SX1280GetPayload  sx1280.o
+    0x08003066   0x08003066   0x00000002   PAD
+    0x08003068   0x08003068   0x00000048   Code   RO          341    .text.SX1280GetRangingCorrectionPerSfBwGain  sx1280.o
+    0x080030b0   0x080030b0   0x00000040   Code   RO          325    .text.SX1280GetRangingPowerDeltaThresholdIndicator  sx1280.o
+    0x080030f0   0x080030f0   0x000000dc   Code   RO          321    .text.SX1280GetRangingResult  sx1280.o
+    0x080031cc   0x080031cc   0x00000024   Code   RO          267    .text.SX1280GetRssiInst  sx1280.o
+    0x080031f0   0x080031f0   0x00000050   Code   RO          263    .text.SX1280GetRxBufferStatus  sx1280.o
+    0x08003240   0x08003240   0x0000001a   Code   RO          221    .text.SX1280GetStatus  sx1280.o
+    0x0800325a   0x0800325a   0x00000002   PAD
+    0x0800325c   0x0800325c   0x00000024   Code   RO          418    .text.SX1280HalGetDioStatus  sx1280-hal.o
+    0x08003280   0x08003280   0x00000012   Code   RO          422    .text.SX1280HalInit  sx1280-hal.o
+    0x08003292   0x08003292   0x00000002   PAD
+    0x08003294   0x08003294   0x00000010   Code   RO          424    .text.SX1280HalIoIrqInit  sx1280-hal.o
+    0x080032a4   0x080032a4   0x00000060   Code   RO          416    .text.SX1280HalReadBuffer  sx1280-hal.o
+    0x08003304   0x08003304   0x0000005c   Code   RO          404    .text.SX1280HalReadCommand  sx1280-hal.o
+    0x08003360   0x08003360   0x00000012   Code   RO          412    .text.SX1280HalReadRegister  sx1280-hal.o
+    0x08003372   0x08003372   0x00000002   PAD
+    0x08003374   0x08003374   0x00000068   Code   RO          410    .text.SX1280HalReadRegisters  sx1280-hal.o
+    0x080033dc   0x080033dc   0x00000034   Code   RO          400    .text.SX1280HalReset  sx1280-hal.o
+    0x08003410   0x08003410   0x00000014   Code   RO          420    .text.SX1280HalWaitOnBusy  sx1280-hal.o
+    0x08003424   0x08003424   0x00000040   Code   RO          414    .text.SX1280HalWriteBuffer  sx1280-hal.o
+    0x08003464   0x08003464   0x00000054   Code   RO          402    .text.SX1280HalWriteCommand  sx1280-hal.o
+    0x080034b8   0x080034b8   0x00000012   Code   RO          408    .text.SX1280HalWriteRegister  sx1280-hal.o
+    0x080034ca   0x080034ca   0x00000002   PAD
+    0x080034cc   0x080034cc   0x00000050   Code   RO          406    .text.SX1280HalWriteRegisters  sx1280-hal.o
+    0x0800351c   0x0800351c   0x00000010   Code   RO          215    .text.SX1280Init    sx1280.o
+    0x0800352c   0x0800352c   0x00000018   Code   RO          213    .text.SX1280OnDioIrq  sx1280.o
+    0x08003544   0x08003544   0x00000238   Code   RO          347    .text.SX1280ProcessIrqs  sx1280.o
+    0x0800377c   0x0800377c   0x00000028   Code   RO          329    .text.SX1280RangingClearFilterResult  sx1280.o
+    0x080037a4   0x080037a4   0x00000012   Code   RO          331    .text.SX1280RangingSetFilterNumSamples  sx1280.o
+    0x080037b6   0x080037b6   0x00000012   Code   RO          291    .text.SX1280SendPayload  sx1280.o
+    0x080037c8   0x080037c8   0x00000014   Code   RO          283    .text.SX1280SetAutoFS  sx1280.o
+    0x080037dc   0x080037dc   0x0000001a   Code   RO          279    .text.SX1280SetAutoTx  sx1280.o
+    0x080037f6   0x080037f6   0x00000002   PAD
+    0x080037f8   0x080037f8   0x00000034   Code   RO          299    .text.SX1280SetBleAccessAddress  sx1280.o
+    0x0800382c   0x0800382c   0x0000000c   Code   RO          301    .text.SX1280SetBleAdvertizerAccessAddress  sx1280.o
+    0x08003838   0x08003838   0x00000018   Code   RO          257    .text.SX1280SetBufferBaseAddresses  sx1280.o
+    0x08003850   0x08003850   0x00000014   Code   RO          243    .text.SX1280SetCad  sx1280.o
+    0x08003864   0x08003864   0x0000001c   Code   RO          255    .text.SX1280SetCadParams  sx1280.o
+    0x08003880   0x08003880   0x00000024   Code   RO          303    .text.SX1280SetCrcPolynomial  sx1280.o
+    0x080038a4   0x080038a4   0x00000024   Code   RO          297    .text.SX1280SetCrcSeed  sx1280.o
+    0x080038c8   0x080038c8   0x00000020   Code   RO          317    .text.SX1280SetDeviceRangingAddress  sx1280.o
+    0x080038e8   0x080038e8   0x00000036   Code   RO          269    .text.SX1280SetDioIrqParams  sx1280.o
+    0x0800391e   0x0800391e   0x00000002   PAD
+    0x08003920   0x08003920   0x00000014   Code   RO          229    .text.SX1280SetFs   sx1280.o
+    0x08003934   0x08003934   0x00000008   Code   RO          345    .text.SX1280SetInterruptMode  sx1280.o
+    0x0800393c   0x0800393c   0x00000032   Code   RO          313    .text.SX1280SetLNAGainSetting  sx1280.o
+    0x0800396e   0x0800396e   0x00000014   Code   RO          285    .text.SX1280SetLongPreamble  sx1280.o
+    0x08003982   0x08003982   0x00000020   Code   RO          311    .text.SX1280SetManualGainValue  sx1280.o
+    0x080039a2   0x080039a2   0x00000002   PAD
+    0x080039a4   0x080039a4   0x00000078   Code   RO          259    .text.SX1280SetModulationParams  sx1280.o
+    0x08003a1c   0x08003a1c   0x00000084   Code   RO          261    .text.SX1280SetPacketParams  sx1280.o
+    0x08003aa0   0x08003aa0   0x00000018   Code   RO          249    .text.SX1280SetPacketType  sx1280.o
+    0x08003ab8   0x08003ab8   0x0000000a   Code   RO          287    .text.SX1280SetPayload  sx1280.o
+    0x08003ac2   0x08003ac2   0x00000002   PAD
+    0x08003ac4   0x08003ac4   0x00000008   Code   RO          339    .text.SX1280SetPollingMode  sx1280.o
+    0x08003acc   0x08003acc   0x00000028   Code   RO          327    .text.SX1280SetRangingCalibration  sx1280.o
+    0x08003af4   0x08003af4   0x0000002c   Code   RO          315    .text.SX1280SetRangingIdLength  sx1280.o
+    0x08003b20   0x08003b20   0x0000001c   Code   RO          319    .text.SX1280SetRangingRequestAddress  sx1280.o
+    0x08003b3c   0x08003b3c   0x00000014   Code   RO          237    .text.SX1280SetRangingRole  sx1280.o
+    0x08003b50   0x08003b50   0x00000008   Code   RO          217    .text.SX1280SetRegistersDefault  sx1280.o
+    0x08003b58   0x08003b58   0x00000014   Code   RO          275    .text.SX1280SetRegulatorMode  sx1280.o
+    0x08003b6c   0x08003b6c   0x00000034   Code   RO          251    .text.SX1280SetRfFrequency  sx1280.o
+    0x08003ba0   0x08003ba0   0x0000003c   Code   RO          239    .text.SX1280SetRx   sx1280.o
+    0x08003bdc   0x08003bdc   0x00000034   Code   RO          241    .text.SX1280SetRxDutyCycle  sx1280.o
+    0x08003c10   0x08003c10   0x0000000a   Code   RO          277    .text.SX1280SetSaveContext  sx1280.o
+    0x08003c1a   0x08003c1a   0x00000002   PAD
+    0x08003c1c   0x08003c1c   0x00000038   Code   RO          225    .text.SX1280SetSleep  sx1280.o
+    0x08003c54   0x08003c54   0x00000028   Code   RO          227    .text.SX1280SetStandby  sx1280.o
+    0x08003c7c   0x08003c7c   0x0000006c   Code   RO          293    .text.SX1280SetSyncWord  sx1280.o
+    0x08003ce8   0x08003ce8   0x00000022   Code   RO          295    .text.SX1280SetSyncWordErrorTolerance  sx1280.o
+    0x08003d0a   0x08003d0a   0x00000002   PAD
+    0x08003d0c   0x08003d0c   0x00000040   Code   RO          231    .text.SX1280SetTx   sx1280.o
+    0x08003d4c   0x08003d4c   0x0000000a   Code   RO          247    .text.SX1280SetTxContinuousPreamble  sx1280.o
+    0x08003d56   0x08003d56   0x0000000a   Code   RO          245    .text.SX1280SetTxContinuousWave  sx1280.o
+    0x08003d60   0x08003d60   0x0000001a   Code   RO          253    .text.SX1280SetTxParams  sx1280.o
+    0x08003d7a   0x08003d7a   0x00000002   PAD
+    0x08003d7c   0x08003d7c   0x00000024   Code   RO          305    .text.SX1280SetWhiteningSeed  sx1280.o
+    0x08003da0   0x08003da0   0x00000016   Code   RO          281    .text.SX1280StopAutoTx  sx1280.o
+    0x08003db6   0x08003db6   0x00000002   PAD
+    0x08003db8   0x08003db8   0x0000001c   Code   RO           24    .text.SendNextPacketEvent  demoranging.o
+    0x08003dd4   0x08003dd4   0x00000010   Code   RO          448    .text.SpiIn         hw-spi.o
+    0x08003de4   0x08003de4   0x00000018   Code   RO          446    .text.SpiInOut      hw-spi.o
+    0x08003dfc   0x08003dfc   0x00000044   Code   RO          442    .text.SpiInit       hw-spi.o
+    0x08003e40   0x08003e40   0x0000000e   Code   RO          567    .text.SysTick_Handler  stm32f1xx_it.o
+    0x08003e4e   0x08003e4e   0x00000066   Code   RO          535    .text.SystemClock_Config  main.o
+    0x08003eb4   0x08003eb4   0x00000002   Code   RO         1372    .text.SystemInit    system_stm32f1xx.o
+    0x08003eb6   0x08003eb6   0x00000002   PAD
+    0x08003eb8   0x08003eb8   0x00000010   Code   RO          519    .text.TimerCancelTimer  hw-lptim.o
+    0x08003ec8   0x08003ec8   0x0000001c   Code   RO          517    .text.TimerCreateTimer  hw-lptim.o
+    0x08003ee4   0x08003ee4   0x00000030   Code   RO          521    .text.TimerSysTick_IRQHandler  hw-lptim.o
+    0x08003f14   0x08003f14   0x0000000c   Code   RO         1322    .text.UART_DMAAbortOnError  stm32f1xx_hal_uart.o
+    0x08003f20   0x08003f20   0x0000004e   Code   RO         1282    .text.UART_EndRxTransfer  stm32f1xx_hal_uart.o
+    0x08003f6e   0x08003f6e   0x000000c4   Code   RO         1320    .text.UART_Receive_IT  stm32f1xx_hal_uart.o
+    0x08004032   0x08004032   0x00000002   PAD
+    0x08004034   0x08004034   0x00000080   Code   RO         1238    .text.UART_SetConfig  stm32f1xx_hal_uart.o
+    0x080040b4   0x080040b4   0x0000006e   Code   RO         1252    .text.UART_WaitOnFlagUntilTimeout  stm32f1xx_hal_uart.o
+    0x08004122   0x08004122   0x00000002   PAD
+    0x08004124   0x08004124   0x00000008   Code   RO          569    .text.USART3_IRQHandler  stm32f1xx_it.o
+    0x0800412c   0x0800412c   0x00000002   Code   RO          559    .text.UsageFault_Handler  stm32f1xx_it.o
+    0x0800412e   0x0800412e   0x00000002   PAD
+    0x08004130   0x08004130   0x0000000c   Code   RO           14    .text.WaitRxTimeout  demoranging.o
+    0x0800413c   0x0800413c   0x00000060   Code   RO          111    .text._DoInit       segger_rtt.o
+    0x0800419c   0x0800419c   0x00000024   Code   RO          939    .text.__NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x080041c0   0x080041c0   0x00000018   Code   RO          604    .text.fputc         syscalls.o
+    0x080041d8   0x080041d8   0x000001dc   Code   RO          533    .text.main          main.o
+    0x080043b4   0x080043b4   0x00000158   Code   RO           66    .text.main_ranging  main_ranging.o
+    0x0800450c   0x0800450c   0x00000020   Code   RO         1649    i.__0printf         mc_w.l(printfa.o)
+    0x0800452c   0x0800452c   0x00000028   Code   RO         1713    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
+    0x08004554   0x08004554   0x000000aa   Code   RO         1715    i.__kernel_poly     m_ws.l(poly.o)
+    0x080045fe   0x080045fe   0x00000002   PAD
+    0x08004600   0x08004600   0x00000010   Code   RO         1699    i.__mathlib_dbl_divzero  m_ws.l(dunder.o)
+    0x08004610   0x08004610   0x00000004   Code   RO         1701    i.__mathlib_dbl_infnan2  m_ws.l(dunder.o)
+    0x08004614   0x08004614   0x0000000c   Code   RO         1702    i.__mathlib_dbl_invalid  m_ws.l(dunder.o)
+    0x08004620   0x08004620   0x0000000e   Code   RO         1703    i.__mathlib_dbl_overflow  m_ws.l(dunder.o)
+    0x0800462e   0x0800462e   0x00000002   PAD
+    0x08004630   0x08004630   0x00000010   Code   RO         1705    i.__mathlib_dbl_underflow  m_ws.l(dunder.o)
+    0x08004640   0x08004640   0x0000000e   Code   RO         1786    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800464e   0x0800464e   0x00000002   Code   RO         1787    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08004650   0x08004650   0x0000000e   Code   RO         1788    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800465e   0x0800465e   0x00000002   PAD
+    0x08004660   0x08004660   0x0000000c   Code   RO         1751    i.__set_errno       mc_w.l(errno.o)
+    0x0800466c   0x0800466c   0x00000184   Code   RO         1656    i._fp_digits        mc_w.l(printfa.o)
+    0x080047f0   0x080047f0   0x000006dc   Code   RO         1657    i._printf_core      mc_w.l(printfa.o)
+    0x08004ecc   0x08004ecc   0x00000024   Code   RO         1658    i._printf_post_padding  mc_w.l(printfa.o)
+    0x08004ef0   0x08004ef0   0x0000002e   Code   RO         1659    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x08004f1e   0x08004f1e   0x00000002   PAD
+    0x08004f20   0x08004f20   0x000009d8   Code   RO         1388    i.pow               m_ws.l(pow.o)
+    0x080058f8   0x080058f8   0x0000000c   Code   RO         1402    i.putchar           mc_w.l(putchar.o)
+    0x08005904   0x08005904   0x00000024   Code   RO         1400    i.puts              mc_w.l(puts.o)
+    0x08005928   0x08005928   0x0000004c   Code   RO         1719    i.sqrt              m_ws.l(sqrt.o)
+    0x08005974   0x08005974   0x00000004   PAD
+    0x08005978   0x08005978   0x00000088   Data   RO         1389    .constdata          m_ws.l(pow.o)
+    0x08005a00   0x08005a00   0x00000008   Data   RO         1717    .constdata          m_ws.l(qnan.o)
+    0x08005a08   0x08005a08   0x00000010   Data   RO         1377    .rodata.AHBPrescTable  system_stm32f1xx.o
+    0x08005a18   0x08005a18   0x00000008   Data   RO         1378    .rodata.APBPrescTable  system_stm32f1xx.o
+    0x08005a20   0x08005a20   0x0000000c   Data   RO           46    .rodata.RNG_CALIB_0400  demoranging.o
+    0x08005a2c   0x08005a2c   0x0000000c   Data   RO           47    .rodata.RNG_CALIB_0800  demoranging.o
+    0x08005a38   0x08005a38   0x0000000c   Data   RO           48    .rodata.RNG_CALIB_1600  demoranging.o
+    0x08005a44   0x08005a44   0x00000004   PAD
+    0x08005a48   0x08005a48   0x00000030   Data   RO           49    .rodata.RNG_FGRAD_0400  demoranging.o
+    0x08005a78   0x08005a78   0x00000030   Data   RO           50    .rodata.RNG_FGRAD_0800  demoranging.o
+    0x08005aa8   0x08005aa8   0x00000030   Data   RO           51    .rodata.RNG_FGRAD_1600  demoranging.o
+    0x08005ad8   0x08005ad8   0x0000011c   Data   RO          430    .rodata.Radio       sx1280-hal.o
+    0x08005bf4   0x08005bf4   0x00000004   PAD
+    0x08005bf8   0x08005bf8   0x00000500   Data   RO          359    .rodata.RangingCorrectionSF10BW0400  sx1280.o
+    0x080060f8   0x080060f8   0x00000500   Data   RO          371    .rodata.RangingCorrectionSF10BW0800  sx1280.o
+    0x080065f8   0x080065f8   0x00000500   Data   RO          383    .rodata.RangingCorrectionSF10BW1600  sx1280.o
+    0x08006af8   0x08006af8   0x00000500   Data   RO          349    .rodata.RangingCorrectionSF5BW0400  sx1280.o
+    0x08006ff8   0x08006ff8   0x00000500   Data   RO          361    .rodata.RangingCorrectionSF5BW0800  sx1280.o
+    0x080074f8   0x080074f8   0x00000500   Data   RO          373    .rodata.RangingCorrectionSF5BW1600  sx1280.o
+    0x080079f8   0x080079f8   0x00000500   Data   RO          351    .rodata.RangingCorrectionSF6BW0400  sx1280.o
+    0x08007ef8   0x08007ef8   0x00000500   Data   RO          363    .rodata.RangingCorrectionSF6BW0800  sx1280.o
+    0x080083f8   0x080083f8   0x00000500   Data   RO          375    .rodata.RangingCorrectionSF6BW1600  sx1280.o
+    0x080088f8   0x080088f8   0x00000500   Data   RO          353    .rodata.RangingCorrectionSF7BW0400  sx1280.o
+    0x08008df8   0x08008df8   0x00000500   Data   RO          365    .rodata.RangingCorrectionSF7BW0800  sx1280.o
+    0x080092f8   0x080092f8   0x00000500   Data   RO          377    .rodata.RangingCorrectionSF7BW1600  sx1280.o
+    0x080097f8   0x080097f8   0x00000500   Data   RO          355    .rodata.RangingCorrectionSF8BW0400  sx1280.o
+    0x08009cf8   0x08009cf8   0x00000500   Data   RO          367    .rodata.RangingCorrectionSF8BW0800  sx1280.o
+    0x0800a1f8   0x0800a1f8   0x00000500   Data   RO          379    .rodata.RangingCorrectionSF8BW1600  sx1280.o
+    0x0800a6f8   0x0800a6f8   0x00000500   Data   RO          357    .rodata.RangingCorrectionSF9BW0400  sx1280.o
+    0x0800abf8   0x0800abf8   0x00000500   Data   RO          369    .rodata.RangingCorrectionSF9BW0800  sx1280.o
+    0x0800b0f8   0x0800b0f8   0x00000500   Data   RO          381    .rodata.RangingCorrectionSF9BW1600  sx1280.o
+    0x0800b5f8   0x0800b5f8   0x00000058   Data   RO          360    .rodata.correctionRangingPolynomeSF10BW0400  sx1280.o
+    0x0800b650   0x0800b650   0x00000058   Data   RO          372    .rodata.correctionRangingPolynomeSF10BW0800  sx1280.o
+    0x0800b6a8   0x0800b6a8   0x00000058   Data   RO          384    .rodata.correctionRangingPolynomeSF10BW1600  sx1280.o
+    0x0800b700   0x0800b700   0x00000058   Data   RO          350    .rodata.correctionRangingPolynomeSF5BW0400  sx1280.o
+    0x0800b758   0x0800b758   0x00000058   Data   RO          362    .rodata.correctionRangingPolynomeSF5BW0800  sx1280.o
+    0x0800b7b0   0x0800b7b0   0x00000058   Data   RO          374    .rodata.correctionRangingPolynomeSF5BW1600  sx1280.o
+    0x0800b808   0x0800b808   0x00000058   Data   RO          352    .rodata.correctionRangingPolynomeSF6BW0400  sx1280.o
+    0x0800b860   0x0800b860   0x00000058   Data   RO          364    .rodata.correctionRangingPolynomeSF6BW0800  sx1280.o
+    0x0800b8b8   0x0800b8b8   0x00000058   Data   RO          376    .rodata.correctionRangingPolynomeSF6BW1600  sx1280.o
+    0x0800b910   0x0800b910   0x00000058   Data   RO          354    .rodata.correctionRangingPolynomeSF7BW0400  sx1280.o
+    0x0800b968   0x0800b968   0x00000058   Data   RO          366    .rodata.correctionRangingPolynomeSF7BW0800  sx1280.o
+    0x0800b9c0   0x0800b9c0   0x00000058   Data   RO          378    .rodata.correctionRangingPolynomeSF7BW1600  sx1280.o
+    0x0800ba18   0x0800ba18   0x00000058   Data   RO          356    .rodata.correctionRangingPolynomeSF8BW0400  sx1280.o
+    0x0800ba70   0x0800ba70   0x00000058   Data   RO          368    .rodata.correctionRangingPolynomeSF8BW0800  sx1280.o
+    0x0800bac8   0x0800bac8   0x00000058   Data   RO          380    .rodata.correctionRangingPolynomeSF8BW1600  sx1280.o
+    0x0800bb20   0x0800bb20   0x00000058   Data   RO          358    .rodata.correctionRangingPolynomeSF9BW0400  sx1280.o
+    0x0800bb78   0x0800bb78   0x00000058   Data   RO          370    .rodata.correctionRangingPolynomeSF9BW0800  sx1280.o
+    0x0800bbd0   0x0800bbd0   0x00000058   Data   RO          382    .rodata.correctionRangingPolynomeSF9BW1600  sx1280.o
+    0x0800bc28   0x0800bc28   0x000000a0   Data   RO           45    .rodata.rangingChannels  demoranging.o
+    0x0800bcc8   0x0800bcc8   0x0000003e   Data   RO           54    .rodata.str1.1      demoranging.o
+    0x0800bd06   0x0800bd06   0x00000009   Data   RO          184    .rodata.str1.1      segger_rtt.o
+    0x0800bd0f   0x0800bd0f   0x00000001   PAD
+    0x0800bd10   0x0800bd10   0x00000020   Data   RO         1785    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800ba28, Size: 0x00003d70, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800bd30, Size: 0x00003d70, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x0800ba28   0x00000004   Data   RW         1735    .data               mc_w.l(stdout.o)
-    0x20000004   0x0800ba2c   0x00000004   Data   RW         1747    .data               mc_w.l(errno.o)
-    0x20000008   0x0800ba30   0x00000028   Data   RW           50    .data..L_MergedGlobals  demoranging.o
-    0x20000030   0x0800ba58   0x00000008   Data   RW          808    .data..L_MergedGlobals  stm32f1xx_hal.o
-    0x20000038   0x0800ba60   0x00000004   Data   RW          383    .data.DioIrq        sx1280.o
-    0x2000003c   0x0800ba64   0x00000048   Data   RW          380    .data.RangingCorrectionPerSfBwGain  sx1280.o
-    0x20000084   0x0800baac   0x00000048   Data   RW          381    .data.RangingCorrectionPolynomesPerSfBw  sx1280.o
-    0x200000cc   0x0800baf4   0x00000004   Data   RW         1371    .data.SystemCoreClock  system_stm32f1xx.o
-    0x200000d0        -       0x00000008   Zero   RW           79    .bss..L_MergedGlobals  rangingdisplay.o
-    0x200000d8        -       0x0000000c   Zero   RW          385    .bss..L_MergedGlobals  sx1280.o
-    0x200000e4        -       0x00000014   Zero   RW          518    .bss..L_MergedGlobals  hw-lptim.o
-    0x200000f8        -       0x00000060   Zero   RW           51    .bss..L_MergedGlobals.22  demoranging.o
-    0x20000158        -       0x00001120   Zero   RW           49    .bss.DemoResults    demoranging.o
-    0x20001278        -       0x00000058   Zero   RW          449    .bss.RadioSpiHandle  hw-spi.o
-    0x200012d0        -       0x000000a8   Zero   RW          176    .bss._SEGGER_RTT    segger_rtt.o
-    0x20001378        -       0x00000010   Zero   RW          181    .bss._acDownBuffer  segger_rtt.o
-    0x20001388        -       0x00000400   Zero   RW          180    .bss._acUpBuffer    segger_rtt.o
-    0x20001788        -       0x000000ff   Zero   RW           48    .bss.demoBuffer     demoranging.o
-    0x20001887   0x0800baf8   0x00000001   PAD
-    0x20001888        -       0x00000040   Zero   RW          502    .bss.gpioIrq        hw-gpio.o
-    0x200018c8        -       0x00000fff   Zero   RW          427    .bss.halRxBuffer    sx1280-hal.o
-    0x200028c7        -       0x00000fff   Zero   RW          426    .bss.halTxBuffer    sx1280-hal.o
-    0x200038c6   0x0800baf8   0x00000002   PAD
-    0x200038c8        -       0x00000054   Zero   RW          534    .bss.hi2c1          main.o
-    0x2000391c        -       0x00000048   Zero   RW          536    .bss.huart3         main.o
-    0x20003964        -       0x00000001   Zero   RW           63    .bss.ranging_role   main_ranging.o
-    0x20003965   0x0800baf8   0x00000003   PAD
-    0x20003968        -       0x00000004   Zero   RW          807    .bss.uwTick         stm32f1xx_hal.o
-    0x2000396c   0x0800baf8   0x00000004   PAD
-    0x20003970        -       0x00000400   Zero   RW         1357    STACK               startup_stm32f103xb.o
+    0x20000000   0x0800bd30   0x00000004   Data   RW         1740    .data               mc_w.l(stdout.o)
+    0x20000004   0x0800bd34   0x00000004   Data   RW         1752    .data               mc_w.l(errno.o)
+    0x20000008   0x0800bd38   0x00000028   Data   RW           55    .data..L_MergedGlobals  demoranging.o
+    0x20000030   0x0800bd60   0x00000008   Data   RW          813    .data..L_MergedGlobals  stm32f1xx_hal.o
+    0x20000038   0x0800bd68   0x00000004   Data   RW          388    .data.DioIrq        sx1280.o
+    0x2000003c   0x0800bd6c   0x00000048   Data   RW          385    .data.RangingCorrectionPerSfBwGain  sx1280.o
+    0x20000084   0x0800bdb4   0x00000048   Data   RW          386    .data.RangingCorrectionPolynomesPerSfBw  sx1280.o
+    0x200000cc   0x0800bdfc   0x00000004   Data   RW         1376    .data.SystemCoreClock  system_stm32f1xx.o
+    0x200000d0        -       0x00000008   Zero   RW           84    .bss..L_MergedGlobals  rangingdisplay.o
+    0x200000d8        -       0x0000000c   Zero   RW          390    .bss..L_MergedGlobals  sx1280.o
+    0x200000e4        -       0x00000014   Zero   RW          523    .bss..L_MergedGlobals  hw-lptim.o
+    0x200000f8        -       0x00000060   Zero   RW           56    .bss..L_MergedGlobals.22  demoranging.o
+    0x20000158        -       0x00001120   Zero   RW           53    .bss.DemoResults    demoranging.o
+    0x20001278        -       0x00000058   Zero   RW          454    .bss.RadioSpiHandle  hw-spi.o
+    0x200012d0        -       0x000000a8   Zero   RW          181    .bss._SEGGER_RTT    segger_rtt.o
+    0x20001378        -       0x00000010   Zero   RW          186    .bss._acDownBuffer  segger_rtt.o
+    0x20001388        -       0x00000400   Zero   RW          185    .bss._acUpBuffer    segger_rtt.o
+    0x20001788        -       0x000000ff   Zero   RW           52    .bss.demoBuffer     demoranging.o
+    0x20001887   0x0800be00   0x00000001   PAD
+    0x20001888        -       0x00000040   Zero   RW          507    .bss.gpioIrq        hw-gpio.o
+    0x200018c8        -       0x00000fff   Zero   RW          432    .bss.halRxBuffer    sx1280-hal.o
+    0x200028c7        -       0x00000fff   Zero   RW          431    .bss.halTxBuffer    sx1280-hal.o
+    0x200038c6   0x0800be00   0x00000002   PAD
+    0x200038c8        -       0x00000054   Zero   RW          539    .bss.hi2c1          main.o
+    0x2000391c        -       0x00000048   Zero   RW          541    .bss.huart3         main.o
+    0x20003964        -       0x00000001   Zero   RW           68    .bss.ranging_role   main_ranging.o
+    0x20003965   0x0800be00   0x00000003   PAD
+    0x20003968        -       0x00000004   Zero   RW          812    .bss.uwTick         stm32f1xx_hal.o
+    0x2000396c   0x0800be00   0x00000004   PAD
+    0x20003970        -       0x00000400   Zero   RW         1362    STACK               startup_stm32f103xb.o
 
 
 ==============================================================================
@@ -4221,12 +4285,12 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      2616        244        340         40       4735      16081   demoranging.o
+      3276        252        402         40       4735      16990   demoranging.o
        220         12          0          0         64       3862   hw-gpio.o
         92          4          0          0         20       1208   hw-lptim.o
        108          8          0          0         88       3941   hw-spi.o
        586         32          0          0        156       8693   main.o
-       288         96          0          0          1       1974   main_ranging.o
+       344        120          0          0          1       1999   main_ranging.o
         40          8          0          0          8       3135   rangingdisplay.o
        100         28          9          0       1208      14379   segger_rtt.o
         36          8        236          0       1024        772   startup_stm32f103xb.o
@@ -4246,9 +4310,9 @@ Image component sizes
          2          0         24          4          0       1586   system_stm32f1xx.o
 
     ----------------------------------------------------------------------
-     14442        860      25560        200      15520     225654   Object Totals
+     15158        892      25620        200      15520     226588   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        48          0         11          0         10          0   (incl. Padding)
+        48          0          9          0         10          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -4301,8 +4365,8 @@ Image component sizes
        162          0          0          0          0        100   dsqrt.o
 
     ----------------------------------------------------------------------
-      7506        324        144          8          0       3668   Library Totals
-         8          0          0          0          0          0   (incl. Padding)
+      7510        324        144          8          0       3668   Library Totals
+        12          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -4313,7 +4377,7 @@ Image component sizes
       1554          0          0          0          0       1304   mf_w.l
 
     ----------------------------------------------------------------------
-      7506        324        144          8          0       3668   Library Totals
+      7510        324        144          8          0       3668   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -4322,15 +4386,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     21948       1184      25704        208      15520     227214   Grand Totals
-     21948       1184      25704        208      15520     227214   ELF Image Totals
-     21948       1184      25704        208          0          0   ROM Totals
+     22668       1216      25764        208      15520     228148   Grand Totals
+     22668       1216      25764        208      15520     228148   ELF Image Totals
+     22668       1216      25764        208          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                47652 (  46.54kB)
+    Total RO  Size (Code + RO Data)                48432 (  47.30kB)
     Total RW  Size (RW Data + ZI Data)             15728 (  15.36kB)
-    Total ROM Size (Code + RO Data + RW Data)      47860 (  46.74kB)
+    Total ROM Size (Code + RO Data + RW Data)      48640 (  47.50kB)
 
 ==============================================================================
 
