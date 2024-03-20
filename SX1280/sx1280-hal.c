@@ -107,6 +107,8 @@ const struct Radio_s Radio =
     SX1280RangingClearFilterResult,
     SX1280RangingSetFilterNumSamples,
     SX1280GetFrequencyError,
+    SX1280SetAdvancedRanging,
+    SX1280GetRangingAddressReceived,
 };
 
 static uint8_t halTxBuffer[MAX_HAL_BUFFER_SIZE] = {0x00};

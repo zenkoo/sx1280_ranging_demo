@@ -655,6 +655,8 @@ typedef enum
     IRQ_RADIO_ALL                           = 0xFFFF,
 }RadioIrqMasks_t;
 
+#define IRQ_ADVANCED_RANGING_DONE  IRQ_PREAMBLE_DETECTED
+
 /*!
  * \brief Represents the digital input/output of the radio
  */
@@ -726,6 +728,7 @@ typedef enum RadioCommands_u
     RADIO_SET_LONGPREAMBLE                  = 0x9B,
     RADIO_SET_UARTSPEED                     = 0x9D,
     RADIO_SET_RANGING_ROLE                  = 0xA3,
+    RADIO_SET_ADVANCED_RANGING              = 0x9A,
 }RadioCommands_t;
 
 /*!
@@ -855,6 +858,7 @@ typedef struct
     void ( *rxError )( IrqErrorCode_t errCode );    //!< Pointer to a function run on reception error
     void ( *rangingDone )( IrqRangingCode_t val );  //!< Pointer to a function run on ranging terminated
     void ( *cadDone )( bool cadFlag );              //!< Pointer to a function run on channel activity detected
+    void ( *rxAdvancedRanging)( void );             //!< Pointer to a function run on advanced ranging terminated
 }RadioCallbacks_t;
 
 /*!
@@ -1106,8 +1110,10 @@ void SX1280OnDioIrq( void );
  *
  * \param [in]  role          Role of the radio
  */
-void SX1280SetRangingRole( RadioRangingRoles_t role );
+void SX1280SetRangingRole( RadioRangingRoles_t role);
 
+void SX1280SetAdvancedRanging(uint8_t sw);
+uint32_t SX1280GetRangingAddressReceived(void);
 /*!
  * \brief Initializes the radio driver
  */

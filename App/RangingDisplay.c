@@ -102,13 +102,13 @@ void RangingDisplayUartOutputData( void )
 /*!
  * \brief Display the Ranging Demo distance and RSSI over UART.
  */
-void RangingDisplayUartOutputDistance( void )
+void RangingDisplayUartOutputDistance(void)
 {
     demoResult = RangingDemoGetResult();
     if( demoResult->RngResultIndex != 0u ){
 		//ggg printf("Distance Ranging = %f, RSSI = %d \r\n", demoResult->RngDistance,demoResult->RssiValue );
         //printf("Distance Ranging = %d, RSSI = %d \r\n", RangingDisplayGetRangingResult(demoResult->RngDistance),demoResult->RssiValue );
-        printf("%f,", demoResult->RngDistance);
+        printf("%f, ", demoResult->RngDistance);
     }
 }
 
@@ -184,7 +184,7 @@ static void RangingDisplayUartOutputResultRaw( void )
     if( rangingResultIndex < (demoResult->RngResultIndex - 1) ){
         printf("\t\t{\"RawRng\": \"%08x\", ", (int32_t)demoResult->RawRngResults[rangingResultIndex] );
 		//HAL_Delay(2);
-        printf("\"RssiRng\": %d },\r\n", demoResult->RawRngRssi[rangingResultIndex] );
+        printf("\"RssiRng\": %d },\r\n", demoResult->RawRngRssi[rangingResultIndex]);
 		//HAL_Delay(2);
 
         resultDisplaying = RANGING_DISPLAY_STATE_RESULT_RAW;
@@ -214,7 +214,6 @@ static void RangingDisplayUartOutputContinue( void )
 
         case RANGING_DISPLAY_STATE_CONFIG:
             RangingDisplayUartOutputResultHeader( );
-
         break;
 
         case RANGING_DISPLAY_STATE_RESULT_HEADER:

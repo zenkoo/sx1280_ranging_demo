@@ -173,6 +173,8 @@ void OnRangingDone( IrqRangingCode_t );
  */
 void SetAntennaSwitch( void );
 
+void OnAdvancedRangingDone( void );
+
 /***************************************************************************\
  * RAM data
 \***************************************************************************/
@@ -203,39 +205,41 @@ static bool demoRunning = false;
 /*!
  * \brief Flag holding the current internal state of the demo application
  */
-static uint8_t demoInternalState;
+uint8_t demoInternalState;
+uint8_t demoLastInternalState;
 
 /*!
  * \brief Channels information variables
  */
-static uint8_t currentChannel;
-static uint16_t measuredChannels;
+uint8_t currentChannel;
+uint16_t measuredChannels;
 
 /*!
  * \brief Buffer and its size
  */
-static uint8_t demoBufferSize = BUFFER_SIZE;
-static uint8_t demoBuffer[BUFFER_SIZE];
+uint8_t demoBufferSize = BUFFER_SIZE;
+uint8_t demoBuffer[BUFFER_SIZE];
 
 
-static uint8_t SendNext = false;
+uint8_t SendNext = false;
 
-static uint32_t RetryCount = 0;
+uint32_t RetryCount = 0;
 
 /*!
  * \brief All the callbacks are stored in a structure
  */
 RadioCallbacks_t Callbacks =
 {
-    &OnTxDone,        // txDone
-    &OnRxDone,        // rxDone
-    NULL,             // syncWordDone
-    NULL,             // headerDone
-    &OnTxTimeout,     // txTimeout
-    &OnRxTimeout,     // rxTimeout
-    &OnRxError,       // rxError
-    &OnRangingDone,   // rangingDone
-    NULL,             // cadDone
+    &OnTxDone,              // txDone
+    &OnRxDone,              // rxDone
+    NULL,                   // syncWordDone
+    NULL,                   // headerDone
+    &OnTxTimeout,           // txTimeout
+    &OnRxTimeout,           // rxTimeout
+    &OnRxError,             // rxError
+    &OnRangingDone,         // rangingDone
+    NULL,                   // cadDone
+    &OnAdvancedRangingDone, // advancedRangingDone
 };
 
 #define PROC_LOG_SW   1
@@ -301,7 +305,7 @@ static void my_trace(int id, const char *format, ...)
  *
  * \param [in] demoEntity    The demo entity (either MASTER or SLAVE)
  */
-void RangingDemoInitApplication( uint8_t demoEntity )
+void RangingDemoInitApplication(uint8_t demoEntity)
 {
 
     // Initialize and select the radio.
@@ -387,34 +391,34 @@ void RangingDemoSetRadioParameters( RadioLoRaSpreadingFactors_t spreadingFactor,
 
 void RangingMasterHandler(void)
 {
-    switch( demoInternalState )
+    switch (demoInternalState)
     {
     case APP_RANGING_CONFIG:
         if( demoReady == true )
         {
             DemoSettings.RngStatus = RNG_INIT;
             DemoResults.CntPacketTx++;
-            modulationParams.PacketType = PACKET_TYPE_LORA;
-            packetParams.PacketType     = PACKET_TYPE_LORA;
 
+            modulationParams.PacketType = PACKET_TYPE_LORA;
+            packetParams.PacketType = PACKET_TYPE_LORA;
             packetParams.Params.LoRa.PayloadLength = 7u;
 
-            Radio.SetPacketType( modulationParams.PacketType );
-            Radio.SetModulationParams( &modulationParams );
-            Radio.SetPacketParams( &packetParams );
-            Radio.SetRfFrequency( DemoSettings.Frequency );
+            Radio.SetPacketType(modulationParams.PacketType);
+            Radio.SetModulationParams(&modulationParams);
+            Radio.SetPacketParams(&packetParams);
+            Radio.SetRfFrequency(DemoSettings.Frequency);
             DemoResults.CntPacketRxOK = 0;
             DemoResults.CntPacketRxOKSlave = 0;
             measuredChannels  = 0u;
             currentChannel    = 0u;
-            demoBuffer[0] = ( DemoSettings.RngAddress >> 24u ) & 0xFFu;
-            demoBuffer[1] = ( DemoSettings.RngAddress >> 16u ) & 0xFFu;
-            demoBuffer[2] = ( DemoSettings.RngAddress >>  8u ) & 0xFFu;
-            demoBuffer[3] = ( DemoSettings.RngAddress & 0xFFu );
+            demoBuffer[0] = (DemoSettings.RngAddress >> 24u) & 0xFFu;
+            demoBuffer[1] = (DemoSettings.RngAddress >> 16u) & 0xFFu;
+            demoBuffer[2] = (DemoSettings.RngAddress >>  8u) & 0xFFu;
+            demoBuffer[3] = (DemoSettings.RngAddress & 0xFFu);
             demoBuffer[4] = currentChannel;    // set the first channel to use
             demoBuffer[5] = DemoSettings.RngAntenna;      // set the antenna strategy
             demoBuffer[6] = DemoSettings.RngRequestCount; // set the number of hops
-            Radio.SendPayload( demoBuffer, packetParams.Params.LoRa.PayloadLength, ( TickTime_t ){ RX_TIMEOUT_TICK_SIZE, RNG_COM_TIMEOUT });
+            Radio.SendPayload(demoBuffer, packetParams.Params.LoRa.PayloadLength, ( TickTime_t ){RX_TIMEOUT_TICK_SIZE, RNG_COM_TIMEOUT});
             demoInternalState = APP_IDLE;
             RetryCount = 0;
             TRACE("Ranging config finish, change to APP_IDLE.\n");
@@ -431,7 +435,7 @@ void RangingMasterHandler(void)
                 RetryCount = 0;
                 Radio.SetRfFrequency( rangingChannels[currentChannel] );
 
-                TRACE("Set frequency to %d, channel %d, request count %d.\n", 
+                TRACE("Set frequency to %u, channel %d, request count %d.\n", 
                     rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
 
                 demoInternalState = APP_IDLE;
@@ -472,7 +476,7 @@ void RangingMasterHandler(void)
     break;
 
     case APP_RANGING_TIMEOUT:
-        if (RetryCount++ >= 20) {
+        if (RetryCount++ >= 40) {
             RetryCount = 0;
             demoInternalState = APP_RANGING_CONFIG;
             TRACE("Master try too much, change to APP_RANGING_CONFIG.\n");
@@ -491,10 +495,10 @@ void RangingMasterHandler(void)
         break;
 
     case APP_RX:
-        if( DemoSettings.RngStatus == RNG_INIT )
+        if (DemoSettings.RngStatus == RNG_INIT)
         {
-            Radio.GetPayload( demoBuffer, &demoBufferSize, BUFFER_SIZE );
-            if( demoBufferSize > 0 )
+            Radio.GetPayload(demoBuffer, &demoBufferSize, BUFFER_SIZE);
+            if (demoBufferSize > 0)
             {
                 PacketStatus_t PacketStatus;
                 DemoResults.RxTimeOutCount = 0;
@@ -503,7 +507,7 @@ void RangingMasterHandler(void)
                 DemoResults.RngFei = (double)(((int32_t)demoBuffer[4] << 24) | \
                                               ((int32_t)demoBuffer[5] << 16) | \
                                               ((int32_t)demoBuffer[6] <<  8) | \
-                                              ((int32_t)demoBuffer[7]      )   );
+                                              ((int32_t)demoBuffer[7]        ) );
                 DemoResults.RssiValue = demoBuffer[8]; // for ranging post-traitment (since V3 only)
                 modulationParams.PacketType = PACKET_TYPE_RANGING;
                 packetParams.PacketType     = PACKET_TYPE_RANGING;
@@ -522,8 +526,8 @@ void RangingMasterHandler(void)
                 measuredChannels = 0;
                 DemoResults.RngResultIndex   = 0;
                 demoInternalState = APP_RNG;
-                TRACE("Ranging Rx done, change to APP_RNG.\n");
-                TimerCreateTimer( &SendNextPacketEvent,0, DemoSettings.RngReqDelay );
+                TRACE("Receive ranging request ack, change to APP_RNG.\n");
+                TimerCreateTimer(&SendNextPacketEvent,0, DemoSettings.RngReqDelay);
             }
             else
             {
@@ -542,7 +546,8 @@ void RangingMasterHandler(void)
         if( DemoSettings.RngStatus == RNG_INIT )
         {
             TRACE("Ranging Tx done, change to APP_RX.\n");
-            Radio.SetRx( ( TickTime_t ) { RX_TIMEOUT_TICK_SIZE, RNG_COM_TIMEOUT });
+            // 收到发送完回调，切换到接收模式
+            Radio.SetRx((TickTime_t) {RX_TIMEOUT_TICK_SIZE, RNG_COM_TIMEOUT});
             demoInternalState = APP_IDLE;
         }
         else
@@ -590,15 +595,15 @@ void RangingSlaveHandler(void)
     case APP_RANGING_CONFIG:
         DemoSettings.RngStatus = RNG_INIT;
         modulationParams.PacketType = PACKET_TYPE_LORA;
-        packetParams.PacketType     = PACKET_TYPE_LORA;
-        packetParams.Params.LoRa.PayloadLength  = 9;
+        packetParams.PacketType = PACKET_TYPE_LORA;
+        packetParams.Params.LoRa.PayloadLength  = 10; //ggg 从9改为10，为了增加一个魔数用于指示测距开始
 
-        Radio.SetPacketType( modulationParams.PacketType );
-        Radio.SetModulationParams( &modulationParams );
-        Radio.SetPacketParams( &packetParams );
-        Radio.SetRfFrequency( DemoSettings.Frequency );
+        Radio.SetPacketType(modulationParams.PacketType);
+        Radio.SetModulationParams(&modulationParams);
+        Radio.SetPacketParams(&packetParams);
+        Radio.SetRfFrequency(DemoSettings.Frequency);
         // use listen mode here instead of rx continuous
-        Radio.SetRx( ( TickTime_t ) { RADIO_TICK_SIZE_1000_US, 0x1000} ); //0xFFFF
+        Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
         demoInternalState = APP_IDLE;
         RetryCount = 0;
         TRACE("Ranging config finish, change to APP_IDLE.\n");
@@ -636,7 +641,10 @@ void RangingSlaveHandler(void)
     case APP_RANGING_DONE:
         DemoResults.CntPacketRxOK++;
         demoInternalState = APP_RNG;
+        TRACE("Ranging done, change to APP_RNG, cntPacketRxOK %d.\n", DemoResults.CntPacketRxOK);
+        TimerCreateTimer(&SendNextPacketEvent, 0, DemoSettings.RngReqDelay / 2 ); //ggg
         
+        #if 0 //ggg
         if (DemoResults.CntPacketRxOK >= DemoSettings.RngRequestCount * 2) {
             TimerCancelTimer( );
             demoStatus = DEMO_RANGING_TERMINATED;
@@ -649,10 +657,11 @@ void RangingSlaveHandler(void)
             TRACE("Ranging done, change to APP_RNG, cntPacketRxOK %d.\n", DemoResults.CntPacketRxOK);
             TimerCreateTimer(&SendNextPacketEvent, 0, DemoSettings.RngReqDelay / 2 ); //ggg
         }
+        #endif
         break;
 
     case APP_RANGING_TIMEOUT:
-        if (RetryCount++ >= 20) {
+        if (RetryCount++ >= 40) {
             //ggg 20次超时后，重新配置RANGING
             RetryCount = 0;
             demoInternalState = APP_RANGING_CONFIG;
@@ -662,7 +671,7 @@ void RangingSlaveHandler(void)
             demoInternalState = APP_RNG;
             //ggg 增加重新进入RANGING接收的功能
             Radio.SetRfFrequency( rangingChannels[currentChannel] );
-            printf("Rereceive set frequency to %d, channel %d, request count %d.\n", 
+            printf("Rereceive set frequency to %u, channel %d, request count %d.\n", 
             rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
             Radio.SetRx((TickTime_t ){ RADIO_TICK_SIZE_1000_US, DemoSettings.RngReqDelay * 2});
             demoInternalState = APP_IDLE;
@@ -680,12 +689,12 @@ void RangingSlaveHandler(void)
             Radio.GetPayload( demoBuffer, &demoBufferSize, BUFFER_SIZE );
             Radio.GetPacketStatus( &PacketStatus );
             if( ( demoBufferSize > 0 ) && \
-                ( demoBuffer[0] == ( ( DemoSettings.RngAddress >> 24 ) & 0xFF ) ) && \
-                ( demoBuffer[1] == ( ( DemoSettings.RngAddress >> 16 ) & 0xFF ) ) && \
-                ( demoBuffer[2] == ( ( DemoSettings.RngAddress >>  8 ) & 0xFF ) ) && \
-                ( demoBuffer[3] == (   DemoSettings.RngAddress         & 0xFF ) ) )
+                ( demoBuffer[0] == ((DemoSettings.RngAddress >> 24) & 0xFF)) && \
+                ( demoBuffer[1] == ((DemoSettings.RngAddress >> 16) & 0xFF)) && \
+                ( demoBuffer[2] == ((DemoSettings.RngAddress >>  8) & 0xFF)) && \
+                ( demoBuffer[3] == ( DemoSettings.RngAddress        & 0xFF)) )
             {
-                DemoResults.RngFei    = Radio.GetFrequencyError( );
+                DemoResults.RngFei    = Radio.GetFrequencyError();
                 DemoResults.RssiValue = PacketStatus.Params.LoRa.RssiPkt;
                 DemoResults.CntPacketTx++;
                 currentChannel               = demoBuffer[4];
@@ -700,7 +709,9 @@ void RangingSlaveHandler(void)
                 demoBuffer[6] = ( ( ( int32_t )DemoResults.RngFei ) >>  8 ) & 0xFF ;
                 demoBuffer[7] = ( ( ( int32_t )DemoResults.RngFei ) & 0xFF );
                 demoBuffer[8] = DemoResults.RssiValue;
-                Radio.SendPayload( demoBuffer, 9, ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, RNG_COM_TIMEOUT } );
+                demoBuffer[9] = 0x5A; /* 增加一个模式，指示开始测距 */
+                // 下面这个函数会调用SET_TX，然后进入IDLE，在IDLE状态会收到TX_DONE
+                Radio.SendPayload(demoBuffer, 10, ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, RNG_COM_TIMEOUT});
                 demoInternalState = APP_IDLE;
             }
             else
@@ -717,25 +728,26 @@ void RangingSlaveHandler(void)
         break;
 
     case APP_TX:
-        if( DemoSettings.RngStatus == RNG_INIT )
+        // 收到TX_DONE中断后，进入到这个状态
+        if (DemoSettings.RngStatus == RNG_INIT)
         {
             DemoSettings.RngStatus = RNG_PROCESS;
 
             modulationParams.PacketType = PACKET_TYPE_RANGING;
-            packetParams.PacketType     = PACKET_TYPE_RANGING;
+            packetParams.PacketType = PACKET_TYPE_RANGING;
 
-            packetParams.Params.LoRa.PayloadLength  = 10;
+            packetParams.Params.LoRa.PayloadLength = 10;
 
-            Radio.SetPacketType( modulationParams.PacketType );
-            Radio.SetModulationParams( &modulationParams );
-            Radio.SetPacketParams( &packetParams );
-            Radio.SetDeviceRangingAddress( DemoSettings.RngAddress );
-            Radio.SetRangingCalibration( DemoSettings.RngCalib );
-            Radio.SetTxParams( DemoSettings.TxPower, RADIO_RAMP_20_US);
+            Radio.SetPacketType(modulationParams.PacketType);
+            Radio.SetModulationParams(&modulationParams);
+            Radio.SetPacketParams(&packetParams);
+            Radio.SetDeviceRangingAddress(DemoSettings.RngAddress);
+            Radio.SetRangingCalibration(DemoSettings.RngCalib);
+            Radio.SetTxParams(DemoSettings.TxPower, RADIO_RAMP_20_US);
             DemoResults.CntPacketRxOK = 0;
             measuredChannels = 0;
             DemoResults.CntPacketRxKOSlave = 0;
-            TimerCreateTimer( &SendNextPacketEvent, 0, DemoSettings.RngReqDelay);
+            TimerCreateTimer(&SendNextPacketEvent, 0, DemoSettings.RngReqDelay / 2 + 1);
             demoInternalState = APP_RNG;
             TRACE("Ranging Init done, change to APP_RNG.\n");
         }
@@ -785,81 +797,102 @@ void RangingSnifferHandler(void)
     case APP_RANGING_CONFIG:
         DemoSettings.RngStatus = RNG_INIT;
         modulationParams.PacketType = PACKET_TYPE_LORA;
-        packetParams.PacketType     = PACKET_TYPE_LORA;
-        packetParams.Params.LoRa.PayloadLength  = 9;
+        packetParams.PacketType = PACKET_TYPE_LORA;
+        packetParams.Params.LoRa.PayloadLength = 10;
+        
+        DemoResults.CntPacketRxOK = 0;
+        DemoResults.CntPacketRxOKSlave = 0;
+        measuredChannels  = 0u;
+        currentChannel    = 0u;
 
-        Radio.SetPacketType( modulationParams.PacketType );
-        Radio.SetModulationParams( &modulationParams );
-        Radio.SetPacketParams( &packetParams );
-        Radio.SetRfFrequency( DemoSettings.Frequency );
+        Radio.SetDioIrqParams(IRQ_RADIO_ALL, IRQ_RADIO_ALL, IRQ_RADIO_NONE, IRQ_RADIO_NONE);
+        Radio.SetPacketType(modulationParams.PacketType);
+        Radio.SetModulationParams(&modulationParams);
+        Radio.SetPacketParams(&packetParams);
+        Radio.SetRfFrequency(DemoSettings.Frequency);
         // use listen mode here instead of rx continuous
-        Radio.SetRx( ( TickTime_t ) { RADIO_TICK_SIZE_1000_US, 0x1000} ); //0xFFFF
+        Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
+                    
+        demoLastInternalState = APP_RANGING_CONFIG;
         demoInternalState = APP_IDLE;
         RetryCount = 0;
-        TRACE("Ranging config finish, change to APP_IDLE.\n");
+        TRACE("Sniffer config finish, change to APP_IDLE.\n");
         break;
 
     case APP_RNG:
-        if( SendNext == true )
+        if (SendNext == true)
         {
             SendNext = false;
             measuredChannels++;
-            if( measuredChannels <= DemoSettings.RngRequestCount )
+            if (measuredChannels <= DemoSettings.RngRequestCount)
             {
                 RetryCount = 0;
-                Radio.SetRfFrequency( rangingChannels[currentChannel] );
-                TRACE("Set frequency to %d, channel %d, request count %d.\n", 
+                Radio.SetRfFrequency(rangingChannels[currentChannel]);
+                TRACE("Set frequency to %u, channel %d, request count %d.\n", 
                     rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
                 demoInternalState = APP_IDLE;
-                Radio.SetRx((TickTime_t ){ RADIO_TICK_SIZE_1000_US, DemoSettings.RngReqDelay * 2});
+
+                Radio.SetDioIrqParams(IRQ_ADVANCED_RANGING_DONE, IRQ_ADVANCED_RANGING_DONE, IRQ_RADIO_NONE, IRQ_RADIO_NONE);
+                Radio.SetRx((TickTime_t){RADIO_TICK_SIZE_1000_US, 0xffff});
                 //防止久不收到Rx的应答或者超时
-                TimerCreateTimer(&WaitRxTimeout, 0, DemoSettings.RngReqDelay * 4);
+                //TimerCreateTimer(&WaitRxTimeout, 0, 400);
             }
             else
             {
-                TimerCancelTimer( );
+                // 所有的通道都监听完毕，退出并等待输出结果
+                TimerCancelTimer();
                 demoStatus = DEMO_RANGING_TERMINATED;
                 demoRunning = false;
-                Radio.SetStandby( STDBY_RC );
-                DemoSettings.RngStatus = RNG_VALID;
+
+                Radio.SetStandby(STDBY_RC);
+                Radio.SetAdvancedRanging(0x00);
                 demoInternalState = APP_RANGING_CONFIG;
-                TRACE("Ranging terminated, change to APP_RANGING_CONFIG.\n");
+
+
+                TRACE("APP_RNG: Sniffer finish, wait next session.\n");                
+                TRACE("channels:%d, index;%d\n", measuredChannels, DemoResults.RngResultIndex);
             }
         }
         break;
 
     case APP_RANGING_DONE:
-        DemoResults.CntPacketRxOK++;
-        demoInternalState = APP_RNG;
-        
-        if (DemoResults.CntPacketRxOK >= DemoSettings.RngRequestCount * 2) {
-            TimerCancelTimer( );
-            demoStatus = DEMO_RANGING_TERMINATED;
-            demoRunning = false;
-            Radio.SetStandby(STDBY_RC);
-            DemoSettings.RngStatus = RNG_VALID;
-            demoInternalState = APP_RANGING_CONFIG;
-            TRACE("APP_RANGING_DONE terminated, change to APP_RANGING_CONFIG.\n");
-        } else {
-            TRACE("Ranging done, change to APP_RNG, cntPacketRxOK %d.\n", DemoResults.CntPacketRxOK);
-            TimerCreateTimer(&SendNextPacketEvent, 0, DemoSettings.RngReqDelay / 2 ); //ggg
+        {
+            PacketStatus_t PacketStatus;
+
+            Radio.GetPacketStatus(&PacketStatus);
+            
+            DemoResults.RawRngRssi[DemoResults.RngResultIndex] = PacketStatus.Params.LoRa.RssiPkt;
+            DemoResults.RawRngResults[DemoResults.RngResultIndex] = Radio.GetRangingResult(RANGING_RESULT_RAW);
+            // Add the correction to the raw result
+            DemoResults.RawRngResults[DemoResults.RngResultIndex] += SX1280GetRangingCorrectionPerSfBwGain(
+                                                                        modulationParams.Params.LoRa.SpreadingFactor,
+                                                                        modulationParams.Params.LoRa.Bandwidth,
+                                                                        Radio.GetRangingPowerDeltaThresholdIndicator( )
+                                                                        );
+            DemoResults.RawRngAddrs[DemoResults.RngResultIndex] = Radio.GetRangingAddressReceived();
+
+            DemoResults.RngResultIndex++;
+            DemoResults.CntPacketRxOK++;
+            demoInternalState = APP_RNG;
+            TRACE("Ranging done, change to APP_RNG.\n");
+            TimerCreateTimer( &SendNextPacketEvent,0,1); //ggg
         }
         break;
 
     case APP_RANGING_TIMEOUT:
-        if (RetryCount++ >= 20) {
+        if (RetryCount++ >= 40) {
             //ggg 20次超时后，重新配置RANGING
             RetryCount = 0;
             demoInternalState = APP_RANGING_CONFIG;
-            TRACE("Slave try too much, change to APP_RANGING_CONFIG.\n");
+            TRACE("Sniffer receive timeout too much, change to APP_RANGING_CONFIG.\n");
             TimerCancelTimer( );
         } else {
             demoInternalState = APP_RNG;
             //ggg 增加重新进入RANGING接收的功能
             Radio.SetRfFrequency( rangingChannels[currentChannel] );
-            printf("Rereceive set frequency to %d, channel %d, request count %d.\n", 
+            printf("Rereceive set frequency to %u, channel %d, request count %d.\n", 
             rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
-            Radio.SetRx((TickTime_t ){ RADIO_TICK_SIZE_1000_US, DemoSettings.RngReqDelay * 2});
+            Radio.SetRx((TickTime_t){ RADIO_TICK_SIZE_1000_US, DemoSettings.RngReqDelay * 2});
             demoInternalState = APP_IDLE;
             
             //防止久不收到Rx的应答或者超时
@@ -868,71 +901,82 @@ void RangingSnifferHandler(void)
         break;
 
     case APP_RX:
-        if( DemoSettings.RngStatus == RNG_INIT )
+        if (DemoSettings.RngStatus == RNG_INIT)
         {
             PacketStatus_t PacketStatus;
 
             Radio.GetPayload(demoBuffer, &demoBufferSize, BUFFER_SIZE);
             Radio.GetPacketStatus(&PacketStatus);
-            if( ( demoBufferSize > 0 ) && \
-                ( demoBuffer[0] == ( ( DemoSettings.RngAddress >> 24 ) & 0xFF ) ) && \
-                ( demoBuffer[1] == ( ( DemoSettings.RngAddress >> 16 ) & 0xFF ) ) && \
-                ( demoBuffer[2] == ( ( DemoSettings.RngAddress >>  8 ) & 0xFF ) ) && \
-                ( demoBuffer[3] == (   DemoSettings.RngAddress         & 0xFF ) ) )
+            /* 判断SLAVE已经返回测距请求应答给MASTER，后面准备测距了 */
+            if ((demoBufferSize >=  10) && 
+                (demoBuffer[9] == 0x5A) && 
+                (demoBuffer[0] == ((DemoSettings.RngAddress >> 24) & 0xFF)) && 
+                (demoBuffer[1] == ((DemoSettings.RngAddress >> 16) & 0xFF)) && 
+                (demoBuffer[2] == ((DemoSettings.RngAddress >>  8) & 0xFF)) && 
+                (demoBuffer[3] == ( DemoSettings.RngAddress        & 0xFF))  )
             {
-                DemoResults.RngFei    = Radio.GetFrequencyError();
+                DemoResults.RngFei = Radio.GetFrequencyError();
                 DemoResults.RssiValue = PacketStatus.Params.LoRa.RssiPkt;
                 DemoResults.CntPacketTx++;
-                currentChannel               = demoBuffer[4];
-                DemoSettings.RngAntenna      = demoBuffer[5];
-                DemoSettings.RngRequestCount = demoBuffer[6];
+                currentChannel = 0;
+                DemoSettings.RngAntenna = 0;
+                DemoSettings.RngRequestCount = 40;
 
-                TRACE("Received ranging request packet, ranging address 0x%x, chl %d, antenna %d, req_count %d.\n",
+                TRACE("Sniffer received ranging session start message, ranging address 0x%x, chl %d, antenna %d, req_count %d.\n",
                         *(uint32_t *)&demoBuffer[0], currentChannel, DemoSettings.RngAntenna, DemoSettings.RngRequestCount);
 
-                demoBuffer[4] = ( ( ( int32_t )DemoResults.RngFei ) >> 24 ) & 0xFF ;
-                demoBuffer[5] = ( ( ( int32_t )DemoResults.RngFei ) >> 16 ) & 0xFF ;
-                demoBuffer[6] = ( ( ( int32_t )DemoResults.RngFei ) >>  8 ) & 0xFF ;
-                demoBuffer[7] = ( ( ( int32_t )DemoResults.RngFei ) & 0xFF );
-                demoBuffer[8] = DemoResults.RssiValue;
-                Radio.SendPayload( demoBuffer, 9, ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, RNG_COM_TIMEOUT } );
-                demoInternalState = APP_IDLE;
+                /* 准备进入监听状态 */
+                DemoSettings.RngStatus = RNG_PROCESS;
+
+                modulationParams.PacketType = PACKET_TYPE_RANGING;
+                packetParams.PacketType = PACKET_TYPE_RANGING;
+                packetParams.Params.LoRa.PayloadLength = 10;
+
+                Radio.SetPacketType(modulationParams.PacketType);
+                Radio.SetModulationParams(&modulationParams);
+                Radio.SetPacketParams(&packetParams);
+                //ggg Radio.SetDeviceRangingAddress(DemoSettings.RngAddress);
+                Radio.SetRangingCalibration(DemoSettings.RngCalib);
+                Radio.SetRangingRole(RADIO_RANGING_ROLE_SLAVE); //ggg 必须增加，底层没有像Master或者Slave一样在SetTX或SetRx中设置Role
+                Radio.SetTxParams(DemoSettings.TxPower, RADIO_RAMP_20_US);
+                Radio.SetAdvancedRanging(0x01); //ggg 增加
+                // 清空接收计数
+                DemoResults.CntPacketRxOK = 0;
+                // 清空频道下标计算
+                measuredChannels = 0;
+                // 清空切换频点计数
+                DemoResults.CntPacketRxKOSlave = 0;
+                DemoResults.RngResultIndex = 0;
+
+                // 创建异步的超时处理，对于SNIFFER端就是假如接收超时那么就切到下一个频点
+                TimerCreateTimer(&SendNextPacketEvent, 0, DemoSettings.RngReqDelay / 2 + 1);
+                demoInternalState = APP_RNG;
+
+                TRACE("Sniffer Init done, change to APP_RNG.\n");
             }
             else
             {
-                demoInternalState = APP_RANGING_CONFIG;
-                TRACE("Slave Rx done 1, change to APP_RANGING_CONFIG.\n");
+                TRACE("Sniffer received ranging session message error, len:%d, magic:0x%x\n", demoBufferSize, demoBuffer[9]);
+                //重新进入到接收模式
+                Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
+                demoInternalState = APP_IDLE;
+                /*
+                Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
+                demoInternalState = APP_IDLE;
+                */
             }
         }
         else
         {
             demoInternalState = APP_RANGING_CONFIG;
-            TRACE("Ranging Rx done 2, change to APP_RANGING_CONFIG.\n");
+            TRACE("Sniffer Rx done 2, change to APP_RANGING_CONFIG.\n");
         }
         break;
 
     case APP_TX:
-        if( DemoSettings.RngStatus == RNG_INIT )
+        if (1) 
         {
-            DemoSettings.RngStatus = RNG_PROCESS;
-
-            modulationParams.PacketType = PACKET_TYPE_RANGING;
-            packetParams.PacketType     = PACKET_TYPE_RANGING;
-
-            packetParams.Params.LoRa.PayloadLength  = 10;
-
-            Radio.SetPacketType( modulationParams.PacketType );
-            Radio.SetModulationParams( &modulationParams );
-            Radio.SetPacketParams( &packetParams );
-            Radio.SetDeviceRangingAddress( DemoSettings.RngAddress );
-            Radio.SetRangingCalibration( DemoSettings.RngCalib );
-            Radio.SetTxParams( DemoSettings.TxPower, RADIO_RAMP_20_US);
-            DemoResults.CntPacketRxOK = 0;
-            measuredChannels = 0;
-            DemoResults.CntPacketRxKOSlave = 0;
-            TimerCreateTimer( &SendNextPacketEvent, 0, DemoSettings.RngReqDelay);
-            demoInternalState = APP_RNG;
-            TRACE("Ranging Init done, change to APP_RNG.\n");
+            //ggg
         }
         else
         {
@@ -942,13 +986,21 @@ void RangingSnifferHandler(void)
         break;
 
     case APP_RX_TIMEOUT:
-        TRACE("Ranging Rx timeout, change to APP_RANGING_CONFIG.\n");
+        TRACE("Sniffer wait session timeout, change to APP_RANGING_CONFIG.\n");
         demoInternalState = APP_RANGING_CONFIG;
         break;
 
     case APP_RX_ERROR:
-        TRACE("Ranging Rx error, change to APP_RANGING_CONFIG.\n");
-        demoInternalState = APP_RANGING_CONFIG;
+        //TRACE("Ranging Rx error, change to APP_RANGING_CONFIG.\n");
+        //有可能一开机就收到错误的包，那么要恢复到普通状态，否则会卡死
+        if (demoLastInternalState == APP_RANGING_CONFIG) {
+            demoInternalState = APP_RANGING_CONFIG;
+        } 
+        #if 0
+        else {
+            demoInternalState = APP_IDLE;
+        }
+        #endif
         break;
 
     case APP_TX_TIMEOUT:
@@ -957,11 +1009,12 @@ void RangingSnifferHandler(void)
         break;
 
     case APP_IDLE:
-        if( DemoResults.CntPacketRxKOSlave > DEMO_RNG_CHANNELS_COUNT_MAX )
+        // CntPacketRxKOSlave表示收到多少个ranging sessions
+        if (DemoResults.CntPacketRxKOSlave > DEMO_RNG_CHANNELS_COUNT_MAX)
         {
             DemoResults.CntPacketRxKOSlave = 0;
             demoInternalState = APP_RANGING_CONFIG;
-            TRACE("Ranging idle, change to APP_RANGING_CONFIG.\n");
+            TRACE("Sniffer APP_IDLE, change to APP_RANGING_CONFIG.\n");
             TimerCancelTimer( );
         }
         break;
@@ -1089,11 +1142,10 @@ DemoResult_t* RangingDemoGetResult( void )
 void SendNextPacketEvent(void)
 {
     SendNext = true;
-    if( DemoSettings.RngStatus == RNG_PROCESS )
+    if( DemoSettings.RngStatus == RNG_PROCESS)
     {
         DemoResults.CntPacketRxKOSlave++;
     }
-
 }
 
 /*!
@@ -1300,3 +1352,7 @@ void OnCadDone( bool channelActivityDetected )
 {
 }
 
+void OnAdvancedRangingDone(void)
+{
+    demoInternalState = APP_RANGING_DONE;
+}

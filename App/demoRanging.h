@@ -154,7 +154,6 @@ typedef struct
     uint8_t RngUnit;             // Ranging distance unit [m]/[mi]
     uint8_t RngStatus;           // Status of ranging distance
     uint8_t RngAntenna;          // Ranging antenna selection
-	uint8_t AntennaSwitch;       // Witch antenna connected
     uint16_t RngReqDelay;        // Time between ranging request
     uint16_t RngCalib;           // Ranging Calibration
 }DemoSettings_t;
@@ -174,6 +173,7 @@ typedef struct{
     double RawRngResults[DEMO_RNG_CHANNELS_COUNT_MAX];
     double RngResults[DEMO_RNG_CHANNELS_COUNT_MAX];
     int8_t RawRngRssi[DEMO_RNG_CHANNELS_COUNT_MAX];
+    uint32_t RawRngAddrs[DEMO_RNG_CHANNELS_COUNT_MAX];
 }DemoResult_t;
 
 

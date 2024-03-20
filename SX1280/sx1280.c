@@ -159,11 +159,11 @@ void SX1280SetTx( TickTime_t timeout )
 
     // If the radio is doing ranging operations, then apply the specific calls
     // prior to SetTx
-    if( SX1280GetPacketType( ) == PACKET_TYPE_RANGING )
+    if (SX1280GetPacketType() == PACKET_TYPE_RANGING)
     {
-        SX1280SetRangingRole( RADIO_RANGING_ROLE_MASTER );
+        SX1280SetRangingRole(RADIO_RANGING_ROLE_MASTER);
     }
-    SX1280HalWriteCommand( RADIO_SET_TX, buf, 3 );
+    SX1280HalWriteCommand(RADIO_SET_TX, buf, 3);
     OperatingMode = MODE_TX;
 }
 
@@ -843,11 +843,11 @@ double SX1280GetRangingResult( RadioRangingResultTypes_t resultType )
     switch( SX1280GetPacketType( ) )
     {
         case PACKET_TYPE_RANGING:
-            SX1280SetStandby( STDBY_XOSC );
-            SX1280HalWriteRegister( 0x97F, SX1280HalReadRegister( 0x97F ) | ( 1 << 1 ) ); // enable LORA modem clock
-            SX1280HalWriteRegister( REG_LR_RANGINGRESULTCONFIG, ( SX1280HalReadRegister( REG_LR_RANGINGRESULTCONFIG ) & MASK_RANGINGMUXSEL ) | ( ( ( ( uint8_t )resultType ) & 0x03 ) << 4 ) );
-            valLsb = ( ( SX1280HalReadRegister( REG_LR_RANGINGRESULTBASEADDR ) << 16 ) | ( SX1280HalReadRegister( REG_LR_RANGINGRESULTBASEADDR + 1 ) << 8 ) | ( SX1280HalReadRegister( REG_LR_RANGINGRESULTBASEADDR + 2 ) ) );
-            SX1280SetStandby( STDBY_RC );
+            SX1280SetStandby(STDBY_XOSC);
+            SX1280HalWriteRegister(0x97F, SX1280HalReadRegister(0x97F) | (1 << 1)); // enable LORA modem clock
+            SX1280HalWriteRegister(REG_LR_RANGINGRESULTCONFIG, (SX1280HalReadRegister(REG_LR_RANGINGRESULTCONFIG) & MASK_RANGINGMUXSEL) | ((((uint8_t)resultType) & 0x03) << 4));
+            valLsb = ((SX1280HalReadRegister(REG_LR_RANGINGRESULTBASEADDR) << 16) | (SX1280HalReadRegister(REG_LR_RANGINGRESULTBASEADDR + 1) << 8) | (SX1280HalReadRegister(REG_LR_RANGINGRESULTBASEADDR + 2)));
+            SX1280SetStandby(STDBY_RC);
 
             // Convertion from LSB to distance. For explanation on the formula, refer to Datasheet of SX1280
             switch( resultType )
@@ -945,7 +945,35 @@ void SX1280SetRangingRole( RadioRangingRoles_t role )
     uint8_t buf[1];
 
     buf[0] = role;
-    SX1280HalWriteCommand( RADIO_SET_RANGING_ROLE, &buf[0], 1 );
+    SX1280HalWriteCommand(RADIO_SET_RANGING_ROLE, &buf[0], 1 );
+}
+
+void SX1280SetAdvancedRanging(uint8_t sw)
+{
+    uint8_t buf[1];
+    buf[0] = sw;
+    SX1280HalWriteCommand(RADIO_SET_ADVANCED_RANGING, &buf[0], 1);
+}
+
+uint32_t SX1280GetRangingAddressReceived(void)
+{
+    uint32_t addr = 0;
+    switch( SX1280GetPacketType( ) )
+    {
+        case PACKET_TYPE_RANGING:
+            SX1280SetStandby( STDBY_RC);
+            SX1280HalWriteRegister(0x927, (SX1280HalReadRegister(0x927) & 0xFC) | 0x00);
+            addr  = SX1280HalReadRegister(0x960);
+            addr |= SX1280HalReadRegister(0x95F) << 8;
+            SX1280HalWriteRegister(0x927, (SX1280HalReadRegister(0x927) & 0xFC) | 0x01);
+            addr |= SX1280HalReadRegister(0x960) << 16;
+            addr |= SX1280HalReadRegister(0x95F) << 24;
+            break;
+
+        default:
+            break;
+    }
+    return addr;
 }
 
 int8_t SX1280GetHexFileLineFields( char* line, uint8_t *bytes, uint16_t *addr, uint16_t *num, uint8_t *code )
@@ -1523,6 +1551,15 @@ void SX1280ProcessIrqs( void )
                         {
                             TRACE("RANGING MODE_RX Header error callback!\n");
                             RadioCallbacks->rxError( IRQ_HEADER_ERROR_CODE );
+                        }
+                    }
+                    if ((irqRegs & IRQ_ADVANCED_RANGING_DONE) == IRQ_ADVANCED_RANGING_DONE)
+                    {
+                        TRACE("RANGING MODE_RX Advanced ranging detected irq!\n");
+                        if ((RadioCallbacks != NULL) && (RadioCallbacks->rxAdvancedRanging != NULL))
+                        {
+                            TRACE("RANGING MODE_RX Advanced ranging detected callback!\n");
+                            RadioCallbacks->rxAdvancedRanging();
                         }
                     }
                     break;

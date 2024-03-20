@@ -75,13 +75,12 @@ int main_ranging(void)
         HAL_GPIO_WritePin(LED_G_PORT, LED_G_PIN, GPIO_PIN_SET  );
     } else {
         ranging_role = SNIFFER;
-        HAL_GPIO_WritePin(LED_G_PORT, LED_G_PIN, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(LED_R_PORT, LED_R_PIN, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(LED_G_PORT, LED_G_PIN, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(LED_R_PORT, LED_R_PIN, GPIO_PIN_RESET);
     }
 
     /* 1- Initialize the Ranging Application */
     RangingDemoInitApplication(ranging_role /* DEMO_SETTING_ENTITY */);
-
     RangingDemoSetRangingParameters( 40u, DEMO_RNG_ADDR_1, DEMO_RNG_ANT_1, DEMO_RNG_UNIT_SEL_M );
     RangingDemoSetRadioParameters( LORA_SF6, LORA_BW_1600, LORA_CR_4_5, DEMO_CENTRAL_FREQ_PRESET2, DEMO_POWER_TX_MAX );
 	
@@ -112,7 +111,7 @@ int main_ranging(void)
         }while( demoStatus == DEMO_RANGING_RUNNING);
 
         // If master, display the ranging result.
-        if( ranging_role /* DEMO_SETTING_ENTITY */ == MASTER){
+        if( ranging_role /* DEMO_SETTING_ENTITY */ == MASTER || ranging_role == SNIFFER){
             //ggg RangingDisplayUartOutputData( );
             RangingDisplayUartOutputDistance( );
         }

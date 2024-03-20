@@ -38,6 +38,6 @@ PUTCHAR_PROTOTYPE
   //serial_write(&serial1, (uint8_t)ch); //发送一个自己的数据到串口
   //通过串口3发送数据
   HAL_UART_Transmit(&huart3, (uint8_t *)&ch, 1, 0xFFFF);
-  //SEGGER_RTT_Write(0, &ch, 1);
+  SEGGER_RTT_Write(0, &ch, 1);
   return ch;
 }

@@ -645,6 +645,10 @@ struct Radio_s
      * \retval efe                The estimated frequency error [Hz]
      */
     double ( *GetFrequencyError )( void );
+
+    void ( *SetAdvancedRanging)( uint8_t );
+
+    uint32_t ( *GetRangingAddressReceived )( void );
 };
 
 /*!
