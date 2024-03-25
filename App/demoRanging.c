@@ -1335,7 +1335,7 @@ uint8_t RangingDemoCheckDistance( void )
             median = DemoResults.RngResults[DemoResults.RngResultIndex / 2];
         }
 
-        if (DemoSettings.Entity == MASTER)
+        //if (DemoSettings.Entity == MASTER)
         { 
             if (median < 100)
             {
@@ -1352,10 +1352,10 @@ uint8_t RangingDemoCheckDistance( void )
                 displayRange = median;
             }
         }
-        else
-        {
-            displayRange = median;
-        }
+        //else
+        //{
+        //    displayRange = median;
+        //}
     
         // 如果测距的结果小于下限，表示测距失败
         if (j < DEMO_RNG_CHANNELS_COUNT_MIN)
