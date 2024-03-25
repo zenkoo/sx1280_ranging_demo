@@ -854,7 +854,11 @@ double SX1280GetRangingResult( RadioRangingResultTypes_t resultType )
             {
                 case RANGING_RESULT_RAW:
                     // Convert the ranging LSB to distance in meter
-                    val = ( double )SX1280complement2( valLsb, 24 ) / ( double )SX1280GetLoRaBandwidth( ) * 36621.09375;
+                    val = (double)SX1280complement2(valLsb, 24) / (double)SX1280GetLoRaBandwidth() * 36621.09375;
+                    break;
+
+                case RANGING_RESULT_RAW_TIME:
+                    val = (double)SX1280complement2(valLsb, 24);
                     break;
 
                 case RANGING_RESULT_AVERAGED:

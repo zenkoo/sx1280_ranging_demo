@@ -925,13 +925,18 @@ void RangingSnifferHandler(void)
             Radio.GetPacketStatus(&PacketStatus);
             
             DemoResults.RawRngRssi[DemoResults.RngResultIndex] = PacketStatus.Params.LoRa.RssiPkt;
-            DemoResults.RawRngResults[DemoResults.RngResultIndex] = Radio.GetRangingResult(RANGING_RESULT_RAW);
+            // 读取时间原始值
+            DemoResults.RawRngResults[DemoResults.RngResultIndex] = Radio.GetRangingResult(RANGING_RESULT_RAW_TIME) / (double)Radio.GetLoRaBandwidth() * (double)73242.1875;
             // Add the correction to the raw result
+            
+            #if 0
             DemoResults.RawRngResults[DemoResults.RngResultIndex] += SX1280GetRangingCorrectionPerSfBwGain(
                                                                         modulationParams.Params.LoRa.SpreadingFactor,
                                                                         modulationParams.Params.LoRa.Bandwidth,
-                                                                        Radio.GetRangingPowerDeltaThresholdIndicator( )
+                                                                        Radio.GetRangingPowerDeltaThresholdIndicator()
                                                                         );
+            #endif
+
             DemoResults.RawRngAddrs[DemoResults.RngResultIndex] = Radio.GetRangingAddressReceived();
 
             DemoResults.RngResultIndex++;
@@ -1300,7 +1305,7 @@ uint8_t RangingDemoCheckDistance( void )
         {
             for (i = 0; i < DemoResults.RngResultIndex; ++i) {
                 // 不修正因频率偏移导致的测距误差
-                DemoResults.RngResults[i] = DemoResults.RawRngResults[i] * 2;
+                DemoResults.RngResults[i] = DemoResults.RawRngResults[i];
             }
         }
         

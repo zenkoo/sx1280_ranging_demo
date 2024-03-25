@@ -591,6 +591,7 @@ typedef enum
     RANGING_RESULT_AVERAGED                 = 0x01,
     RANGING_RESULT_DEBIASED                 = 0x02,
     RANGING_RESULT_FILTERED                 = 0x03,
+    RANGING_RESULT_RAW_TIME                 = 0x04,
 }RadioRangingResultTypes_t;
 
 /*!

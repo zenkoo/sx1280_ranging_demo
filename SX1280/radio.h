@@ -649,6 +649,8 @@ struct Radio_s
     void ( *SetAdvancedRanging)( uint8_t );
 
     uint32_t ( *GetRangingAddressReceived )( void );
+
+    int32_t ( *GetLoRaBandwidth ) ( void );
 };
 
 /*!
