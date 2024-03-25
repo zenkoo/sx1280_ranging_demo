@@ -139,9 +139,7 @@ static void RangingDisplayUartOutputStart( void )
 	//HAL_Delay(2);
 	
 	resultDisplaying = RANGING_DISPLAY_STATE_CONFIG;
-
 }
-
 
 /*!
  * \brief Display the Ranging Radio setting informations.
@@ -174,7 +172,6 @@ static void RangingDisplayUartOutputResultHeader( void )
     }
 	rangingResultIndex = 0;
 }
-
 
 /*!
  * \brief Display the Ranging Result informations

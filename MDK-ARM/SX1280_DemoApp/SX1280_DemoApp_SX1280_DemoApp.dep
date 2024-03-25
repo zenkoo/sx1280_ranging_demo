@@ -1,5 +1,5 @@
 Dependencies for Project 'SX1280_DemoApp', Target 'SX1280_DemoApp': (DO NOT MODIFY !)
-F (..\App\demoRanging.c)(0x65FAA8CE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/demoranging.o -MD)
+F (..\App\demoRanging.c)(0x65FD4A88)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/demoranging.o -MD)
 I (..\SX1280_HAL\boards.h)(0x65F297C5)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5DB34DA0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5DB34DA0)
@@ -37,12 +37,12 @@ I (..\SX1280_HAL\utilities.h)(0x5BB4C2F2)
 I (..\SX1280_HAL\hw-spi.h)(0x5BB4C2F2)
 I (..\SX1280_HAL\hw-gpio.h)(0x65F15080)
 I (..\SX1280_HAL\hw-lptim.h)(0x65F171B8)
-I (..\SX1280\sx1280.h)(0x65FA5876)
+I (..\SX1280\sx1280.h)(0x65FBF4D9)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5DB34DA0)
 I (..\SX1280\sx1280-hal.h)(0x65F14C62)
 I (..\SX1280\radio.h)(0x65FA57B8)
 I (..\App\FreqLUT.h)(0x5BB4C2F2)
-I (..\App\demoRanging.h)(0x65FA5A5D)
+I (..\App\demoRanging.h)(0x65FD4A8A)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5DB34D9E)
 F (..\App\main_ranging.c)(0x65FAA906)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/main_ranging.o -MD)
 I (..\SX1280_HAL\boards.h)(0x65F297C5)
@@ -82,16 +82,16 @@ I (..\SX1280_HAL\utilities.h)(0x5BB4C2F2)
 I (..\SX1280_HAL\hw-spi.h)(0x5BB4C2F2)
 I (..\SX1280_HAL\hw-gpio.h)(0x65F15080)
 I (..\SX1280_HAL\hw-lptim.h)(0x65F171B8)
-I (..\SX1280\sx1280.h)(0x65FA5876)
+I (..\SX1280\sx1280.h)(0x65FBF4D9)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5DB34DA0)
 I (..\SX1280\radio.h)(0x65FA57B8)
-I (..\App\demoRanging.h)(0x65FA5A5D)
+I (..\App\demoRanging.h)(0x65FD4A8A)
 I (..\App\RangingDisplay.h)(0x65F14A51)
 I (..\SEGGER\RTT\SEGGER_RTT.h)(0x65E04A40)
 I (..\SEGGER\RTT\SEGGER_RTT_Conf.h)(0x65E04A40)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5DB34DA0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5DB34D9E)
-F (..\App\RangingDisplay.c)(0x65FAA919)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/rangingdisplay.o -MD)
+F (..\App\RangingDisplay.c)(0x65FB8F20)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/rangingdisplay.o -MD)
 I (..\SX1280_HAL\boards.h)(0x65F297C5)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5DB34DA0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5DB34DA0)
@@ -129,9 +129,9 @@ I (..\SX1280_HAL\utilities.h)(0x5BB4C2F2)
 I (..\SX1280_HAL\hw-spi.h)(0x5BB4C2F2)
 I (..\SX1280_HAL\hw-gpio.h)(0x65F15080)
 I (..\SX1280_HAL\hw-lptim.h)(0x65F171B8)
-I (..\SX1280\sx1280.h)(0x65FA5876)
+I (..\SX1280\sx1280.h)(0x65FBF4D9)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5DB34DA0)
-I (..\App\demoRanging.h)(0x65FA5A5D)
+I (..\App\demoRanging.h)(0x65FD4A8A)
 I (..\App\RangingDisplay.h)(0x65F14A51)
 F (..\App\timoueter.c)(0x65F1494B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/timoueter.o -MD)
 I (..\App\timoueter.h)(0x5BB4C2F2)
@@ -183,9 +183,9 @@ I (..\SEGGER\RTT\SEGGER_RTT.h)(0x65E04A40)
 I (..\SEGGER\RTT\SEGGER_RTT_Conf.h)(0x65E04A40)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5DB34DA0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5DB34D9E)
-F (..\SX1280\sx1280.c)(0x65FA599D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/sx1280.o -MD)
+F (..\SX1280\sx1280.c)(0x65FD1E49)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/sx1280.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5DB34DA0)
-I (..\SX1280\sx1280.h)(0x65FA5876)
+I (..\SX1280\sx1280.h)(0x65FBF4D9)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DB34DA0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5DB34DA0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5DB34DA0)
@@ -285,7 +285,7 @@ I (..\SX1280_HAL\hw-spi.h)(0x5BB4C2F2)
 I (..\SX1280_HAL\hw-gpio.h)(0x65F15080)
 I (..\SX1280_HAL\hw-lptim.h)(0x65F171B8)
 I (..\SX1280\sx1280-hal.h)(0x65F14C62)
-I (..\SX1280\sx1280.h)(0x65FA5876)
+I (..\SX1280\sx1280.h)(0x65FBF4D9)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5DB34DA0)
 I (..\SX1280\radio.h)(0x65FA57B8)
 F (..\SX1280_HAL\hw-spi.c)(0x65F15031)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER/RTT -I ../App -I ../SX1280 -I ../SX1280_HAL-I./RTE/_SX1280_DemoApp-IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.6.0/CMSIS/Core/Include-IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o sx1280_demoapp/hw-spi.o -MD)

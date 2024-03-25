@@ -638,8 +638,8 @@ typedef enum
     IRQ_RADIO_NONE                          = 0x0000,
     IRQ_TX_DONE                             = 0x0001,
     IRQ_RX_DONE                             = 0x0002,
-    IRQ_SYNCWORD_VALID                      = 0x0004,
-    IRQ_SYNCWORD_ERROR                      = 0x0008,
+    IRQ_SYNCWORD_VALID                      = 0x0004,  // 这个IRQ应该只有哦GFSK模式有
+    IRQ_SYNCWORD_ERROR                      = 0x0008,  // 这个IRQ应该只有哦GFSK模式
     IRQ_HEADER_VALID                        = 0x0010,
     IRQ_HEADER_ERROR                        = 0x0020,
     IRQ_CRC_ERROR                           = 0x0040,

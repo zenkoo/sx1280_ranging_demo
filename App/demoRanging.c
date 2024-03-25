@@ -281,13 +281,47 @@ void WaitRxTimeout(void)
     demoInternalState = APP_RANGING_TIMEOUT;
 }
 
+void MasterWaitTxDoneTimeout(void)
+{
+    printf("MasterWaitTxDoneTimeout!!!!!!!!!!!!!!!!!\n");
+    demoInternalState = APP_RANGING_CONFIG;
+}
+
+void MasterWaitRxDoneTimeout(void)
+{
+    printf("MasterWaitTxDoneTimeout!!!!!!!!!!!!!!!!!\n");
+    demoInternalState = APP_TX;
+}
+
+void SlaveWaitRxDoneTimeout(void)
+{
+    printf("SlaveWaitRxDoneTimeout!!!!!!!!!!!!!!!!!\n");
+    demoInternalState = APP_RANGING_CONFIG;
+}
+
+void SlaveWaitTxDoneTimeout(void)
+{
+    printf("SlaveWaitTxDoneTimeout!!!!!!!!!!!!!!!!!\n");
+    demoInternalState = APP_RANGING_CONFIG;
+}
+
+void SnifferDetectStatus(void)
+{
+    RadioStatus_t st = Radio.GetStatus();
+
+    TimerCreateTimer(&SnifferDetectStatus, 0, 20);
+
+    if (!(st.Fields.ChipMode == MODE_RX || st.Fields.ChipMode == MODE_FS)) {
+        printf("SnifferDetectStatus: ChipMode %d error!!!!!!!!!!!!!!!!!!!!!!\n", st.Fields.ChipMode);
+    } 
+}
 
 /***************************************************************************\
  *  APPLICATION INTERFACES functions definition
-\***************************************************************************/
+\*******************************************************TT*******************/
 #include <stdarg.h>
 static void my_trace(int id, const char *format, ...)
-{
+{  
     if (id != 10) {
         return;
     }
@@ -419,6 +453,9 @@ void RangingMasterHandler(void)
             demoBuffer[5] = DemoSettings.RngAntenna;      // set the antenna strategy
             demoBuffer[6] = DemoSettings.RngRequestCount; // set the number of hops
             Radio.SendPayload(demoBuffer, packetParams.Params.LoRa.PayloadLength, ( TickTime_t ){RX_TIMEOUT_TICK_SIZE, RNG_COM_TIMEOUT});
+            
+            TimerCreateTimer(&MasterWaitTxDoneTimeout, 0, 200);
+            
             demoInternalState = APP_IDLE;
             RetryCount = 0;
             TRACE("Ranging config finish, change to APP_IDLE.\n");
@@ -439,13 +476,13 @@ void RangingMasterHandler(void)
                     rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
 
                 demoInternalState = APP_IDLE;
-                Radio.SetTx( ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, 50 });
+                Radio.SetTx((TickTime_t){RADIO_TICK_SIZE_1000_US, 50});
                 //防止久不收到Rx的应答或者超时
                 TimerCreateTimer(&WaitRxTimeout, 0, 50 * 2);
             }
             else
             {
-                TimerCancelTimer( );
+                TimerCancelTimer();
                 demoStatus = DEMO_RANGING_TERMINATED;
                 demoRunning = false;
                 demoInternalState = APP_RANGING_CONFIG;
@@ -497,6 +534,8 @@ void RangingMasterHandler(void)
     case APP_RX:
         if (DemoSettings.RngStatus == RNG_INIT)
         {
+            // 关闭MasterWaitRxDoneTimeout定时器
+            TimerCancelTimer();
             Radio.GetPayload(demoBuffer, &demoBufferSize, BUFFER_SIZE);
             if (demoBufferSize > 0)
             {
@@ -520,6 +559,10 @@ void RangingMasterHandler(void)
                 Radio.SetPacketParams(&packetParams);
                 Radio.SetRangingRequestAddress(DemoSettings.RngAddress);
                 Radio.SetRangingCalibration(DemoSettings.RngCalib);
+
+                //延时一下，等其他角色准备好
+                HAL_Delay(2);
+
                 Radio.SetTxParams(DemoSettings.TxPower, RADIO_RAMP_20_US);
 
                 DemoResults.SnrValue = PacketStatus.Params.LoRa.SnrPkt;
@@ -545,9 +588,14 @@ void RangingMasterHandler(void)
     case APP_TX:
         if( DemoSettings.RngStatus == RNG_INIT )
         {
+            // 关闭MasterWaitTxDoneTimeout定时器
+            TimerCancelTimer();
+
             TRACE("Ranging Tx done, change to APP_RX.\n");
             // 收到发送完回调，切换到接收模式
             Radio.SetRx((TickTime_t) {RX_TIMEOUT_TICK_SIZE, RNG_COM_TIMEOUT});
+            
+            TimerCreateTimer(&MasterWaitRxDoneTimeout, 0, 200);
             demoInternalState = APP_IDLE;
         }
         else
@@ -603,14 +651,15 @@ void RangingSlaveHandler(void)
         Radio.SetPacketParams(&packetParams);
         Radio.SetRfFrequency(DemoSettings.Frequency);
         // use listen mode here instead of rx continuous
-        Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
+        Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 4000}); //0xFFFF
+        TimerCreateTimer(&SlaveWaitRxDoneTimeout, 0, 5000); //0x2000
         demoInternalState = APP_IDLE;
         RetryCount = 0;
         TRACE("Ranging config finish, change to APP_IDLE.\n");
         break;
 
     case APP_RNG:
-        if( SendNext == true )
+        if(SendNext == true)
         {
             SendNext = false;
             measuredChannels++;
@@ -618,7 +667,7 @@ void RangingSlaveHandler(void)
             {
                 RetryCount = 0;
                 Radio.SetRfFrequency( rangingChannels[currentChannel] );
-                TRACE("Set frequency to %d, channel %d, request count %d.\n", 
+                TRACE("Set frequency to %u, channel %d, request count %d.\n", 
                     rangingChannels[currentChannel], measuredChannels, DemoSettings.RngRequestCount);
                 demoInternalState = APP_IDLE;
                 Radio.SetRx((TickTime_t ){ RADIO_TICK_SIZE_1000_US, DemoSettings.RngReqDelay * 2});
@@ -630,10 +679,10 @@ void RangingSlaveHandler(void)
                 TimerCancelTimer( );
                 demoStatus = DEMO_RANGING_TERMINATED;
                 demoRunning = false;
-                Radio.SetStandby( STDBY_RC );
+                Radio.SetStandby(STDBY_RC);
                 DemoSettings.RngStatus = RNG_VALID;
                 demoInternalState = APP_RANGING_CONFIG;
-                TRACE("Ranging terminated, change to APP_RANGING_CONFIG.\n");
+                TRACE("############## Slave Ranging finish, change to APP_RANGING_CONFIG ############\n");
             }
         }
         break;
@@ -686,6 +735,9 @@ void RangingSlaveHandler(void)
         {
             PacketStatus_t PacketStatus;
 
+            // 关闭SlaveWaitRxDoneTimeout定时器
+            TimerCancelTimer();
+
             Radio.GetPayload( demoBuffer, &demoBufferSize, BUFFER_SIZE );
             Radio.GetPacketStatus( &PacketStatus );
             if( ( demoBufferSize > 0 ) && \
@@ -712,6 +764,9 @@ void RangingSlaveHandler(void)
                 demoBuffer[9] = 0x5A; /* 增加一个模式，指示开始测距 */
                 // 下面这个函数会调用SET_TX，然后进入IDLE，在IDLE状态会收到TX_DONE
                 Radio.SendPayload(demoBuffer, 10, ( TickTime_t ){ RADIO_TICK_SIZE_1000_US, RNG_COM_TIMEOUT});
+                // 放置异常情况没有收到TX_DONE中断
+                TimerCreateTimer(&SlaveWaitTxDoneTimeout, 0, 200);
+
                 demoInternalState = APP_IDLE;
             }
             else
@@ -732,6 +787,9 @@ void RangingSlaveHandler(void)
         if (DemoSettings.RngStatus == RNG_INIT)
         {
             DemoSettings.RngStatus = RNG_PROCESS;
+
+            // 关闭SlaveWaitTxDoneTimeout定时器
+            TimerCancelTimer();
 
             modulationParams.PacketType = PACKET_TYPE_RANGING;
             packetParams.PacketType = PACKET_TYPE_RANGING;
@@ -785,7 +843,7 @@ void RangingSlaveHandler(void)
 
     default:
         demoInternalState = APP_RANGING_CONFIG;
-        TimerCancelTimer( );
+        TimerCancelTimer();
         break;
     }
 }
@@ -805,14 +863,19 @@ void RangingSnifferHandler(void)
         measuredChannels  = 0u;
         currentChannel    = 0u;
 
-        Radio.SetDioIrqParams(IRQ_RADIO_ALL, IRQ_RADIO_ALL, IRQ_RADIO_NONE, IRQ_RADIO_NONE);
+        Radio.SetDioIrqParams(IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_CRC_ERROR | IRQ_RANGING_SLAVE_RESPONSE_DONE | IRQ_RANGING_SLAVE_REQUEST_DISCARDED | IRQ_RANGING_SLAVE_REQUEST_VALID | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE,
+                              IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_CRC_ERROR | IRQ_RANGING_SLAVE_RESPONSE_DONE | IRQ_RANGING_SLAVE_REQUEST_DISCARDED | IRQ_RANGING_SLAVE_REQUEST_VALID | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE,
+                              IRQ_RADIO_NONE, IRQ_RADIO_NONE);
+                                   
         Radio.SetPacketType(modulationParams.PacketType);
         Radio.SetModulationParams(&modulationParams);
         Radio.SetPacketParams(&packetParams);
         Radio.SetRfFrequency(DemoSettings.Frequency);
         // use listen mode here instead of rx continuous
-        Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
-                    
+        Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0xffff}); //0xFFFF
+        
+        TimerCreateTimer(&SnifferDetectStatus, 0, 20);
+
         demoLastInternalState = APP_RANGING_CONFIG;
         demoInternalState = APP_IDLE;
         RetryCount = 0;
@@ -905,6 +968,8 @@ void RangingSnifferHandler(void)
         {
             PacketStatus_t PacketStatus;
 
+            TimerCancelTimer();
+
             Radio.GetPayload(demoBuffer, &demoBufferSize, BUFFER_SIZE);
             Radio.GetPacketStatus(&PacketStatus);
             /* 判断SLAVE已经返回测距请求应答给MASTER，后面准备测距了 */
@@ -958,7 +1023,7 @@ void RangingSnifferHandler(void)
             {
                 TRACE("Sniffer received ranging session message error, len:%d, magic:0x%x\n", demoBufferSize, demoBuffer[9]);
                 //重新进入到接收模式
-                Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
+                //前面设置为持续接收模式Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
                 demoInternalState = APP_IDLE;
                 /*
                 Radio.SetRx((TickTime_t) {RADIO_TICK_SIZE_1000_US, 0x1000}); //0xFFFF
@@ -1054,21 +1119,25 @@ RangingDemoStatus_t RangingDemoRun( void )
 
         if( DemoSettings.Entity == MASTER )
         {
-            Radio.SetDioIrqParams( /* IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE, ggg */
-                                   /* IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE, ggg */
-                                   IRQ_RADIO_ALL, IRQ_RADIO_ALL,
+            Radio.SetDioIrqParams( IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_CRC_ERROR | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE,
+                                   IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_CRC_ERROR | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE,
                                    IRQ_RADIO_NONE, IRQ_RADIO_NONE);
             DemoResults.RngDistance = 0.0;
             demoInternalState = APP_RANGING_CONFIG;
         }
         else if (DemoSettings.Entity == SLAVE)
         {
-            Radio.SetDioIrqParams( IRQ_RADIO_ALL, IRQ_RADIO_ALL, IRQ_RADIO_NONE, IRQ_RADIO_NONE);
+            // Radio.SetDioIrqParams( IRQ_RADIO_ALL, IRQ_RADIO_ALL, IRQ_RADIO_NONE, IRQ_RADIO_NONE);
+            Radio.SetDioIrqParams( IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_CRC_ERROR | IRQ_RANGING_SLAVE_RESPONSE_DONE | IRQ_RANGING_SLAVE_REQUEST_DISCARDED | IRQ_RANGING_SLAVE_REQUEST_VALID,
+                                   IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_CRC_ERROR | IRQ_RANGING_SLAVE_RESPONSE_DONE | IRQ_RANGING_SLAVE_REQUEST_DISCARDED | IRQ_RANGING_SLAVE_REQUEST_VALID,
+                                   IRQ_RADIO_NONE, IRQ_RADIO_NONE);
             demoInternalState = APP_RANGING_CONFIG;
         } 
         else  // (DemoSettings.Entity == SNIFFER)
         {
-            Radio.SetDioIrqParams( IRQ_RADIO_ALL, IRQ_RADIO_ALL, IRQ_RADIO_NONE, IRQ_RADIO_NONE);
+            Radio.SetDioIrqParams( IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_CRC_ERROR | IRQ_RANGING_SLAVE_RESPONSE_DONE | IRQ_RANGING_SLAVE_REQUEST_DISCARDED | IRQ_RANGING_SLAVE_REQUEST_VALID | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE,
+                                   IRQ_RX_DONE | IRQ_TX_DONE | IRQ_RX_TX_TIMEOUT | IRQ_CRC_ERROR | IRQ_RANGING_SLAVE_RESPONSE_DONE | IRQ_RANGING_SLAVE_REQUEST_DISCARDED | IRQ_RANGING_SLAVE_REQUEST_VALID | IRQ_RANGING_MASTER_RESULT_VALID | IRQ_RANGING_MASTER_ERROR_CODE,
+                                   IRQ_RADIO_NONE, IRQ_RADIO_NONE);
             demoInternalState = APP_RANGING_CONFIG;
         }
     }
@@ -1219,11 +1288,22 @@ uint8_t RangingDemoCheckDistance( void )
     /* RngResultIndex is DemoResults.RawRngRssi[] and DemoResults.RawResults arrays index */
     if (DemoResults.RngResultIndex > 0)
     {
-        for (i = 0; i < DemoResults.RngResultIndex; ++i)
+        if (DemoSettings.Entity == MASTER) 
         {
-            // 修正因频率偏移导致的测距误差
-            DemoResults.RngResults[i] = DemoResults.RawRngResults[i] - (DemoSettings.RngFeiFactor * DemoResults.RngFei / 1000);
+            for (i = 0; i < DemoResults.RngResultIndex; ++i)
+            {
+                // 修正因频率偏移导致的测距误差
+                DemoResults.RngResults[i] = DemoResults.RawRngResults[i] - (DemoSettings.RngFeiFactor * DemoResults.RngFei / 1000);
+            }
+        } 
+        else 
+        {
+            for (i = 0; i < DemoResults.RngResultIndex; ++i) {
+                // 不修正因频率偏移导致的测距误差
+                DemoResults.RngResults[i] = DemoResults.RawRngResults[i] * 2;
+            }
         }
+        
         // 冒泡排序，最大值在最后
         for (int i = DemoResults.RngResultIndex - 1; i > 0; --i)
         {
@@ -1250,15 +1330,22 @@ uint8_t RangingDemoCheckDistance( void )
             median = DemoResults.RngResults[DemoResults.RngResultIndex / 2];
         }
 
-        if (median < 100)
-        {
-            // Apply the short range correction and RSSI short range improvement below 50 m
-            // 测距结果小于100时，对结果进行修正
-			displayRange = SX1280ComputeRangingCorrectionPolynome(
-                modulationParams.Params.LoRa.SpreadingFactor,
-                modulationParams.Params.LoRa.Bandwidth,
-                median
-            );
+        if (DemoSettings.Entity == MASTER)
+        { 
+            if (median < 100)
+            {
+                // Apply the short range correction and RSSI short range improvement below 50 m
+                // 测距结果小于100时，对结果进行修正
+                displayRange = SX1280ComputeRangingCorrectionPolynome(
+                    modulationParams.Params.LoRa.SpreadingFactor,
+                    modulationParams.Params.LoRa.Bandwidth,
+                    median
+                );
+            }
+            else
+            {
+                displayRange = median;
+            }
         }
         else
         {
